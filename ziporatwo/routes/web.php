@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 Route::get('/loginAdmin',[
-	'uses' => '@index',
+	'uses' => 'LoginController@index',
 	'as' => 'login']);
 
 Auth::routes();
