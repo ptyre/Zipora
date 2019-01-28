@@ -15,7 +15,7 @@
     <!-- Bootstrap Core Css -->
     <link href="../../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Waves Effect Css -->
+    <!-- Waves Effect Css -->   
     <link href="../../plugins/node-waves/waves.css" rel="stylesheet" />
 
     <!-- Animation Css -->
@@ -33,7 +33,7 @@
         <div class="card">
             <div class="body">
                 <form id="sign_in" method="POST">
-                    <div class="msg">Sign in to start your session</div>
+                    <div class="msg">Enter your username and password.</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
