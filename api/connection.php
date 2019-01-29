@@ -1,8 +1,8 @@
 <?php
 
-$host = "localhost";
-$db = "zipora";
-$user = "root";
-$password = "";
+	$host = "localhost";
+	$db = "zipora";
+	$user = "root";
+	$password = "";
 
 ?>
