@@ -7766,11 +7766,11 @@ fieldset[disabled] .form-control {
 /* Login Page ================================== */
 .login-page {
   background:#0F466E;
-  background:-webkit-linear-gradient(right,#ffae00 0%,#ffdd00 75%);
-  background:-moz-linear-gradient(right,#ffae00 0%,#ffdd00 75%);
-  background:-o-linear-gradient(right,#ffae00 0%,#ffdd00 75%);
-  background:-ms-linear-gradient(right,#ffae00 0%,#ffdd00 75%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdd00',endColorstr='#ffae00',GradientType=1);
+  background:-webkit-linear-gradient(right,#ffdd00 0%,#ffae00 75%);
+  background:-moz-linear-gradient(right,#ffdd00 0%,#ffae00 75%);
+  background:-o-linear-gradient(right,#ffdd00 0%,#ffae00 75%);
+  background:-ms-linear-gradient(right,#ffdd00 0%,#ffae00 75%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffae00',endColorstr='#ffdd00',GradientType=1);
   height:100px;
   padding-left: 0;
   max-width: 360px;
