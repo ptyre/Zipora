@@ -21,8 +21,12 @@ Route::get('/loginAdmin',[
 	'as' => 'login']);
 
 Route::get('/AHome',[
-	'uses' => 'LoginController@halamanAdmin',
+	'uses' => 'AdminController@halamanAdmin',
 	'as' => 'homeadmin']);
+
+Route::get('/AHome/createa',[
+	'uses' => 'AdminController@index',
+	'as' => 'create.admin']);
 
 Auth::routes();
 
