@@ -20,7 +20,7 @@ Route::get('/loginAdmin',[
 	'uses' => 'LoginController@index',
 	'as' => 'login']);
 
-<<<<<<< HEAD
+
 Route::get('/pagetest', 'PagesController@index')->name('pagetest');
 =======
 Route::get('/AHome',[
@@ -30,7 +30,6 @@ Route::get('/AHome',[
 Route::get('/AHome/createa',[
 	'uses' => 'AdminController@index',
 	'as' => 'create.admin']);
->>>>>>> 62e333da1b4dc149b8d42c3ed9bf51bff31c5db2
 
 Auth::routes();
 
