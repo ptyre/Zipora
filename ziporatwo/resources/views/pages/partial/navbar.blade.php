@@ -8,20 +8,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="#" class="navbar-brand logo">
-                    <h2>colid</h2>
+                    <h2>page1</h2>
                 </a>
             </div>
             <!--Logo/-->
             <nav class="collapse navbar-collapse" id="primary-menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#home-page">Home</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">page1</a></li>
+                    <li><a href="#">page1</a></li>
+                    <li><a href="#">page1</a></li>
+                    <li><a href="#">page1</a></li>
+                    <li><a href="#">page1</a></li>
+                    <li><a href="#">page1</a></li>
+                    <li><a href="#">page1</a></li>
                 </ul>
             </nav>
         </div>

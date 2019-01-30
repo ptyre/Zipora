@@ -20,6 +20,8 @@ Route::get('/loginAdmin',[
 	'uses' => 'LoginController@index',
 	'as' => 'login']);
 
+Route::get('/pagetest', 'PagesController@index')->name('pagetest');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
