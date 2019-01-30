@@ -10,15 +10,11 @@ class LoginController extends Controller
     	return view('login');
     }
 
-    public function halamanAdmin(){
-        return view('slicing.dasboard');
-    }
+    // public function tes(){
+    //     $url = "http://localhost/zipora/api/getInfoBuku.php";
+    //     $json = file_get_contents($url);
+    //     $json_data = json_decode($json, true);
 
-    public function tes(){
-        $url = "http://localhost/zipora/api/getInfoBuku.php";
-        $json = file_get_contents($url);
-        $json_data = json_decode($json, true);
-
-        return $json_data;
-    }
+    //     return $json_data;
+    // }
 }

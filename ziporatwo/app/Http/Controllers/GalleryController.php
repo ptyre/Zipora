@@ -4,21 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function halamanAdmin(){
-        return view('slicing.dasboard');
-    }
-
     public function index()
     {
-        return view('slicing.createadmin');
+        return view('slicing.gallery');
     }
 
     /**
@@ -39,7 +34,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //
     }
 
     /**
