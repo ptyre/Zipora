@@ -32,7 +32,7 @@
         </div>
         <div class="card">
             <div class="body">
-                <form id="sign_in" method="POST">
+                <form id="sign_in" method="GET" action="{{ route('homeadmin') }}">
                     <div class="msg">Enter your username and password.</div>
                     <div class="input-group">
                         <span class="input-group-addon">
