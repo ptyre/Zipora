@@ -20,6 +20,9 @@ Route::get('/loginAdmin',[
 	'uses' => 'LoginController@index',
 	'as' => 'login']);
 
+
+Route::get('/pagetest', 'PagesController@index')->name('pagetest');
+=======
 Route::get('/AHome',[
 	'uses' => 'AdminController@halamanAdmin',
 	'as' => 'homeadmin']);

@@ -6,16 +6,22 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     @yield('css')
-    <link href="asset('css/app.css')" rel="stylesheet">
+    <link href="{{asset('css/nav/nav.css')}}" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
     <title></title>
   </head>
   <body>
+
+
     @include('pages.partial.navbar')
+    @yield('header')
 
     @yield('content')
 
-    <link href="asset('js/app.js')">
+    <link href="{{asset('js/app.js')}}">
+    <link href="{{asset('js/nav.js')}}">
+
     @yield('script')
   </body>
 </html>
