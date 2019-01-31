@@ -22,7 +22,7 @@ Route::get('/loginAdmin',[
 
 
 Route::get('/pagetest', 'PagesController@index')->name('pagetest');
-=======
+
 Route::get('/AHome',[
 	'uses' => 'AdminController@halamanAdmin',
 	'as' => 'homeadmin']);
@@ -53,6 +53,19 @@ Route::post('/AHome/class/createc',[
 Route::get('/AHome/gallery',[
 	'uses' => 'GalleryController@index', 
 	'as' => 'admin.gallery']);
+
+// book
+Route::get('/AHome/book',[
+	'uses' => 'BookController@index', 
+	'as' => 'admin.book']);
+
+Route::get('/AHome/book/create',[
+	'uses' => 'BookController@create', 
+	'as' => 'admin.newbook']);
+
+Route::post('/AHome/book/create',[
+	'uses' => 'BookController@store',
+	'as' => 'admin.createbook']);
 
 Auth::routes();
 

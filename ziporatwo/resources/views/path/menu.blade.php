@@ -20,9 +20,15 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('admin.book') }}">
                 <i class="material-icons">book</i>
                 <span>Book</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="material-icons">assignment_ind</i>
+                <span>Member</span>
             </a>
         </li>
         <li>

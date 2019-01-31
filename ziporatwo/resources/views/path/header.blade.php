@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="">ADMIN ZIPORATWO</a>
+                <a class="navbar-brand" href="{{ route('homeadmin') }}">ADMIN ZIPORATWO</a>
             </div>
         </div>
     </nav>
