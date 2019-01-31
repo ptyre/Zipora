@@ -1,28 +1,24 @@
-<div class="mainmenu-area" data-spy="affix" data-offset-top="100">
-        <div class="container">
-            <!--Logo-->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="navbar-brand logo">
-                    <h2>page1</h2>
-                </a>
-            </div>
-            <!--Logo/-->
-            <nav class="collapse navbar-collapse" id="primary-menu">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#home-page">Home</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                </ul>
-            </nav>
-        </div>
+
+<div id="logo" class="menuUp">
+        <h1>Hardi Bray.</h1>
+        <div id="navToggle"><a href="#">page1</a></div>
     </div>
+    <nav>
+        <ul>
+            <li><a href="#">page2</a></li>
+            <li><a href="#">page3</a></li>
+            <li>
+                <a href="#">page4 <span class="toggle">Expand</span><span class="caret"></span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">page1</a></li>
+                        <li><a href="#">page2</a></li>
+                        <li><a href="#">page3</a></li>
+                        <li><a href="#">page4</a></li>
+                        <li><a href="#">page5</a></li>
+                    </ul>
+                </nav>
+            </li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
