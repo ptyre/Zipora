@@ -1,14 +1,14 @@
 <div class="menu">
     <ul class="list">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active">
+        <li>
             <a href="{{ route('homeadmin') }}">
                 <i class="material-icons">home</i>
                 <span>Home</span>
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('admin.class') }}">
                 <i class="material-icons">desktop_windows</i>
                 <span>Class</span>
             </a>
@@ -26,7 +26,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('admin.gallery') }}">
                 <i class="material-icons">add_a_photo</i>
                 <span>Gallery</span>
             </a>

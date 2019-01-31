@@ -4,21 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class ClassController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function halamanAdmin(){
-        return view('slicing.dasboard');
-    }
-
     public function index()
     {
-        return view('slicing.createadmin');
+        return view('slicing.class');
     }
 
     /**
@@ -28,7 +23,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('slicing.createclass');
     }
 
     /**
