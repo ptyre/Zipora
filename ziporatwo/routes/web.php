@@ -82,6 +82,19 @@ Route::post('/AHome/member/createm',[
 	'uses' => 'MemberController@store',
 	'as' => 'admin.createmember']);
 
+// information
+Route::get('/AHome/info',[
+	'uses' => 'InfoController@index',
+	'as' => 'admin.info']);
+
+Route::get('/AHome/info/createin',[
+	'uses' => 'InfoController@create',
+	'as' => 'admin.createi']);
+
+Route::post('/AHome/info/createin',[
+	'uses' => 'InfoController@store',
+	'as' => 'admin.newinfo']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

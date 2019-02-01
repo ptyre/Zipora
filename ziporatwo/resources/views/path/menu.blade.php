@@ -14,7 +14,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('admin.info') }}">
                 <i class="material-icons">info</i>
                 <span>Information</span>
             </a>
