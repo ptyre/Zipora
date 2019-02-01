@@ -23,6 +23,7 @@ Route::get('/loginAdmin',[
 
 Route::get('/pagetest', 'PagesController@index')->name('pagetest');
 
+// awal
 Route::get('/AHome',[
 	'uses' => 'AdminController@halamanAdmin',
 	'as' => 'homeadmin']);
