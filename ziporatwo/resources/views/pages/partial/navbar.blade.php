@@ -1,24 +1,20 @@
-
-<div id="logo" class="menuUp">
-        <h1>Hardi Bray.</h1>
-        <div id="navToggle"><a href="#">page1</a></div>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#">page2</a></li>
-            <li><a href="#">page3</a></li>
-            <li>
-                <a href="#">page4 <span class="toggle">Expand</span><span class="caret"></span></a>
-                <nav>
-                    <ul>
-                        <li><a href="#">page1</a></li>
-                        <li><a href="#">page2</a></li>
-                        <li><a href="#">page3</a></li>
-                        <li><a href="#">page4</a></li>
-                        <li><a href="#">page5</a></li>
-                    </ul>
-                </nav>
-            </li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Help</a></li>
-        </ul>
+<nav class="menucoy">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Okay Bray</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>

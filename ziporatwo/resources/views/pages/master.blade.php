@@ -12,12 +12,19 @@
     <title></title>
   </head>
   <body>
-<header>
-      @include('pages.partial.navbar')
-</header>
+    @include('pages.partial.navbar')
+
+<div class="kepala">
+
+@yield('header')
+overflow: hidden
+</div>
 
 
-    @yield('header')
+
+
+
+
 
     @yield('content')
 

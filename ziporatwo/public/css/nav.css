@@ -1,220 +1,349 @@
-* {
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.menucoy {
+    width: 100%;
+    height: 65px;
+    position: relative;
+    line-height: 65px;
+    text-align: center;
+    z-index: 21;
+}
+
+.menucoy div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.menucoy div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.menucoy div.logo a:hover {
+    color: #00E676;
+}
+
+.menucoy div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.menucoy div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
-    outline: none;
-    box-sizing: border-box;
 }
 
-body {
-    background: #eee;
+.menucoy div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.menucoy div.main_list ul li a {
+    text-decoration: none;
     color: #fff;
-    -webkit-font-smoothing: antialiased;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    font-weight: 400;
-    height: auto !important;
-    height: 100%;
-    min-height: 100%;
-    text-rendering: optimizeLegibility;
+    line-height: 65px;
+    font-size: 2.4rem;
 }
 
-header {
-    background-color: rgb(253, 144, 0);
-    border-bottom: 1px solid rgba(0,0,0,.15);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.menucoy div.main_list ul li a:hover {
+    color: #00E676;
 }
 
-    header > div#logo {
-        line-height: 70px;
-        position: relative;
+
+/* Home section */
+
+
+
+.navTrigger {
+    display: none;
+}
+
+.menucoy {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
     }
+}
 
-    header > .menuDown {
-        box-shadow: 0 3px 5px rgba(0,0,0,.15);
-    }
-
-    header > .menuUp {
-        box-shadow: none;
-    }
-
-        header > div#logo > h1 {
-            color: rgb(253, 144, 0);
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-
-        header > div#logo > div#navToggle {
-            background-color: rgba(0,0,0,.15);
-            position: absolute;
-            right: 0;
-            top: 0;
-            transition: 300ms all ease;
-        }
-
-            header > div#logo > div#navToggle:hover {
-                background-color: rgba(0,0,0,.1);
-            }
-
-            header > div#logo > div#navToggle > a {
-                color: rgba(255,255,255,.85);
-                display: block;
-                font-size: 0.85em;
-                font-weight: 600;
-                padding: 0 2.5rem;
-                text-decoration: none;
-                transition: 300ms all ease;
-            }
-
-                header > div#logo > div#navToggle:hover > a {
-                    color: rgba(255,255,255,1);
-                }
-
-    header > nav {
-        background-color: rgb(0, 0, 0);
-        display: none;
-        flex: 1;
-        transform: 300ms all ease;
-    }
-
-        header nav > ul {
-            list-style-type: none;
-        }
-
-            header nav > ul > li {
-                border-bottom: 1px dotted rgba(0,0,0,.1);
-                position: relative;
-            }
-
-                header nav > ul > li:last-of-type {
-                    border-bottom: none;
-                }
-
-                header nav > ul > li > a {
-                    display: block;
-                    color: rgba(0,0,0,.65);
-                    font-weight: 1000;
-                    padding: 1.5rem 0;
-                    text-decoration: none;
-                    transition: 250ms all ease;
-                }
-
-					header nav > ul > li > a span.toggle {
-						background-color: rgba(0,0,0,.05);
-						border-radius: 3rem;
-						color: rgba(0,0,0,.25);
-						font-size: 0.75em;
-						font-weight: 1000;
-						padding: 2px 8px;
-						text-transform: lowercase;
-					}
-
-					header nav > ul > li > a span.caret {
-                        display: none;
-					}
-
-                    header > nav > ul > li:hover > a {
-                        color: rgb(140, 193, 193);
-                    }
-
-            header > nav > ul > li > nav {
-                background-color: rgb(51,51,51);
-                border-radius: 1.5em;
-                box-shadow: 0 2px 8px rgba(0,0,0,.6);
-                display: none;
-                overflow: hidden;
-                position: absolute;
-                right: 5%;
-                width: 90%;
-                z-index: 100;
-            }
-
-                header > nav > ul > li > nav > ul > li > a {
-                    color: rgba(255,255,255,.85);
-                    transition: 300ms all ease;
-                }
-
-                    header > nav > ul > li > nav > ul > li:hover > a {
-                        background-color: rgba(0,0,0,.6);
-                        color: rgba(255,255,255,1);
-                    }
-
-/* Medium screens */
-@media all and (min-width: 600px) {
-    header > div#logo > div#navToggle {
-        display: none;
-    }
-
-    header {
-        background-color: white;
-        flex-direction: row;
-        line-height: 90px;
-        padding: 0 3rem;
-		position: fixed;
-        text-align: left;
-		width: 100%;
-    }
-
-        header > div#logo {
-            background-color: transparent;
-            line-height: 90px;
-        }
-
-            header > div#logo > h1 {
-                color: rgb(140, 193, 193);
-            }
-
-    header > nav {
-        background-color: transparent;
+@media screen and (max-width:768px) {
+    .navTrigger {
         display: block;
     }
-
-        header > nav > ul {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-end;
-        }
-
-            header nav > ul > li {
-                border-bottom: none;
-            }
-
-                header nav > ul > li > a {
-                    padding: 0 1.25rem;
-                }
-
-					header nav > ul > li > a span.toggle {
-						display: none;
-					}
-
-					header nav > ul > li > a span.caret {
-                        border-bottom: 4px solid transparent;
-                        border-top: 4px solid rgba(0,0,0,.65);
-                        border-right: 4px solid transparent;
-                        border-left: 4px solid transparent;
-						border-radius: 1px;
-						content: "";
-						display: inline-block;
-						height: 0;
-						margin: 0 0 0 .25rem;
-						transition: 250ms all ease;
-						width: 0;
-						vertical-align: middle;
-					}
-
-						header nav > ul > li:hover > a span.caret {
-							border-top-color: rgb(140, 193, 193);
-							transform: rotate(270deg);
-						}
-
-    header > nav > ul > li:hover > nav {
-        background-color: rgb(51,51,51);
-        border-radius: .25em;
-        box-shadow: 0 2px 8px rgba(0,0,0,.6);
-        display: block;
-        line-height: 3em;
-        right: -50%;
-        width: 196px;
+    .menucoy div.logo {
+        margin-left: 15px;
     }
+    .menucoy div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .menucoy div.show_list {
+        height: auto;
+        display: none;
+    }
+    .menucoy div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .menucoy div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .menucoy div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .menucoy div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+
+
+
+
+
+.myH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
 }
