@@ -68,6 +68,20 @@ Route::post('/AHome/book/create',[
 	'uses' => 'BookController@store',
 	'as' => 'admin.createbook']);
 
+// member
+
+Route::get('/AHome/member',[
+	'uses' => 'MemberController@index',
+	'as' => 'admin.member']);
+
+Route::get('/AHome/member/createm',[
+	'uses' => 'MemberController@create',
+	'as' => 'admin.newmember']);
+
+Route::post('/AHome/member/createm',[
+	'uses' => 'MemberController@store',
+	'as' => 'admin.createmember']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

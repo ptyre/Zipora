@@ -26,7 +26,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="{{ route('admin.member') }}">
                 <i class="material-icons">assignment_ind</i>
                 <span>Member</span>
             </a>
@@ -41,6 +41,12 @@
             <a href="{{ route('create.admin') }}">
                 <i class="material-icons">contacts</i>
                 <span>Admin</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="material-icons">exit_to_app</i>
+                <span>Log out</span>
             </a>
         </li>
     </ul>

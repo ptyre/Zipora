@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Blank Page | Bootstrap Based Admin Template - Material Design</title>
+    <title>Ziporatwo</title>
     <!-- Favicon-->
     <link href="{{asset('images/zipora.ico')}}" rel="shortcut icon" type="image/x-icon">
 
@@ -20,6 +20,18 @@
 
     <!-- Animation Css -->
     <link href="{{asset('plugins/animate-css/animate.css')}}" rel="stylesheet" />
+
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link href="{{asset('plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}" rel="stylesheet" />
+
+    <!-- Bootstrap DatePicker Css -->
+    <link href="{{asset('plugins/bootstrap-datepicker/css/bootstrap-datepicker.css')}}" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="{{asset('plugins/morrisjs/morris.css')}}" rel="stylesheet" />
+
+    <!-- Select Css -->
+    <link href="{{asset('plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
 
     <!-- Custom Css -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
@@ -65,11 +77,25 @@
     <!-- Waves Effect Plugin Js -->
     <script src="{{asset('plugins/node-waves/waves.js')}}"></script>
 
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="{{asset('plugins/jquery-countto/jquery.countTo.js')}}"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="{{asset('plugins/raphael/raphael.min.js')}}"></script>
+    <script src="{{asset('plugins/morrisjs/morris.js')}}"></script>
+
     <!-- Custom Js -->
     <script src="{{asset('js/admin.js')}}"></script>
 
+    <!-- Bootstrap Material Datetime Picker Plugin Js -->
+    <script src="{{asset('plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')}}"></script>
+
+    <!-- Bootstrap Datepicker Plugin Js -->
+    <script src="{{asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
+
     <!-- Demo Js -->
-    <script src="{{asset('js/demo.js')}}"></script>
+    <script src="{{asset('js/demo.js')}}"></script>  
+    <script src="{{asset('js/tambahan.js')}}" type="text/javascript"></script>      
     @yield('script')
 </body>
 

@@ -13,7 +13,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        //
+        return view('slicing.member');
     }
 
     /**
@@ -23,7 +23,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
+        return view('slicing.createmember');
     }
 
     /**
@@ -34,7 +34,7 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

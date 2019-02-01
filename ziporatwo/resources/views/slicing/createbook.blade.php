@@ -46,7 +46,17 @@
                                                 <input type="text" name="name_class" class="form-control" placeholder="Kota" required />
                                             </div>
                                         </div>
-                                        <!-- Input Tahun Disini -->
+                                        <div class="form-group">
+                                            <b>Year</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons">date_range</i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="date" name="tahun" id="tahun" data-date-format="YYYY/MM/DD" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <b>Small Description</b>
                                             <div class="form-line">
