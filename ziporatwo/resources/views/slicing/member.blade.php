@@ -4,10 +4,10 @@
         <div class="card">
             <div class="header">
                 <h2>
-                    BOOK
-                    <small>Class Book</small>
+                    MEMBER
+                    <small>Class Member</small>
                 </h2>
-                <ul class="header-dropdown m-r--5"><a href="{{ route('admin.newbook') }}"><button type="button" class="btn btn-info waves-effect">New Book</button></a>
+                <ul class="header-dropdown m-r--5"><a href="{{ route('admin.newmember') }}"><button type="button" class="btn btn-info waves-effect">New Member</button></a>
                     <li class="dropdown" hidden="true">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons"></i>

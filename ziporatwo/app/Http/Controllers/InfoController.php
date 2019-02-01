@@ -13,7 +13,7 @@ class InfoController extends Controller
      */
     public function index()
     {
-        //
+        return view('slicing.information');
     }
 
     /**
@@ -23,7 +23,7 @@ class InfoController extends Controller
      */
     public function create()
     {
-        //
+        return view('slicing.createinfo');
     }
 
     /**
@@ -34,7 +34,7 @@ class InfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
