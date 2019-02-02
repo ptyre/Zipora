@@ -34,7 +34,32 @@ class ClassController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+        $url = "http://localhost/zipora/api/createClass.php";
+        $name_class = $request->_name_class;
+        $deskripsi = $request->_deskripsi;
+
+        $data = array(
+            '_name_class' => $name_class,
+            '_deskripsi' => $deskripsi
+        );
+
+        $option = array(
+            'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => "POST",
+            'content' => http_build_query($data)
+            )
+        );
+        $context = stream_context_create($option);
+        $result = file_get_contents($url, false, $context);
+
+        if ($result == "\r\n") {
+            return redirect()->route('admin.class');
+        }
+        else {
+            return redirect()->route('admin.class');
+        }
     }
 
     /**

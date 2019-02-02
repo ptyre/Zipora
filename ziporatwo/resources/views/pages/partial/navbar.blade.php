@@ -1,28 +1,20 @@
-<div class="mainmenu-area" data-spy="affix" data-offset-top="100">
+<nav class="menucoy">
         <div class="container">
-            <!--Logo-->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="navbar-brand logo">
-                    <h2>page1</h2>
-                </a>
+            <div class="logo">
+                <a href="#">Okay Bray</a>
             </div>
-            <!--Logo/-->
-            <nav class="collapse navbar-collapse" id="primary-menu">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#home-page">Home</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
-                    <li><a href="#">page1</a></li>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
         </div>
-    </div>
+    </nav>

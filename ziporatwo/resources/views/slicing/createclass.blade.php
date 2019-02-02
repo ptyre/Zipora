@@ -10,7 +10,6 @@
                             <h2>
                                 Input New Class
                             </h2>
-                            
                         </div>
                         <form method="POST" action="{{ route('create.newclass') }}">
                         {{ csrf_field() }}
@@ -18,8 +17,15 @@
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
+                                            <b>Class Name</b>
                                             <div class="form-line">
-                                                <input type="text" name="name_class" class="form-control" placeholder="Class Name" required />
+                                                <input type="text" name="_name_class" class="form-control" placeholder="Input Class Name" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <b>Deskripsi</b>
+                                            <div class="form-line">
+                                                <input type="text" name="_deskripsi" class="form-control" placeholder="....." required />
                                             </div>
                                         </div>
                                         <div class="form-group">

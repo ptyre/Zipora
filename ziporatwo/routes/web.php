@@ -22,7 +22,8 @@ Route::get('/loginAdmin',[
 
 
 Route::get('/pagetest', 'PagesController@index')->name('pagetest');
-=======
+
+// awal
 Route::get('/AHome',[
 	'uses' => 'AdminController@halamanAdmin',
 	'as' => 'homeadmin']);
@@ -53,6 +54,46 @@ Route::post('/AHome/class/createc',[
 Route::get('/AHome/gallery',[
 	'uses' => 'GalleryController@index', 
 	'as' => 'admin.gallery']);
+
+// book
+Route::get('/AHome/book',[
+	'uses' => 'BookController@index', 
+	'as' => 'admin.book']);
+
+Route::get('/AHome/book/create',[
+	'uses' => 'BookController@create', 
+	'as' => 'admin.newbook']);
+
+Route::post('/AHome/book/create',[
+	'uses' => 'BookController@store',
+	'as' => 'admin.createbook']);
+
+// member
+
+Route::get('/AHome/member',[
+	'uses' => 'MemberController@index',
+	'as' => 'admin.member']);
+
+Route::get('/AHome/member/createm',[
+	'uses' => 'MemberController@create',
+	'as' => 'admin.newmember']);
+
+Route::post('/AHome/member/createm',[
+	'uses' => 'MemberController@store',
+	'as' => 'admin.createmember']);
+
+// information
+Route::get('/AHome/info',[
+	'uses' => 'InfoController@index',
+	'as' => 'admin.info']);
+
+Route::get('/AHome/info/createin',[
+	'uses' => 'InfoController@create',
+	'as' => 'admin.createi']);
+
+Route::post('/AHome/info/createin',[
+	'uses' => 'InfoController@store',
+	'as' => 'admin.newinfo']);
 
 Auth::routes();
 
