@@ -17,7 +17,6 @@
 <div class="kepala">
 
 @yield('header')
-overflow: hidden
 </div>
 
 
