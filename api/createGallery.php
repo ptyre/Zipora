@@ -6,12 +6,14 @@
             die(mysqli_connect_error($con));
     }
 
-    $nameclass = $_POST['_name_class'];
-    $deskripsi = $_POST['_deskripsi'];
+    $pict = $_POST['_pict'];
+    $info = $_POST['_info'];
+    $tgl = $_POST['_tgl'];
+    $jenis = $_POST['_jenis'];
 
-    if( $nameclass != "")
+    if( $pict != "" && $tgl != "" && $jenis != "")
     {
-        $query = "INSERT INTO `tb_class` (`id_class`, `name_class`, `deskripsi`) VALUES (NULL, '$nameclass', '$deskripsi');";
+        $query = "INSERT INTO `tb_galery`(`id`, `pict`, `info`, `tgl`, `jenis`) VALUES (NULL, '$pict', '$info', '$tgl', '$jenis')";
         $result = mysqli_query($con, $query);
         if( $result)
         {

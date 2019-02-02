@@ -7,7 +7,7 @@
 		die(mysqli_connect_error($con));
 	}
 
-	$qr = "SELECT tb_galery.id, tb_jenisgallery.nama_jenis, tb_galery.tgl,tb_galery.info ,tb_galery.pict FROM tb_galery INNER JOIN tb_jenisgallery ON tb_jenisgallery.id_galeri = tb_galery.galeri";
+	$qr = "SELECT tb_member.id_member, tb_member.name, tb_member.email, tb_member.alamat, tb_member.institusi, tb_member.tgl_masuk, tb_class.name_class FROM tb_member INNER JOIN tb_class ON tb_class.id_class = tb_member.id_member";
 	$result = mysqli_query($con, $qr);
 
 	if (mysqli_num_rows($result) > 0) {

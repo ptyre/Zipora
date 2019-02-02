@@ -6,12 +6,13 @@
             die(mysqli_connect_error($con));
     }
 
-    $nameclass = $_POST['_name_class'];
-    $deskripsi = $_POST['_deskripsi'];
+    $username = $_POST['_username'];
+    $password = $_POST['_password'];
+    $namename = $_POST['_name'];
 
-    if( $nameclass != "")
+    if( $username != "")
     {
-        $query = "INSERT INTO `tb_class` (`id_class`, `name_class`, `deskripsi`) VALUES (NULL, '$nameclass', '$deskripsi');";
+        $query = "INSERT INTO `tb_admin`(`id`, `username`, `password`, `nama`, `status`) VALUES (NULL,'$username','$password','$namename','false')";
         $result = mysqli_query($con, $query);
         if( $result)
         {

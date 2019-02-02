@@ -38,7 +38,7 @@ Route::post('/AHome/createa',[
 	'as' => 'create.newadmin']);
 
 // class
-Route::get('/Ahome/class', [
+Route::get('/AHome/class', [
 	'uses' => 'ClassController@index',
 	'as' => 'admin.class']);
 
@@ -49,6 +49,18 @@ Route::get('/AHome/class/createc',[
 Route::post('/AHome/class/createc',[
 	'uses' => 'ClassController@store',
 	'as' => 'create.newclass']);
+
+Route::get('/AHome/class/edit/{id_class}',[
+	'uses' => 'ClassController@edit',
+	'as' => 'edit.class']);
+
+Route::post('/AHome/class/update',[
+	'uses' => 'ClassController@update',
+	'as' => 'update.class']);
+
+Route::post('/Ahome/class',[
+	'uses' => 'ClassController@destroy',
+	'as' => 'delete.class']);
 
 // gallery
 Route::get('/AHome/gallery',[

@@ -6,20 +6,19 @@
             die(mysqli_connect_error($con));
     }
 
-    $nameclass = $_POST['_name_class'];
-    $deskripsi = $_POST['_deskripsi'];
+    $id_gallery = $_POST['_idgallery'];
 
-    if( $nameclass != "")
+    if( $id_gallery != "")
     {
-        $query = "INSERT INTO `tb_class` (`id_class`, `name_class`, `deskripsi`) VALUES (NULL, '$nameclass', '$deskripsi');";
+        $query = "DELETE FROM `tb_galery` WHERE id = '$id_gallery'";
         $result = mysqli_query($con, $query);
         if( $result)
         {
-            echo json_encode(array('announcement' => "Insert berhasil"));
+            echo json_encode(array('announcement' => "Delete berhasil"));
         }
         else
         {
-            echo json_encode(array('announcement' => "insert gagal"));
+            echo json_encode(array('announcement' => "Delete gagal"));
         }
     }
     else

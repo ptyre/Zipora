@@ -6,12 +6,16 @@
             die(mysqli_connect_error($con));
     }
 
-    $nameclass = $_POST['_name_class'];
-    $deskripsi = $_POST['_deskripsi'];
+    $name = $_POST['_name'];
+    $email = $_POST['_email'];
+    $alamat = $_POST['_alamat'];
+    $institusi = $_POST['_institusi'];
+    $tgl_masuk = $_POST['_tgl_masuk'];
+    $id_class = $_POST['_id_class'];
 
-    if( $nameclass != "")
+    if( $id_class != "" && $alamat != "" && $name != "")
     {
-        $query = "INSERT INTO `tb_class` (`id_class`, `name_class`, `deskripsi`) VALUES (NULL, '$nameclass', '$deskripsi');";
+        $query = "INSERT INTO `tb_member`(`id_member`, `name`, `email`, `alamat`, `institusi`, `tgl_masuk`, `id_class`) VALUES (NULL, '$name', '$email', '$alamat', '$institusi', '$tgl_masuk', '$id_class')";
         $result = mysqli_query($con, $query);
         if( $result)
         {

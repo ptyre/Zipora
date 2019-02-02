@@ -7,8 +7,10 @@
 		die(mysqli_connect_error($con));
 	}
 
-	$qr = "SELECT tb_galery.id, tb_jenisgallery.nama_jenis, tb_galery.tgl,tb_galery.info ,tb_galery.pict FROM tb_galery INNER JOIN tb_jenisgallery ON tb_jenisgallery.id_galeri = tb_galery.galeri";
-	$result = mysqli_query($con, $qr);
+	$id_class = $_POST['_id'];
+
+	$query = "SELECT * FROM tb_class WHERE id_class = '$id_class'";
+	$result = mysqli_query($con, $query);
 
 	if (mysqli_num_rows($result) > 0) {
 		$arr_rak = array();

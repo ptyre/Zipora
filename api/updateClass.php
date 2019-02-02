@@ -6,20 +6,21 @@
             die(mysqli_connect_error($con));
     }
 
+    $id_class = $_POST['_id_class'];
     $nameclass = $_POST['_name_class'];
     $deskripsi = $_POST['_deskripsi'];
 
-    if( $nameclass != "")
+    if( $id_class != "")
     {
-        $query = "INSERT INTO `tb_class` (`id_class`, `name_class`, `deskripsi`) VALUES (NULL, '$nameclass', '$deskripsi');";
+        $query = "UPDATE `tb_class` SET `name_class`= '$nameclass',`deskripsi`= '$deskripsi' WHERE id_class = '$id_class'";
         $result = mysqli_query($con, $query);
         if( $result)
         {
-            echo json_encode(array('announcement' => "Insert berhasil"));
+            echo json_encode(array('announcement' => "Update berhasil"));
         }
         else
         {
-            echo json_encode(array('announcement' => "insert gagal"));
+            echo json_encode(array('announcement' => "Update gagal"));
         }
     }
     else
