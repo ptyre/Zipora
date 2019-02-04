@@ -110,3 +110,8 @@ Route::post('/AHome/info/createin',[
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
