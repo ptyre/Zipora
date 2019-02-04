@@ -7,7 +7,7 @@
     }
 
     $judul = $_POST['_judul'];
-    $pict = $_POST['_pict'];
+    $pict = $_POST['_picture'];
     $informasi = $_POST['_informasi'];
     $id_jenisinfo = $_POST['_id_jenisinfo'];
     $tgl = $_POST['_tgl'];

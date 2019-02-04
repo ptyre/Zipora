@@ -49,24 +49,28 @@ class InfoController extends Controller
      */
     public function store(Request $request)
     {
-        
-
+        $image = $request->file('_picture');
         $path = $request->_picture->getClientOriginalName();
-        $image = $_FILES['_picture']['name'];
-        $target = "C:/xampp/htdocs/Zipora/ziporatwo/public/images/".basename($image);
-        move_uploaded_file($_FILES['_picture']['tmp_name'], $target);
+        $new_name = $image->getClientOriginalName();
+        $image->move(public_path("images"), $new_name);
+        //return back()->with('success','Image Upload success')->with('path',$new_name);
+
+        // $path = $request->_picture->getClientOriginalName();
+        // $image = $_FILES['_picture']['name'];
+        // $target = "C:/xampp/htdocs/Zipora/ziporatwo/public/images/".basename($image);
+        // move_uploaded_file($_FILES['_picture']['tmp_name'], $target);
 
         $url = "http://localhost/zipora/api/createInformation.php";
 
         $judul = $request->_judul;
-        $pict = $request->_picture;
+        $pict = $path;
         $informasi = $request->_informasi;
         $id_jenisinfo = $request->_id_jenisinfo;
         $tgl = $request->_tgl;
 
         $data = array(
             '_judul' => $judul,
-            '_picture' => $pict,
+            '_picture' => $path,
             '_informasi' => $informasi,
             '_id_jenisinfo' => $id_jenisinfo,
             '_tgl' => $tgl
@@ -82,17 +86,17 @@ class InfoController extends Controller
         $context = stream_context_create($option);
         $result = file_get_contents($url, false, $context);
 
-        return dd($request->all());
-        Session::flash('message', 'Success');
+        //return dd();
+        // Session::flash('message', 'Success');
         return redirect()->route('admin.info');
-        if ($result == "\r\n") {
+        // if ($result == "\r\n") {
             
-        }
-        else {
-            //Session::flash('message', 'Gagal');
-            //return redirect()->route('admin.info');
-            return dd($request->all());
-        }
+        // }
+        // else {
+        //     //Session::flash('message', 'Gagal');
+        //     //return redirect()->route('admin.info');
+        //     return dd($request->all());
+        // }
     }
 
     /**
