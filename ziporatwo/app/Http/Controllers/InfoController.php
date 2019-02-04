@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Input;
 
 class InfoController extends Controller
 {
@@ -48,18 +49,24 @@ class InfoController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-        $url = "http://localhost/zipora/api/createInformation.php";
         
+
+        $path = $request->_picture->getClientOriginalName();
+        $image = $_FILES['_picture']['name'];
+        $target = "C:/xampp/htdocs/Zipora/ziporatwo/public/images/".basename($image);
+        move_uploaded_file($_FILES['_picture']['tmp_name'], $target);
+
+        $url = "http://localhost/zipora/api/createInformation.php";
+
         $judul = $request->_judul;
-        $pict = $request->_pict;
+        $pict = $request->_picture;
         $informasi = $request->_informasi;
         $id_jenisinfo = $request->_id_jenisinfo;
         $tgl = $request->_tgl;
 
         $data = array(
             '_judul' => $judul,
-            '_pict' => $pict,
+            '_picture' => $pict,
             '_informasi' => $informasi,
             '_id_jenisinfo' => $id_jenisinfo,
             '_tgl' => $tgl
@@ -75,16 +82,17 @@ class InfoController extends Controller
         $context = stream_context_create($option);
         $result = file_get_contents($url, false, $context);
 
+        return dd($request->all());
         Session::flash('message', 'Success');
         return redirect()->route('admin.info');
-        // if ($result == "\r\n") {
+        if ($result == "\r\n") {
             
-        // }
-        // else {
-        //     //Session::flash('message', 'Gagal');
-        //     //return redirect()->route('admin.info');
-        //     dd($request->all());
-        // }
+        }
+        else {
+            //Session::flash('message', 'Gagal');
+            //return redirect()->route('admin.info');
+            return dd($request->all());
+        }
     }
 
     /**

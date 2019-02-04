@@ -63,7 +63,7 @@
                                 Input New Information
                             </h2>
                         </div>
-                        <form method="POST" action="{{ route('admin.newinfo') }}">
+                        <form method="POST" enctype="multipart/form-data" action="{{ route('admin.newinfo') }}">
                         {{ csrf_field() }}
                             <div class="body">
                                 <div class="row clearfix">
@@ -95,7 +95,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="imageInput">Choose Photo</label>
-                                            <input data-preview="#preview" name="_pict" type="file" accept="image/*" id="imageInput">
+                                            <input name="_picture" type="file" id="_picture">
                                             <img class="col-sm-6" id="preview"  src="">
                                         </div>
                                         <div class="form-group">
