@@ -43,8 +43,7 @@
                     <img src="{{asset('images/user.png')}}" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opang</div>
-                    <div class="email">naufaldwimln@gmail.com</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMIN</div>
                 </div>
             </div>
             <!-- Menu -->
@@ -64,7 +63,7 @@
                                 Input New Information
                             </h2>
                         </div>
-                        <form method="POST" action="{{ route('admin.createbook') }}">
+                        <form method="POST" action="{{ route('admin.newinfo') }}">
                         {{ csrf_field() }}
                             <div class="body">
                                 <div class="row clearfix">
@@ -72,7 +71,7 @@
                                         <div class="form-group">
                                             <b>Judul Informasi</b>
                                             <div class="form-line">
-                                                <input type="text" name="name_class" class="form-control" placeholder="Judul Informasi ...." required />
+                                                <input type="text" name="_judul" class="form-control" placeholder="Judul Informasi ...." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -82,29 +81,26 @@
                                                     <i class="material-icons">date_range</i>
                                                 </span>
                                                 <div class="form-line">
-                                                    <input type="date" name="tahun" id="tahun" data-date-format="YYYY/MM/DD" class="form-control">
+                                                    <input type="date" name="_tgl" id="tahun" data-date-format="YYYY/MM/DD" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Combobox</b>
-                                            <select class="form-control show-tick" >
-                                                <option value="">-- Please select --</option>
-                                                <option value="10">10</option>
-                                                <option value="20">20</option>
-                                                <option value="30">30</option>
-                                                <option value="40">40</option>
-                                                <option value="50">50</option>
+                                            <select class="form-control show-tick" name="_id_jenisinfo">
+                                                @foreach($jenis as $j)
+                                                    <option value="{{ $j['id'] }}">{{ $j['jenisinformasi'] }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="imageInput">Choose Photo</label>
-                                            <input data-preview="#preview" name="input_img" type="file" accept="image/*" id="imageInput">
+                                            <input data-preview="#preview" name="_pict" type="file" accept="image/*" id="imageInput">
                                             <img class="col-sm-6" id="preview"  src="">
                                         </div>
                                         <div class="form-group">
                                             <b>About That</b>
-                                                <textarea id="ckeditor">
+                                                <textarea id="ckeditor" name="_informasi">
                                                     <h2>WYSIWYG Editor</h2>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non dui et tortor vulputate luctus. Praesent consequat rhoncus velit, ut molestie arcu venenatis sodales.</p>
                                                     <h3>Lacinia</h3>

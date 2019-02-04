@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class InfoController extends Controller
 {
@@ -11,9 +12,18 @@ class InfoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('slicing.information');
+        $url = "http://localhost/zipora/api/getInfoInformasi.php";
+        $json = json_decode(file_get_contents($url),true);
+
+        if (empty($json)) {
+            return view('slicing.information');
+        } else {
+            return view('slicing.information', ['info' => $json]);    
+        }
+        
+        //return dd($request->$json);
     }
 
     /**
@@ -23,7 +33,11 @@ class InfoController extends Controller
      */
     public function create()
     {
-        return view('slicing.createinfo');
+        $url = "http://localhost/zipora/api/getInfoJenisInfo.php";
+        $json = json_decode(file_get_contents($url),true);
+        return view('slicing.createinfo', ['jenis' => $json]);
+
+        // return view('slicing.createinfo');
     }
 
     /**
@@ -34,7 +48,43 @@ class InfoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //dd($request->all());
+        $url = "http://localhost/zipora/api/createInformation.php";
+        
+        $judul = $request->_judul;
+        $pict = $request->_pict;
+        $informasi = $request->_informasi;
+        $id_jenisinfo = $request->_id_jenisinfo;
+        $tgl = $request->_tgl;
+
+        $data = array(
+            '_judul' => $judul,
+            '_pict' => $pict,
+            '_informasi' => $informasi,
+            '_id_jenisinfo' => $id_jenisinfo,
+            '_tgl' => $tgl
+        );
+
+        $option = array(
+            'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => "POST",
+            'content' => http_build_query($data)
+            )
+        );
+        $context = stream_context_create($option);
+        $result = file_get_contents($url, false, $context);
+
+        Session::flash('message', 'Success');
+        return redirect()->route('admin.info');
+        // if ($result == "\r\n") {
+            
+        // }
+        // else {
+        //     //Session::flash('message', 'Gagal');
+        //     //return redirect()->route('admin.info');
+        //     dd($request->all());
+        // }
     }
 
     /**
@@ -43,9 +93,11 @@ class InfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showJenisInfo()
     {
-        //
+        // $url = "http://localhost/zipora/api/getInfoJenisInfo.php";
+        // $json = json_decode(file_get_contents($url),true);
+        // return view('admin.createi', ['jenis' => $json]);
     }
 
     /**
@@ -56,7 +108,24 @@ class InfoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $url = "http://localhost/zipora/api/searchInfo.php";
+
+        $data = array('_id' => $id);
+
+        $option = array(
+            'http' => array(
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method' => "POST",
+                'content' => http_build_query($data)
+            )
+        );
+
+        $context = stream_context_create($option);
+        $result = file_get_contents($url,true,$context);
+
+        $json = json_decode($result);
+
+        return view('slicing.updateInformasi', compact('json'));
     }
 
     /**
@@ -66,9 +135,33 @@ class InfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $url = "http://localhost/zipora/api/updateInformation.php";
+        $id = $request->_id;
+        $judul = $request->_judul;
+        $informasi = $request->_informasi;
+        $tgl = $request->_tgl;
+
+        $data = array(
+            '_id' => $id,
+            '_judul' => $judul,
+            '_informasi' => $informasi,
+            '_tgl' => $tgl
+        );
+
+        $option = array(
+            'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => "POST",
+            'content' => http_build_query($data)
+            )
+        );
+        $context = stream_context_create($option);
+        $result = file_get_contents($url, false, $context);
+        //return dd($request->$result);
+        Session::flash('message', 'Success edited');
+        return redirect()->route('admin.info');
     }
 
     /**
@@ -77,8 +170,24 @@ class InfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $url = "http://localhost/zipora/api/deleteInformation.php";
+        $id = $request->_id;
+        $data = array('_id' => $id);
+
+        $option = array(
+            'http' => array(
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method' => "POST",
+                'content' => http_build_query($data)
+            )
+        );
+
+        $context = stream_context_create($option);
+        $result = file_get_contents($url, false, $context);
+
+        Session::flash('message', 'Success deleted');
+        return redirect()->route('admin.info');
     }
 }
