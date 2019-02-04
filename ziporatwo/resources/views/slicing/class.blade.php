@@ -54,6 +54,11 @@
     </section>
 
     <section class="content">
+        @if(Session::has('message'))
+        <p class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>{{ Session::get('message') }}
+        </p>
+        @endif
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -86,24 +91,26 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($class as $c)
-                                        <tr>
-                                            <td hidden>{{ $c['id_class'] }}</td>
-                                            <td>{{ $c['name_class']}}</td>
-                                            <td>{{ $c['deskripsi']}}</td>
-                                            <td><a href="{{  route('edit.class', $c['id_class']) }}" ><button type="button" class="btn btn-primary waves-effect">
-                                                <i class="material-icons">settings</i>
-                                            </button></a>
-                                            <form method="POST" action="{{ route('delete.class') }}">
-                                            {{ csrf_field() }}
-                                                <input type="hidden" name="_id_class" value="{{ $c['id_class'] }}">
-                                                    <button type="submit" class="btn btn-danger waves-effect">
-                                                        <i class="material-icons">report</i>
-                                                     </button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                        @endforeach
+                                        <?php if (!empty($class)): ?>
+                                            @foreach($class as $c)
+                                            <tr>
+                                                <td hidden>{{ $c['id_class'] }}</td>
+                                                <td>{{ $c['name_class']}}</td>
+                                                <td>{{ $c['deskripsi']}}</td>
+                                                <td><a href="{{  route('edit.class', $c['id_class']) }}" ><button type="button" class="btn btn-primary waves-effect">
+                                                    <i class="material-icons">settings</i>
+                                                </button></a>
+                                                <form method="POST" action="{{ route('delete.class') }}">
+                                                {{ csrf_field() }}
+                                                    <input type="hidden" name="_id_class" value="{{ $c['id_class'] }}">
+                                                        <button type="submit" class="btn btn-danger waves-effect">
+                                                            <i class="material-icons">report</i>
+                                                         </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        <?php endif ?>
                                     </tbody>
                                 </table>
                             </div>

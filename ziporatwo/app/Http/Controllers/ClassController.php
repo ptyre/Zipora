@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ClassController extends Controller
 {
@@ -15,7 +16,12 @@ class ClassController extends Controller
     {
         $url = "http://localhost/zipora/api/getInfoClass.php";
         $json = json_decode(file_get_contents($url),true);
-        return view('slicing.class', ['class' => $json]);
+
+        if (empty($json)) {
+            return view('slicing.class');
+        } else {
+            return view('slicing.class', ['class' => $json]);
+        }
     }
 
     /**
@@ -36,7 +42,6 @@ class ClassController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         $url = "http://localhost/zipora/api/createClass.php";
         $name_class = $request->_name_class;
         $deskripsi = $request->_deskripsi;
@@ -56,12 +61,16 @@ class ClassController extends Controller
         $context = stream_context_create($option);
         $result = file_get_contents($url, false, $context);
 
-        if ($result == "\r\n") {
-            return redirect()->route('admin.class');
-        }
-        else {
-            return redirect()->route('admin.class');
-        }
+        Session::flash('message', 'Success');
+        return redirect()->route('admin.class');
+
+        // if ($result == "\r\n") {
+        //     Session::flash('message','Berhasil');
+            
+        // }
+        // else {
+        //     return redirect()->route('admin.class');
+        // }
     }
 
     /**
@@ -137,6 +146,7 @@ class ClassController extends Controller
         );
         $context = stream_context_create($option);
         $result = file_get_contents($url, false, $context);
+        Session::flash('message', 'Success edited');
         return redirect()->route('admin.class');
     }
 
@@ -163,6 +173,7 @@ class ClassController extends Controller
         $context = stream_context_create($option);
         $result = file_get_contents($url, false, $context);
 
+        Session::flash('message', 'Success deleted');
         return redirect()->route('admin.class');
     }
 }

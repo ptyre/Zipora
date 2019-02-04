@@ -8,7 +8,7 @@
                         <a href="{{ route('admin.class') }}"><i class="material-icons">keyboard_backspace</i></a>
                         <div class="header text-center">
                             <h2>
-                                Update New Class
+                                Update Class
                             </h2>
                         </div>
                         <form method="POST" action="{{ route('update.class') }}">

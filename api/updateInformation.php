@@ -6,14 +6,14 @@
             die(mysqli_connect_error($con));
     }
 
-    $id = $_POST('_id');
-    $judul = $_POST('_judul');
-    $informasi = $_POST('_informasi');
-    $id_jenisinfo = $_POST('_id_jenisinfo');
+    $id = $_POST['_id'];
+    $judul = $_POST['_judul'];
+    $informasi = $_POST['_informasi'];
+    $tgl = $_POST['_tgl'];
 
     if( $id != "")
     {
-        $query = "UPDATE `tb_informasi` SET `judul`= '$judul',`informasi`= '$informasi',`id_jenisinfo`= '$id_jenisinfo', WHERE id = '$id'";
+        $query = "UPDATE tb_informasi SET judul = '$judul', informasi = '$informasi', tgl = '$tgl' WHERE id = '$id'";
         $result = mysqli_query($con, $query);
         if( $result)
         {

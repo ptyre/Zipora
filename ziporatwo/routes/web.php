@@ -107,6 +107,18 @@ Route::post('/AHome/info/createin',[
 	'uses' => 'InfoController@store',
 	'as' => 'admin.newinfo']);
 
+Route::get('/AHome/info/edit/{id}',[
+	'uses' => 'InfoController@edit',
+	'as' => 'edit.info']);
+
+Route::post('/AHome/info/update',[
+	'uses' => 'InfoController@update',
+	'as' => 'update.info']);
+
+Route::post('/AHome/info',[
+	'uses' => 'InfoController@destroy',
+	'as' => 'delete.info']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

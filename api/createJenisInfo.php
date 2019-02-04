@@ -6,15 +6,11 @@
             die(mysqli_connect_error($con));
     }
 
-    $judul = $_POST['_judul'];
-    $pict = $_POST['_pict'];
-    $informasi = $_POST['_informasi'];
-    $id_jenisinfo = $_POST['_id_jenisinfo'];
-    $tgl = $_POST['_tgl'];
+    $jenis_info = $_POST('_jenis_info');
 
-    if( $judul != "")
+    if($jenis_info != "")
     {
-        $query = "INSERT INTO `tb_informasi`(`id`, `judul`, `pict`, `informasi`, `id_jenisinfo`, `tgl`) VALUES (NULL, '$judul', '$pict', '$informasi', '$id_jenisinfo', '$tgl')";
+        $query = "INSERT INTO `tb_jenisinfo`(`id`, `jenisinformasi`) VALUES (NULL,'$jenis_info')";
         $result = mysqli_query($con, $query);
         if( $result)
         {

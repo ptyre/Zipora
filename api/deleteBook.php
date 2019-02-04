@@ -6,11 +6,11 @@
             die(mysqli_connect_error($con));
     }
 
-    $id = $_POST['_id'];
+    $id_buku = $_POST['_id_buku'];
 
-    if( $id != "")
+    if( $id_buku != "")
     {
-        $query = "DELETE FROM tb_informasi WHERE id = '$id'";
+        $query = "DELETE FROM `tb_buku` WHERE id_buku = '$id_buku'";
         $result = mysqli_query($con, $query);
         if( $result)
         {
