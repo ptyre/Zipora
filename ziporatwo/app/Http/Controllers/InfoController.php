@@ -52,13 +52,7 @@ class InfoController extends Controller
         $image = $request->file('_picture');
         $path = $request->_picture->getClientOriginalName();
         $new_name = $image->getClientOriginalName();
-        $image->move(public_path("images"), $new_name);
-        //return back()->with('success','Image Upload success')->with('path',$new_name);
-
-        // $path = $request->_picture->getClientOriginalName();
-        // $image = $_FILES['_picture']['name'];
-        // $target = "C:/xampp/htdocs/Zipora/ziporatwo/public/images/".basename($image);
-        // move_uploaded_file($_FILES['_picture']['tmp_name'], $target);
+        
 
         $url = "http://localhost/zipora/api/createInformation.php";
 
@@ -85,9 +79,10 @@ class InfoController extends Controller
         );
         $context = stream_context_create($option);
         $result = file_get_contents($url, false, $context);
+        $image->move(public_path("images/info"), $new_name);
 
         //return dd();
-        // Session::flash('message', 'Success');
+        //Session::flash('message', 'Success');
         return redirect()->route('admin.info');
         // if ($result == "\r\n") {
             

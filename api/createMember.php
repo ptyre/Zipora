@@ -13,7 +13,7 @@
     $tgl_masuk = $_POST['_tgl_masuk'];
     $id_class = $_POST['_id_class'];
 
-    if( $id_class != "" && $alamat != "" && $name != "")
+    if($name != "")
     {
         $query = "INSERT INTO `tb_member`(`id_member`, `name`, `email`, `alamat`, `institusi`, `tgl_masuk`, `id_class`) VALUES (NULL, '$name', '$email', '$alamat', '$institusi', '$tgl_masuk', '$id_class')";
         $result = mysqli_query($con, $query);

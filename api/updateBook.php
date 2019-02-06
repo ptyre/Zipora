@@ -14,11 +14,10 @@
     $kota = $_POST['_kota'];
     $deskripsi = $_POST['_deskripsi'];
     $deskripsi_pendek = $_POST['_deskripsi_pendek'];
-    $pict = $_POST['_pict'];
 
     if( $id_buku != "")
     {
-        $query = "UPDATE `tb_buku` SET `judul_buku`= '$judul_buku',`pengarang`= '$pengarang',`penerbit`= '$penerbit',`tahun`= '$tahun',`kota`= '$kota',`deskripsi`= '$deskripsi',`deskripsi_pendek`= '$deskripsi_pendek',`pict`= '$pict' WHERE id_buku = '$id_buku'";
+        $query = "UPDATE `tb_buku` SET `judul_buku`= '$judul_buku',`pengarang`= '$pengarang',`penerbit`= '$penerbit',`tahun`= '$tahun',`kota`= '$kota',`deskripsi`= '$deskripsi',`deskripsi_pendek`= '$deskripsi_pendek' WHERE id_buku = '$id_buku'";
         $result = mysqli_query($con, $query);
         if( $result)
         {

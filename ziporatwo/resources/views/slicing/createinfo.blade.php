@@ -95,7 +95,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="imageInput">Choose Photo</label>
-                                            <input name="_picture" type="file" id="_picture">
+                                            <input name="_picture" type="file" id="_picture" accept="image/*">
                                             <img class="col-sm-6" id="preview"  src="">
                                         </div>
                                         <div class="form-group">

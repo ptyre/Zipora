@@ -80,8 +80,19 @@ Route::post('/AHome/book/create',[
 	'uses' => 'BookController@store',
 	'as' => 'admin.createbook']);
 
-// member
+Route::get('/AHome/book/edit/{_id_buku}',[
+	'uses' => 'BookController@edit',
+	'as' => 'edit.book']);
 
+Route::post('/AHome/book/update',[
+	'uses' => 'BookController@update',
+	'as' => 'update.book']);
+
+Route::post('/AHome/book',[
+	'uses' => 'BookController@destroy',
+	'as' => 'delete.book']);
+
+// member
 Route::get('/AHome/member',[
 	'uses' => 'MemberController@index',
 	'as' => 'admin.member']);
