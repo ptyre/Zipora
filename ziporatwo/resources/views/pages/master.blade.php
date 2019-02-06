@@ -7,28 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     @yield('css')
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
-    <link href="{{asset('css/nav.css')}}" rel="stylesheet">
+
 
     <title></title>
   </head>
-  <body>
-    @include('pages.partial.navbar')
+  <body data-spy="scroll" data-target=".menubaru" data-offset="50">
+@yield('navigasi')
+@yield('content')
 
-<div class="kepala">
-
-@yield('header')
-</div>
-
-
-
-
-
-
-
-    @yield('content')
-
-<script src="{{asset('js/nav.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
-    @stack('script')
+<script href="{{asset('js/app.js')}}"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+    @yield('script')
   </body>
 </html>
