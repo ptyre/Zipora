@@ -67,6 +67,26 @@ Route::get('/AHome/gallery',[
 	'uses' => 'GalleryController@index', 
 	'as' => 'admin.gallery']);
 
+Route::get('/AHome/gallery/createt',[
+	'uses' => 'GalleryController@create',
+	'as' => 'gallery.createt']);
+
+Route::post('/AHome/gallery/createt',[
+	'uses' => 'GalleryController@storeType',
+	'as' => 'create.type']);
+
+Route::get('/AHome/gallery/createg',[
+	'uses' => 'GalleryController@show',
+	'as' => 'gallery.createg']);
+
+Route::post('/AHome/gallery/createg',[
+	'uses' => 'GalleryController@storePhoto',
+	'as' => 'create.photo']);
+
+Route::post('/AHome/gallery',[
+	'uses' => 'GalleryController@destroy',
+	'as' => 'delete.gallery']);
+
 // book
 Route::get('/AHome/book',[
 	'uses' => 'BookController@index', 

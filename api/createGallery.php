@@ -6,7 +6,7 @@
             die(mysqli_connect_error($con));
     }
 
-    $pict = $_POST['_pict'];
+    $pict = $_POST['_picture'];
     $info = $_POST['_info'];
     $tgl = $_POST['_tgl'];
     $jenis = $_POST['_jenis'];
