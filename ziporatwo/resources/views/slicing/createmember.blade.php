@@ -25,7 +25,7 @@
                                         <div class="form-group">
                                             <b>Email</b>
                                             <div class="form-line">
-                                                <input type="text" name="name_class" class="form-control" placeholder="Email" required />
+                                                <input type="email" name="name_class" class="form-control" placeholder="Email" required />
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -46,21 +46,18 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <b>Combobox</b>
+                                            <b>Class</b>
                                             <select class="form-control show-tick" >
-                                                <option value="">-- Please select --</option>
-                                                <option value="10">10</option>
-                                                <option value="20">20</option>
-                                                <option value="30">30</option>
-                                                <option value="40">40</option>
-                                                <option value="50">50</option>
+                                                @foreach($class as $c)
+                                                    <option value="{{ $c['id_class'] }}">{{ $c['name_class'] }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <br><br>
                                         <div class="form-group">
                                             <button type="submit" class="btn bg-green waves-effect col-sm-12">
-                                                <i class="material-icons">book</i>
-                                                <span>INSERT NEW BOOK</span>
+                                                <i class="material-icons">people</i>
+                                                <span>INSERT NEW MEMBER</span>
                                             </button>
                                         </div>
                                     </div>

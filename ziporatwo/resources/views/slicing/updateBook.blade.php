@@ -11,39 +11,40 @@
                                 Input New Book
                             </h2>
                         </div>
-                        <form method="POST" enctype="multipart/form-data" action="{{ route('admin.createbook') }}">
+                        <form method="POST" enctype="multipart/form-data" action="{{ route('update.book') }}">
                         {{ csrf_field() }}
                             <div class="body">
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
+                                        @foreach ($json as $book)
                                         <div class="form-group">
                                             <b>Book Code</b>
                                             <div class="form-line">
-                                                <input type="text" name="_id_buku" class="form-control" placeholder="Book Code" required />
+                                                <input type="text" name="_id_buku" value="{{ $book->id_buku }}" class="form-control" placeholder="Book Code" readonly />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Title</b>
                                             <div class="form-line">
-                                                <input type="text" name="_judul_buku" class="form-control" placeholder="Title here.." required />
+                                                <input type="text" name="_judul_buku" value="{{ $book->judul_buku }}" class="form-control" placeholder="Title here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Author</b>
                                             <div class="form-line">
-                                                <input type="text" name="_pengarang" class="form-control" placeholder="Author here.." required />
+                                                <input type="text" name="_pengarang" class="form-control" value="{{ $book->pengarang }}" placeholder="Author here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Publisher</b>
                                             <div class="form-line">
-                                                <input type="text" name="_penerbit" class="form-control" placeholder="Publisher here.." required />
+                                                <input type="text" name="_penerbit" value="{{ $book->penerbit }}" class="form-control" placeholder="Publisher here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>City</b>
                                             <div class="form-line">
-                                                <input type="text" name="_kota" class="form-control" placeholder="City here.." required />
+                                                <input type="text" name="_kota" value="{{ $book->kota }}" class="form-control" placeholder="City here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -53,32 +54,28 @@
                                                     <i class="material-icons">date_range</i>
                                                 </span>
                                                 <div class="form-line">
-                                                    <input type="date" name="_tahun" id="tahun" data-date-format="YYYY/MM/DD" class="form-control">
+                                                    <input type="date" value="{{ $book->tahun }}" name="_tahun" id="tahun" data-date-format="YYYY/MM/DD" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Small Description</b>
                                             <div class="form-line">
-                                                <textarea rows="1" name="_deskripsi_pendek" class="form-control no-resize auto-growth" placeholder="Input Small Description"></textarea>
+                                                <textarea rows="1" name="_deskripsi_pendek" class="form-control no-resize auto-growth" placeholder="Input Small Description">{{ $book->deskripsi_pendek }}</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Description</b>
                                             <div class="form-line">
                                                 <textarea rows="3" name="_deskripsi" class="form-control no-resize auto-growth" placeholder="
-                                                Input Full Description"></textarea>
+                                                Input Full Description">{{ $book->deskripsi }}</textarea>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="imageInput">Choose Photo</label>
-                                            <input data-preview="#preview" name="_picture" type="file" accept="image/*" id="imageInput">
-                                            <img class="col-sm-6" id="preview"  src="">
-                                        </div>
+                                        @endforeach
                                         <div class="form-group">
                                             <button type="submit" class="btn bg-green waves-effect col-sm-12">
                                                 <i class="material-icons">book</i>
-                                                <span>INSERT NEW BOOK</span>
+                                                <span>UPDATE BOOK</span>
                                             </button>
                                         </div>
                                     </div>

@@ -13,10 +13,10 @@
     $tahun = $_POST['_tahun'];
     $kota = $_POST['_kota'];
     $deskripsi = $_POST['_deskripsi'];
-    $deskripsi_pendik = $_POST['_deskripsi_pendek'];
-    $pict = $_POST['_pict'];
+    $deskripsi_pendek = $_POST['_deskripsi_pendek'];
+    $pict = $_POST['_picture'];
 
-    if( $pict != "" && $id_buku != "" && $pengarang != "")
+    if($id_buku != "" && $pengarang != "")
     {
         $query = "INSERT INTO `tb_buku`(`id_buku`, `judul_buku`, `pengarang`, `penerbit`, `tahun`, `kota`, `deskripsi`, `deskripsi_pendek`, `pict`) VALUES ('$id_buku','$judul_buku','$pengarang','$penerbit','$tahun','$kota','$deskripsi','$deskripsi_pendek','$pict')";
         $result = mysqli_query($con, $query);
