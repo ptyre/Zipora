@@ -105,6 +105,18 @@ Route::post('/AHome/member/createm',[
 	'uses' => 'MemberController@store',
 	'as' => 'admin.createmember']);
 
+Route::get('/AHome/member/edit/{id_member}',[
+	'uses' => 'MemberController@edit',
+	'as' => 'edit.member']);
+
+Route::post('/AHome/member/update',[
+	'uses' => 'MemberController@update',
+	'as' => 'update.member']);
+
+Route::post('/AHome/member',[
+	'uses' => 'MemberController@destroy',
+	'as' => 'delete.member']);
+
 // information
 Route::get('/AHome/info',[
 	'uses' => 'InfoController@index',
