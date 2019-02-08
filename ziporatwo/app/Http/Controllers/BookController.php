@@ -13,6 +13,12 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $url = "http://localhost/zipora/api/getInfoBook.php";

@@ -1,20 +1,13 @@
-$(function () {
-    $("#btnSubmit").click(function () {
-        var password = $("#txtPassword").val();
-        var confirmPassword = $("#txtConfirmPassword").val();
-        if (password != confirmPassword) {
-            alert("Passwords do not match.");
-            return false;
-        }
-        return true;
-    });
-});
-function myFunction(){
-    var jos = $('#txtPassword').val();
-    var confirmPassword = $("#txtConfirmPassword").val();
-    if (jos != confirmPassword) {
-        document.getElementById("btn_input").disabled = false;
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+    if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
     } else {
-        document.getElementById("btn_input").disabled = true;
+    confirm_password.setCustomValidity('');
     }
 }
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;

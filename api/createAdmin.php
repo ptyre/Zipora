@@ -12,7 +12,7 @@
 
     if( $username != "")
     {
-        $query = "INSERT INTO `tb_admin`(`id`, `username`, `password`, `nama`, `status`) VALUES (NULL,'$username',MD5('$password'),'$namename','false')";
+        $query = "INSERT INTO `tb_admin`(`id`, `username`, `password`, `nama`, `status`) VALUES (NULL,'$username','$password','$namename','false')";
         $result = mysqli_query($con, $query);
         if( $result)
         {

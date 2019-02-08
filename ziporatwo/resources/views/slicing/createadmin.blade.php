@@ -27,12 +27,12 @@
 		                                </div>
 		                                <div class="form-group">
 		                                    <div class="form-line">
-		                                        <input type="password" name="_password" class="form-control" id="txtPassword" placeholder="Password" required/>
+		                                        <input type="password" name="_password" class="form-control" id="password" placeholder="Password" required/>
 		                                    </div>
 		                                </div>
 		                                <div class="form-group">
 		                                    <div class="form-line">
-		                                        <input type="password" class="form-control" id="txtConfirmPassword" placeholder="Confirm Password" required/>
+		                                        <input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password" required/>
 		                                    </div>
 		                                </div>
 		                                <div class="form-group">

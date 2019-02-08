@@ -20,6 +20,9 @@ Route::get('/loginAdmin',[
 	'uses' => 'LoginController@index',
 	'as' => 'login']);
 
+Route::post('/loginAdmin',[
+	'uses' => 'LoginController@store',
+	'as' => 'login.admin']);
 
 Route::get('/pagetest', 'PagesController@index')->name('pagetest');
 
@@ -167,6 +170,3 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
