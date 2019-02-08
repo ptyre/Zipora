@@ -39,7 +39,7 @@
         </li>
         <li>
             <a href="{{ route('admin.testimony') }}">
-                <i class="material-icons">assignment_ind</i>
+                <i class="material-icons">face</i>
                 <span>Testimony</span>
             </a>
         </li>

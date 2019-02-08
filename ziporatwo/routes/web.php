@@ -165,6 +165,23 @@ Route::post('/AHome/info',[
 	'uses' => 'InfoController@destroy',
 	'as' => 'delete.info']);
 
+// Testimony
+Route::get('/AHome/testimony',[
+	'uses' => 'TestimonyController@index',
+	'as' => 'admin.testimony']);
+
+Route::get('/AHome/testimony/createt',[
+	'uses' => 'TestimonyController@create',
+	'as' => 'create.testimony']);
+
+Route::post('/AHome/testimony/createt',[
+	'uses' => 'TestimonyController@store',
+	'as' => 'create.newtestimony']);
+
+Route::post('/AHome/testimony',[
+	'uses' => 'TestimonyController@destroy',
+	'as' => 'delete.testimony']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
