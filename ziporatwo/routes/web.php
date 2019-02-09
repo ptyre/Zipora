@@ -12,17 +12,17 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/loginAdmin',[
 	'uses' => 'LoginController@index',
 	'as' => 'login']);
 
 
-Route::get('/pagetest', 'PagesController@index')->name('pagetest');
+Route::get('/', 'PagesController@index')->name('index');
 
+Route::get('/gallery/detail', 'PagesController@gallery')->name('gallery');
+
+Route::get('/gallery', 'PagesController@galleryJudul')->name('galerry.judul');
 // awal
 Route::get('/AHome',[
 	'uses' => 'AdminController@halamanAdmin',
@@ -64,16 +64,16 @@ Route::post('/Ahome/class',[
 
 // gallery
 Route::get('/AHome/gallery',[
-	'uses' => 'GalleryController@index', 
+	'uses' => 'GalleryController@index',
 	'as' => 'admin.gallery']);
 
 // book
 Route::get('/AHome/book',[
-	'uses' => 'BookController@index', 
+	'uses' => 'BookController@index',
 	'as' => 'admin.book']);
 
 Route::get('/AHome/book/create',[
-	'uses' => 'BookController@create', 
+	'uses' => 'BookController@create',
 	'as' => 'admin.newbook']);
 
 Route::post('/AHome/book/create',[
@@ -137,4 +137,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-

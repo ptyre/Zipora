@@ -1,0 +1,80 @@
+.menu-pinggir {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.gal-item{
+	overflow: hidden;
+	padding: 8px;
+}
+.gal-item .box{
+	height: 100%;
+	overflow: hidden;
+}
+.box img{
+	height: 100%;
+	width: auto;
+	object-fit:cover;
+}
+
+.navigasi-atas {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  margin-right: 14%;
+  width: 100%;
+  z-index: 50;
+}
+
+.navigasi-atas a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navigasi-atas a:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+.kumpulan-gambar table tr td a:hover > img{
+  -webkit-filter: blur(2px);
+}
+
+
+
+.menu-pinggir a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.menu-pinggir a:hover {
+  color: #f1f1f1;
+}
+
+.kumpulan-gambar {
+  margin-top: 20%;
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 600px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
