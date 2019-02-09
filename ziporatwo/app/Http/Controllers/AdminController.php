@@ -18,8 +18,16 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
 
-    public function halamanAdmin(){
-        return view('slicing.dasboard');
+    public function halamanAdmin()
+    {
+        $url = "http://localhost/zipora/api/getDasboard.php";
+        $json = json_decode(file_get_contents($url),true);
+
+        if (empty($json)) {
+            return view('slicing.dasboard');
+        } else {
+            return view('slicing.dasboard', ['dasboard' => $json]);
+        }
     }
 
     public function index()
