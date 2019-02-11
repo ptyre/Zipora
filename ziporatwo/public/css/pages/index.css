@@ -1,11 +1,32 @@
-.gambarBuku{
-  width:500px;
-  height:400px;
 
+
+
+
+.kolum {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }
 
-.deskripsiBuku{
-  height:400px;
+.mybros:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+#berita{
+  margin-top: 15%;
+}
+
+.huruf-nama-1{
+  color:orange;
+  font-size: 20px;
+}
+.huruf-nama-2{
+  color:white;
+  font-size: 20px;
 }
 
 
@@ -16,10 +37,52 @@
 }
 
 #buttonpemisah{
-  position: absolute;
-  left: 50%;
-  top: 10%
+  position: relative;
+  height: 50px;
+  width: 100%;
+  top: 10%;
+  padding-left: 45%;
+  z-index:5;
 }
+
+
+
+
+.joinbutton-1 {
+       fill: url(#linear-gradient);
+     }
+
+.joinbutton-2 {
+       fill: #fff;
+       font-size: 22px;
+       font-family: SegoeUI, Segoe UI;
+     }
+.joinbutton-3 {
+       filter: url(#Rectangle_2-2);
+     }
+.joinbutton-4 {
+       filter: url(#Rectangle_2);
+     }
+
+.joinbuttonsvg:hover path{
+  fill:blue;
+}
+
+
+
+.readmorebutton-1 {
+       fill: url(#linear-gradient);
+     }
+
+.readmorebutton-2 {
+       fill: #fff;
+       font-size: 35px;
+       font-family: SegoeUI, Segoe UI;
+     }
+
+.readmorebutton-3 {
+       filter: url(#Rectangle_6);
+     }
 
 .post-slide{
     background: #fff;
@@ -120,7 +183,10 @@
     color:#333;
     text-decoration:none;
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 600px) {
+  .kolum {
+    width: 100%;
+  }
     .post-slide{
         padding: 15px;
     }

@@ -12,17 +12,20 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/loginAdmin',[
 	'uses' => 'LoginController@index',
 	'as' => 'login']);
 
+Route::post('/loginAdmin',[
+	'uses' => 'LoginController@store',
+	'as' => 'login.admin']);
 
-Route::get('/pagetest', 'PagesController@index')->name('pagetest');
+Route::get('/', 'PagesController@index')->name('index');
 
+Route::get('/gallery/detail', 'PagesController@gallery')->name('gallery');
+
+Route::get('/gallery', 'PagesController@galleryJudul')->name('galerry.judul');
 // awal
 Route::get('/AHome',[
 	'uses' => 'AdminController@halamanAdmin',
@@ -64,7 +67,7 @@ Route::post('/Ahome/class',[
 
 // gallery
 Route::get('/AHome/gallery',[
-	'uses' => 'GalleryController@index', 
+	'uses' => 'GalleryController@index',
 	'as' => 'admin.gallery']);
 
 Route::get('/AHome/gallery/createt',[
@@ -89,11 +92,11 @@ Route::post('/AHome/gallery',[
 
 // book
 Route::get('/AHome/book',[
-	'uses' => 'BookController@index', 
+	'uses' => 'BookController@index',
 	'as' => 'admin.book']);
 
 Route::get('/AHome/book/create',[
-	'uses' => 'BookController@create', 
+	'uses' => 'BookController@create',
 	'as' => 'admin.newbook']);
 
 Route::post('/AHome/book/create',[
@@ -162,11 +165,28 @@ Route::post('/AHome/info',[
 	'uses' => 'InfoController@destroy',
 	'as' => 'delete.info']);
 
+// Testimony
+Route::get('/AHome/testimony',[
+	'uses' => 'TestimonyController@index',
+	'as' => 'admin.testimony']);
+
+Route::get('/AHome/testimony/createt',[
+	'uses' => 'TestimonyController@create',
+	'as' => 'create.testimony']);
+
+Route::post('/AHome/testimony/createt',[
+	'uses' => 'TestimonyController@store',
+	'as' => 'create.newtestimony']);
+
+Route::post('/AHome/testimony',[
+	'uses' => 'TestimonyController@destroy',
+	'as' => 'delete.testimony']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
+=======
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+>>>>>>> a14dd28b4f6dc460d3c2fbea907d2c2e0ba097b5

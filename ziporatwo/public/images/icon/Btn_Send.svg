@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="96" viewBox="0 0 640 96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        fill: #fa0;
+        font-size: 35px;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_53" data-name="Group 53" transform="translate(-190 -6216)">
+    <g id="Group_52" data-name="Group 52">
+      <g id="Rectangle_24" data-name="Rectangle 24" class="cls-1" transform="translate(190 6216)">
+        <rect class="cls-3" width="640" height="96" rx="48"/>
+        <rect class="cls-4" x="0.5" y="0.5" width="639" height="95" rx="47.5"/>
+      </g>
+      <text id="SEND" class="cls-2" transform="translate(467 6279)"><tspan x="0" y="0">SEND</tspan></text>
+    </g>
+  </g>
+</svg>

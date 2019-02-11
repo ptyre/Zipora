@@ -1,0 +1,22 @@
+<svg id="Group_30" data-name="Group 30" xmlns="http://www.w3.org/2000/svg" width="181.811" height="181.811" viewBox="0 0 181.811 181.811">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #fa0;
+      }
+    </style>
+  </defs>
+  <g id="Group_29" data-name="Group 29">
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="90.906" cy="90.906" rx="90.906" ry="90.906"/>
+    <g id="Group_28" data-name="Group 28" transform="translate(37.755 51.387)">
+      <path id="Path_13" data-name="Path 13" class="cls-2" d="M3135.525,3583.208v53.932l30.753-30.753Z" transform="translate(-3135.525 -3571.274)"/>
+      <path id="Path_14" data-name="Path 14" class="cls-2" d="M3188.982,3668.2l15.406-11.245,37.867,37.867H3136.686l37.638-37.867Z" transform="translate(-3136.227 -3615.871)"/>
+      <path id="Path_15" data-name="Path 15" class="cls-2" d="M3136.686,3553.014h105.339l-52.784,40.392Z" transform="translate(-3136.227 -3553.014)"/>
+      <path id="Path_16" data-name="Path 16" class="cls-2" d="M3325.979,3605.563l31.212-24.1v54.85Z" transform="translate(-3250.704 -3570.221)"/>
+    </g>
+  </g>
+</svg>

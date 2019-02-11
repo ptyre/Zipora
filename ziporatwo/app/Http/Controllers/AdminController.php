@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -12,8 +13,21 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function halamanAdmin(){
-        return view('slicing.dasboard');
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function halamanAdmin()
+    {
+        $url = "http://localhost/zipora/api/getDasboard.php";
+        $json = json_decode(file_get_contents($url),true);
+
+        if (empty($json)) {
+            return view('slicing.dasboard');
+        } else {
+            return view('slicing.dasboard', ['dasboard' => $json]);
+        }
     }
 
     public function index()
