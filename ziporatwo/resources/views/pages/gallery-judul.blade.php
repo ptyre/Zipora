@@ -30,7 +30,7 @@
         <td class="contGambar">
           <form>
             {{ csrf_field() }}
-            <input type="submit" value="" class="foto-1"></input>
+            <input type="submit" value="" style="background:url(/images/foto-background/foto-1.jpg) no-repeat;" class="foto-1"></input>
           </form>
         </td>
         <td class="contGambar">
@@ -102,8 +102,17 @@
         <td>Moar</td>
     </tr>
   </table>
+  <div class="row">
+    <div class="">
+
+    </div>
+  </div>
 </section>
 </div>
+<div class="footerGallery">
+
+</div>
+
 
 @endsection
 
