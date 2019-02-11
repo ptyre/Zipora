@@ -3,14 +3,18 @@
   @foreach(array_chunk($data2, 3) as $datafinal)
     <tr>
       @foreach($datafinal as $data)
-        @if($urutan % 5 == 0)
+        @if($urutan % 4 == 0)
+
+        data2
+
         @else($urutan % 6 == 0)
 
+        data3
+
         <td class="contGambar">
-          <form>
-            {{ csrf_field() }}
-            <input type="submit" value="" style="background:url(/images/foto-background/foto-1.jpg) no-repeat;" class="foto-1"></input>
-          </form>
+
+          data1
+
         </td>
 
 

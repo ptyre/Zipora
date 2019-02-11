@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-      return view('pages.index');
+      $url = "http://localhost/api/frontend/dashboard.php";
+      $json = json_decode(file_get_contents($url),true);
+
+        return view('pages.index', ['data' => $json]);
+
+
     }
 
     public function gallery(){

@@ -16,8 +16,20 @@
          <header>
             <nav id="menubaruid" class="menubaru">
                <div class="menu-icon">
-                  <button onclick="myFunction()" class="btn btn-primary dropbtn">Dropdown</button>
+                 <div class="dropdown">
+                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                     Dropdown button
+                   </button>
+                   <div class="dropdown-menu">
+                     <a class="dropdown-item" href="#">Link 1</a>
+                     <a class="dropdown-item" href="#">Link 2</a>
+                     <a class="dropdown-item" href="#">Link 3</a>
+                     <a class="dropdown-item" href="#">Link 3</a>
+                     <a class="dropdown-item" href="#">Link 3</a>
+                   </div>
+                 </div>
                </div>
+
 
                <div class="logo">
                   <a href="#">
@@ -67,7 +79,13 @@
                     </table>
 
                   </ul>
+
+
                </div>
+
+
+
+
             </nav>
 
          </header>
@@ -125,26 +143,29 @@
         <div class="col-md-12">
             <div id="news-slider" class="owl-carousel">
 
-            <?php foreach ($variable as $key => $value): ?>
+            <?php foreach ($data['newsEvent'] as $nw): ?>
 
 
               <div class="post-slide">
                   <div class="post-header">
-                      <a href="#" class="subtitle">Lorem ipsum</a>
-                      <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                    <hidden></hidden>
+                      <a href="#" class="subtitle">{{ $nw['tentang'] }}</a>
+                      <h3 class="post-title"><a href="#">{{ $nw['judul'] }}</a></h3>
                   </div>
                   <div class="pic">
-                      <img src="images/img-2.jpg" alt="">
+                      <img url="{{$nw['pict']}}" alt="">
                   </div>
                   <ul class="post-bar">
-                      <li><i class="fa fa-users"></i> <a href="#">Admin</a></li>
-                      <li><i class="fa fa-clock-o"></i> March 7,2016</li>
-                      <li><i class="fa fa-comments"></i> <a href="#">3 Comment</a></li>
+                      <li><i class="fa fa-clock-o"></i> {{ $nw['tgl'] }}</li>
                   </ul>
                   <p class="post-description">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur, eu hendrerit ipsum efficitur. Morbi vitae velit ac.
+                      {{ $nw['informasi'] }}
                   </p>
-                  <a href="#" class="read-more"><button class="btn btn-primary">Join</button></a>
+
+                  <form method="POST" class="read-more" action="#">
+                  {{ csrf_field() }}
+                      <input type="hidden" class="read-more" name="_id" value="{{ $nw['id'] }}"><button class="btn btn-primary">Read more</button></input>
+                  </form>
               </div>
 
             <?php endforeach; ?>
@@ -197,17 +218,40 @@
      <h3 class="card-title row h-100 justify-content-center align-items-center">Article</h3>
 <div class="carousel-wrap">
   <div class="owl-carousel">
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
+
+    <?php foreach ($data['article'] as $atr) : ?>
+      <div class="item">
+
+        <div class="col-sm-3">
+                          <div class="col-item">
+                              <div class="photo">
+                                  <img src="{{$atr['pict']}}" class="img-responsive" alt="a" />
+                              </div>
+                              <div class="info">
+                                  <div class="row">
+                                      <div class="price col-md-6">
+                                          <h5>
+                                              {{$atr['judul']}}</h5>
+                                          <h5 class="price-text-color">
+                                              {{$atr['tgl']}}</h5>
+                                              <h1>
+                                                  {{ $nw['informasi'] }}
+                                              </h1>
+                                      </div>
+                                      <div class="rating hidden-sm col-md-6">
+                                      </div>
+                                  </div>
+                                  <div class="separator clear-left">
+                                      <p class="btn-details">
+                                          <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+                                  </div>
+                                  <div class="clearfix">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+      </div>
+    <?php endforeach; ?>
     <div class="item"><img src="http://placehold.it/150x150"></div>
   </div>
 </div>
@@ -296,7 +340,6 @@
 @section('script')
   @parent
   <script src="{{asset('js/pages2/nav.js')}}"></script>
-  <script src="{{asset('vendor/javascript/jquery-3.3.1.min.js')}}"></script>
   <script src="{{asset('vendor/javascript/jquery.mousewheel.min.js')}}"></script>
   <script src="{{asset('vendor/javascript/owl.carousel.min.js')}}"></script>
   <script src="{{asset('js/pages2/page1.js')}}"></script>
