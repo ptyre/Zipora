@@ -11,7 +11,7 @@
 }
 
 .gambar-1{
-  background-image:url("{{ asset('assets/image/background.png') }}");
+  background-image:url("/assets/images/foto-background/foto-1.jpg");
 }
 
 

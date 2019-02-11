@@ -27,17 +27,17 @@
     <tr>
         <td><a><div class="gambar-1"></div></a></td>
         <td><a><div class="gambar-2"></div></a></td>
-        <td><a><div class="gambar-1"></div></a></td>
+        <td><a><div class="gambar-3"></div></a></td>
     </tr>
     <tr>
-        <td><a><div class="gambar-3"></div></a></td>
         <td><a><div class="gambar-4"></div></a></td>
-        <td><a><div class="gambar-3"></div></a></td>
-    </tr>
-    <tr>
         <td><a><div class="gambar-5"></div></a></td>
         <td><a><div class="gambar-6"></div></a></td>
-        <td><a><div class="gambar-5"></div></a></td>
+    </tr>
+    <tr>
+        <td><a><div class="gambar-7"></div></a></td>
+        <td><a><div class="gambar-8"></div></a></td>
+        <td><a><div class="gambar-9"></div></a></td>
     </tr>
   </table>
 </section>

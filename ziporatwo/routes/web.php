@@ -185,8 +185,3 @@ Route::post('/AHome/testimony',[
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
-=======
-
-Auth::routes();
->>>>>>> a14dd28b4f6dc460d3c2fbea907d2c2e0ba097b5
