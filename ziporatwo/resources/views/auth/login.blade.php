@@ -36,7 +36,7 @@
                     {{ csrf_field() }}
 
                     <div class="input-group">
-                        <label for="email" class="col-lg-4 col-form-label text-lg-right">E-Mail Address</label>
+                        <label for="email" class="col-lg-4 col-form-label text-lg-right">E-Mail</label>
                         <div class="form-line">
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" requiredautofocus>
 
