@@ -6,11 +6,11 @@
             die(mysqli_connect_error($con));
     }
 
-    $id_gallery = $_POST['_idgallery'];
+    $id = $_POST['_id'];
 
-    if( $id_gallery != "")
+    if( $id != "")
     {
-        $query = "DELETE FROM `tb_galery` WHERE id = '$id_gallery'";
+        $query = "DELETE FROM `tb_galery` WHERE id = '$id'";
         $result = mysqli_query($con, $query);
         if( $result)
         {

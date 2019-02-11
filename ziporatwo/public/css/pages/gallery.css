@@ -10,6 +10,11 @@
   padding-top: 20px;
 }
 
+.gambar-1{
+  background-image:url("{{ asset('assets/image/background.png') }}");
+}
+
+
 .gal-item{
 	overflow: hidden;
 	padding: 8px;

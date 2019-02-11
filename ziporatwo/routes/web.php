@@ -17,6 +17,9 @@ Route::get('/loginAdmin',[
 	'uses' => 'LoginController@index',
 	'as' => 'login']);
 
+Route::post('/loginAdmin',[
+	'uses' => 'LoginController@store',
+	'as' => 'login.admin']);
 
 Route::get('/', 'PagesController@index')->name('index');
 
@@ -67,6 +70,26 @@ Route::get('/AHome/gallery',[
 	'uses' => 'GalleryController@index',
 	'as' => 'admin.gallery']);
 
+Route::get('/AHome/gallery/createt',[
+	'uses' => 'GalleryController@create',
+	'as' => 'gallery.createt']);
+
+Route::post('/AHome/gallery/createt',[
+	'uses' => 'GalleryController@storeType',
+	'as' => 'create.type']);
+
+Route::get('/AHome/gallery/createg',[
+	'uses' => 'GalleryController@show',
+	'as' => 'gallery.createg']);
+
+Route::post('/AHome/gallery/createg',[
+	'uses' => 'GalleryController@storePhoto',
+	'as' => 'create.photo']);
+
+Route::post('/AHome/gallery',[
+	'uses' => 'GalleryController@destroy',
+	'as' => 'delete.gallery']);
+
 // book
 Route::get('/AHome/book',[
 	'uses' => 'BookController@index',
@@ -105,6 +128,18 @@ Route::post('/AHome/member/createm',[
 	'uses' => 'MemberController@store',
 	'as' => 'admin.createmember']);
 
+Route::get('/AHome/member/edit/{id_member}',[
+	'uses' => 'MemberController@edit',
+	'as' => 'edit.member']);
+
+Route::post('/AHome/member/update',[
+	'uses' => 'MemberController@update',
+	'as' => 'update.member']);
+
+Route::post('/AHome/member',[
+	'uses' => 'MemberController@destroy',
+	'as' => 'delete.member']);
+
 // information
 Route::get('/AHome/info',[
 	'uses' => 'InfoController@index',
@@ -130,10 +165,28 @@ Route::post('/AHome/info',[
 	'uses' => 'InfoController@destroy',
 	'as' => 'delete.info']);
 
+// Testimony
+Route::get('/AHome/testimony',[
+	'uses' => 'TestimonyController@index',
+	'as' => 'admin.testimony']);
+
+Route::get('/AHome/testimony/createt',[
+	'uses' => 'TestimonyController@create',
+	'as' => 'create.testimony']);
+
+Route::post('/AHome/testimony/createt',[
+	'uses' => 'TestimonyController@store',
+	'as' => 'create.newtestimony']);
+
+Route::post('/AHome/testimony',[
+	'uses' => 'TestimonyController@destroy',
+	'as' => 'delete.testimony']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
+=======
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+>>>>>>> a14dd28b4f6dc460d3c2fbea907d2c2e0ba097b5

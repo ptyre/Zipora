@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -11,6 +12,11 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function halamanAdmin(){
         return view('slicing.dasboard');
@@ -39,7 +45,40 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //dd($request->all());
+        $url = "http://localhost/zipora/api/createAdmin.php";
+
+        $username = $request->_username;
+        $password = $request->_password;
+        $name = $request->_name;
+
+        $data = array(
+            '_username' => $username,
+            '_password' => $password,
+            '_name' => $name
+        );
+
+        $option = array(
+            'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => "POST",
+            'content' => http_build_query($data)
+            )
+        );
+        $context = stream_context_create($option);
+        $result = file_get_contents($url, false, $context);
+
+
+        return redirect()->route('create.admin');
+        //return dd($request->all());
+        //return $result;
+        // if ($result == "\r\n") {
+        //     //Session::flash('message', 'Gagal');
+        //     return redirect()->route('admin.book');
+        // }
+        // else {
+        //     //Session::flash('message', 'Success');
+        // }
     }
 
     /**

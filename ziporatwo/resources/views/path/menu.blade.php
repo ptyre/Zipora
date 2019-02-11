@@ -38,15 +38,15 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('create.admin') }}">
-                <i class="material-icons">contacts</i>
-                <span>Admin</span>
+            <a href="{{ route('admin.testimony') }}">
+                <i class="material-icons">face</i>
+                <span>Testimony</span>
             </a>
         </li>
         <li>
-            <a href="">
-                <i class="material-icons">exit_to_app</i>
-                <span>Log out</span>
+            <a href="{{ route('create.admin') }}">
+                <i class="material-icons">contacts</i>
+                <span>Admin</span>
             </a>
         </li>
     </ul>

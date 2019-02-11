@@ -124,96 +124,31 @@
     <div class="row">
         <div class="col-md-12">
             <div id="news-slider" class="owl-carousel">
-                <div class="post-slide">
-                    <div class="post-header">
-                        <a href="#" class="subtitle">Lorem ipsum</a>
-                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
-                    </div>
-                    <div class="pic">
-                        <img src="images/img-1.jpg" alt="">
-                    </div>
-                    <ul class="post-bar">
-                        <li><i class="fa fa-users"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-clock-o"></i> March 5,2016</li>
-                        <li><i class="fa fa-comments"></i> <a href="#">2 Comment</a></li>
-                    </ul>
-                    <p class="post-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur, eu hendrerit ipsum efficitur. Morbi vitae velit ac.
-                    </p>
-                    <a href="#" class="read-more">
 
-                      <svg class="joinbuttonsvg" width="100" height="50" viewBox="0 0 128 64">
-                      <linearGradient id="linear-gradient" x1="0.578" y1="0.5" x2="-0.295" y2="1.818" gradientUnits="objectBoundingBox">
-                        <stop offset="0" stop-color="#fa0"/>
-                        <stop offset="1" stop-color="#ff6f00"/>
-                      </linearGradient>
-                      <filter id="Rectangle_2" x="0" y="0" width="128" height="64" filterUnits="userSpaceOnUse">
-                        <feOffset dy="3" input="SourceAlpha"/>
-                        <feGaussianBlur stdDeviation="3" result="blur"/>
-                        <feFlood flood-opacity="0.149"/>
-                        <feComposite operator="in" in2="blur"/>
-                        <feComposite in="SourceGraphic"/>
-                      </filter>
-                      <filter id="Rectangle_2-2" x="0" y="0" width="128" height="64" filterUnits="userSpaceOnUse">
-                        <feOffset dy="3" input="SourceAlpha"/>
-                        <feGaussianBlur stdDeviation="3" result="blur-2"/>
-                        <feFlood flood-opacity="0.149"/>
-                        <feComposite operator="in" in2="blur-2"/>
-                        <feComposite in="SourceGraphic"/>
-                      </filter>
-                    </defs>
-                    <g id="Group_17" data-name="Group 17" transform="translate(-222.381 -1977)">
-                      <g class="joinbutton-4" transform="matrix(1, 0, 0, 1, 222.38, 1977)">
-                          <rect id="Rectangle_2-3" data-name="Rectangle 2" class="joinbutton-1" width="110" height="46" rx="23" transform="translate(9 6)"/>
-                        </g>
-                        <text id="JOIN" class="joinbutton-2" transform="translate(263.381 2015)"><tspan x="0" y="0">JOIN</tspan></text>
-                        <g class="joinbutton-3" transform="matrix(1, 0, 0, 1, 222.38, 1977)">
-                          <rect id="Rectangle_2-4" data-name="Rectangle 2" class="joinbutton-1" width="110" height="46" rx="23" transform="translate(9 6)"/>
-                        </g>
-                        <text id="JOIN-2" data-name="JOIN" class="joinbutton-2" transform="translate(263.381 2015)"><tspan x="0" y="0">JOIN</tspan></text>
-                      </g>
-                    </svg>
+            <?php foreach ($variable as $key => $value): ?>
 
-                    </a>
-                </div>
 
-                <div class="post-slide">
-                    <div class="post-header">
-                        <a href="#" class="subtitle">Lorem ipsum</a>
-                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
-                    </div>
-                    <div class="pic">
-                        <img src="images/img-2.jpg" alt="">
-                    </div>
-                    <ul class="post-bar">
-                        <li><i class="fa fa-users"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-clock-o"></i> March 7,2016</li>
-                        <li><i class="fa fa-comments"></i> <a href="#">3 Comment</a></li>
-                    </ul>
-                    <p class="post-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur, eu hendrerit ipsum efficitur. Morbi vitae velit ac.
-                    </p>
-                    <a href="#" class="read-more"><button class="btn btn-primary">Join</button></a>
-                </div>
+              <div class="post-slide">
+                  <div class="post-header">
+                      <a href="#" class="subtitle">Lorem ipsum</a>
+                      <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                  </div>
+                  <div class="pic">
+                      <img src="images/img-2.jpg" alt="">
+                  </div>
+                  <ul class="post-bar">
+                      <li><i class="fa fa-users"></i> <a href="#">Admin</a></li>
+                      <li><i class="fa fa-clock-o"></i> March 7,2016</li>
+                      <li><i class="fa fa-comments"></i> <a href="#">3 Comment</a></li>
+                  </ul>
+                  <p class="post-description">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur, eu hendrerit ipsum efficitur. Morbi vitae velit ac.
+                  </p>
+                  <a href="#" class="read-more"><button class="btn btn-primary">Join</button></a>
+              </div>
 
-                <div class="post-slide">
-                    <div class="post-header">
-                        <a href="#" class="subtitle">Lorem ipsum</a>
-                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
-                    </div>
-                    <div class="pic">
-                        <img src="images/img-2.jpg" alt="">
-                    </div>
-                    <ul class="post-bar">
-                        <li><i class="fa fa-users"></i> <a href="#">Admin</a></li>
-                        <li><i class="fa fa-clock-o"></i> March 7,2016</li>
-                        <li><i class="fa fa-comments"></i> <a href="#">3 Comment</a></li>
-                    </ul>
-                    <p class="post-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida nulla eu massa efficitur, eu hendrerit ipsum efficitur. Morbi vitae velit ac.
-                    </p>
-                    <a href="#" class="read-more"><button class="btn btn-primary">Join</button></a>
-                </div>
+            <?php endforeach; ?>
+
 
 
 
@@ -315,7 +250,7 @@
 
 
 
-<section id="buku">
+<!-- <section id="buku">
     <div class="mybros">
     <div class="kolum" style="background-color:orange;">
       <h2>Column 1</h2>
@@ -342,7 +277,7 @@
   </div>
 </div>
 
-</section>
+</section> -->
 
 
 

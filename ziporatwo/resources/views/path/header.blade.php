@@ -25,5 +25,28 @@
                 <a href="javascript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="{{ route('homeadmin') }}">ADMIN ZIPORATWO</a>
             </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                {{ Auth::user()->name }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a href="{{ route('logout') }}" class="dropdown-item"
+                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <i class="material-icons">backspace</i>
+                                    <span>LOGOUT</span>
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
