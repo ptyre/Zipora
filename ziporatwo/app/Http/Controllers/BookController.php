@@ -75,7 +75,7 @@ class BookController extends Controller
             '_kota' => $kota,
             '_deskripsi' => $deskripsi,
             '_deskripsi_pendek' => $deskripsi_pendek,
-            '_picture' => $path
+            '_picture' => '/images/buku/'.$path
         );
 
         $option = array(
