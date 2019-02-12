@@ -28,6 +28,9 @@ class PagesController extends Controller
     }
 
     public function book(){
-      return view('pages.buku');
+      $url = "http://localhost/api/frontend/getTesBook.php";
+      $json = json_decode(file_get_contents($url),true);
+
+      return view('pages.buku', ['data' => $json]);
     }
 }
