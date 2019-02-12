@@ -70,7 +70,7 @@ class InfoController extends Controller
 
         $data = array(
             '_judul' => $judul,
-            '_picture' => $path,
+            '_picture' => '/images/info/'.$path,
             '_informasi' => $informasi,
             '_id_jenisinfo' => $id_jenisinfo,
             '_tgl' => $tgl
