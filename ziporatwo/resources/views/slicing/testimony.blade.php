@@ -56,7 +56,7 @@
                                                                 <tr>
                                                                     <td hidden>{{ $t['id'] }}</td>
                                                                     <td>{{ $t['nama'] }}</td>
-                                                                    <td>{{ $t['text'] }}</td>
+                                                                    <td id="trimdeskripsi">{{ $t['text'] }}</td>
                                                                     <td>{{ $t['pict'] }}</td>
                                                                     <td><form method="POST" action="{{ route('delete.testimony') }}">
                                                                     {{ csrf_field() }}

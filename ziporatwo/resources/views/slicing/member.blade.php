@@ -40,13 +40,13 @@
                             @foreach($member as $m)
                             <tr>
                                 <td hidden>{{ $m['id_member'] }}</td>
-                                <td>{{ $m['name'] }}</td>
+                                <td id="namamember">{{ $m['name'] }}</td>
                                 <td>{{ $m['telp'] }}</td>
                                 <td>{{ $m['email'] }}</td>
                                 <td>{{ $m['name_class'] }}</td>
                                 <td>{{ $m['tgl_masuk'] }}</td>
                                 <td>{{ $m['institusi'] }}</td>
-                                <td>{{ $m['alamat'] }}</td>
+                                <td id="alamatmember">{{ $m['alamat'] }}</td>
                                 <td><a href="{{ route('edit.member', $m['id_member']) }}" >
                                     <button type="button" class="btn btn-primary waves-effect">
                                         <i class="material-icons">settings</i></button></a>

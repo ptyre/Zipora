@@ -38,7 +38,7 @@
                             @foreach($book as $b)
                             <tr>
                                 <td>{{ $b['id_buku'] }}</td>
-                                <td>{{ $b['judul_buku'] }}</td>
+                                <td id="trimname">{{ $b['judul_buku'] }}</td>
                                 <td>{{ $b['pengarang'] }}</td>
                                 <td>{{ $b['penerbit'] }}</td>
                                 <td>{{ $b['kota'] }}</td>
