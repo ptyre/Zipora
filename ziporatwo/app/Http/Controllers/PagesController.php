@@ -22,4 +22,12 @@ class PagesController extends Controller
     public function galleryJudul(){
       return view('pages.gallery-judul');
     }
+
+    public function class(){
+      return view('pages.class');
+    }
+
+    public function book(){
+      return view('pages.buku');
+    }
 }

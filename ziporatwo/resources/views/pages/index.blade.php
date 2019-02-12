@@ -71,7 +71,7 @@
                       <li><a href="#buku">Buku</a></li>
                     </td>
                     <td>
-                      <li><a href="#kelas">Class</a></li>
+                      <li><a href="{{route('class')}}">Class</a></li>
                     </td>
                     <td>
                       <li><a href="#kontak">Contact</a></li>
@@ -153,7 +153,7 @@
                       <h3 class="post-title"><a href="#">{{ $nw['judul'] }}</a></h3>
                   </div>
                   <div class="pic">
-                      <img url="{{$nw['pict']}}" alt="">
+                      <img url="{{ $nw['pict'] }}" alt="">
                   </div>
                   <ul class="post-bar">
                       <li><i class="fa fa-clock-o"></i> {{ $nw['tgl'] }}</li>

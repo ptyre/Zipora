@@ -138,33 +138,8 @@ body, html {
 .box img{
 	height: 100%;
 	width: auto;
-	object-fit:cover;
-}
+	object-fit:cover;}
 
-.navigasi-atas {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  margin-right: 14%;
-  width: 100%;
-  z-index: 50;
-}
-
-.navigasi-atas a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navigasi-atas a:hover {
-  background: #ddd;
-  color: black;
-}
 
 
 .kumpulan-gambar table tr td a:hover > img{
