@@ -21,7 +21,7 @@
                                             <b>Class Name</b>
                                             <div class="form-line">
                                                 <input type="hidden" name="_id_class" value="{{ $class->id_class}}" class="form-control" required />
-                                                <input type="text" name="_name_class" value="{{ $class->name_class}}" class="form-control" required />
+                                                <input type="text" name="_name_class" value="{{ $class->name_class}}" maxlength="45" class="form-control" required />
                                             </div>
                                         </div>
                                         <div class="form-group">

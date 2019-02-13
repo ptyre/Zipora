@@ -19,25 +19,25 @@
                                         <div class="form-group">
                                             <b>Name</b>
                                             <div class="form-line">
-                                                <input type="text" name="_name" class="form-control" placeholder="Member Name" required />
+                                                <input type="text" name="_name" class="form-control" maxlength="45" placeholder="Member Name" required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Email</b>
                                             <div class="form-line">
-                                                <input type="email" name="_email" class="form-control" placeholder="Email" required />
+                                                <input type="email" name="_email" class="form-control" maxlength="29" placeholder="Email" required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Handphone</b>
                                             <div class="form-line">
-                                                <input type="text" name="_telp" class="form-control" placeholder="Handphone" required />
+                                                <input type="text" name="_telp" class="form-control" maxlength="15" placeholder="Handphone" required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Institusi</b>
                                             <div class="form-line">
-                                                <input type="text" name="_institusi" class="form-control" placeholder="Institusi" required />
+                                                <input type="text" name="_institusi" class="form-control" maxlength="48" placeholder="Institusi" required />
                                             </div>
                                         </div>
                                         <div class="form-group">

@@ -17,7 +17,7 @@
 		                            <div class="col-sm-12">
 		                                <div class="form-group">
 		                                    <div class="form-line">
-		                                        <input type="text" name="_nama_jenis" class="form-control" placeholder="Inset new Type here.." required />
+		                                        <input type="text" name="_nama_jenis" class="form-control" maxlength="25" placeholder="Inset new Type here.." required />
 		                                    </div>
 		                                </div>
 		                                <div class="form-group">

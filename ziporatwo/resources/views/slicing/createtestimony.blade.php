@@ -18,7 +18,7 @@
 		                                <div class="form-group">
                                             <label for="imageInput">Name</label>
                                             <div class="form-line">
-                                                <input type="text" name="_nama" class="form-control" placeholder="Name ..." required />
+                                                <input type="text" name="_nama" class="form-control" maxlength="45" placeholder="Name ..." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
