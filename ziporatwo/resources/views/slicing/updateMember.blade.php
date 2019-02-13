@@ -21,25 +21,25 @@
                                             <b>Name</b>
                                             <div class="form-line">
                                                 <input type="hidden" name="_id_member" value="{{ $a->id_member }}">
-                                                <input type="text" name="_name" class="form-control" value="{{ $a->name }}" required />
+                                                <input type="text" name="_name" class="form-control" value="{{ $a->name }}" maxlength="45" required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Email</b>
                                             <div class="form-line">
-                                                <input type="email" name="_email" class="form-control" value="{{ $a->email }}" required />
+                                                <input type="email" name="_email" class="form-control" value="{{ $a->email }}" maxlength="29" required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Handphone</b>
                                             <div class="form-line">
-                                                <input type="text" name="_telp" class="form-control" value="{{ $a->telp }}" required />
+                                                <input type="text" name="_telp" class="form-control" value="{{ $a->telp }}" maxlength="15" required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Institusi</b>
                                             <div class="form-line">
-                                                <input type="text" name="_institusi" class="form-control" value="{{ $a->institusi }}" required />
+                                                <input type="text" name="_institusi" class="form-control" value="{{ $a->institusi }}" maxlength="45" required />
                                             </div>
                                         </div>
                                         <div class="form-group">

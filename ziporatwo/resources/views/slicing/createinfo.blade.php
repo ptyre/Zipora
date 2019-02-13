@@ -55,7 +55,7 @@
                                         <div class="form-group">
                                             <b>Judul Informasi</b>
                                             <div class="form-line">
-                                                <input type="text" name="_judul" class="form-control" placeholder="Judul Informasi ...." required />
+                                                <input type="text" name="_judul" class="form-control" maxlength="45" placeholder="Judul Informasi ...." required />
                                             </div>
                                         </div>
                                         <div class="form-group">

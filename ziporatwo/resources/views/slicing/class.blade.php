@@ -78,13 +78,13 @@
                                             @foreach($class as $c)
                                             <tr>
                                                 <td hidden>{{ $c['id_class'] }}</td>
-                                                <td>{{ $c['name_class']}}</td>
-                                                <td>{{ $c['deskripsi']}}</td>
+                                                <td id="trimname">{{ $c['name_class']}}</td>
+                                                <td id="trimdeskripsi">{{ $c['deskripsi']}}</td>
                                                 <td><a href="{{  route('edit.class', $c['id_class']) }}" ><button type="button" class="btn btn-primary waves-effect">
                                                     <i class="material-icons">settings</i>
                                                 </button></a>
                                                 <form method="POST" action="{{ route('delete.class') }}">
-                                                {{ csrf_field() }}
+                                                    {{ csrf_field() }}
                                                     <input type="hidden" name="_id_class" value="{{ $c['id_class'] }}">
                                                         <button type="submit" class="btn btn-danger waves-effect">
                                                             <i class="material-icons">report</i>

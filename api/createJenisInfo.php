@@ -6,7 +6,7 @@
             die(mysqli_connect_error($con));
     }
 
-    $jenis_info = $_POST('_jenis_info');
+    $jenis_info = $_POST['_jenis_info'];
 
     if($jenis_info != "")
     {

@@ -19,7 +19,7 @@
                                         <div class="form-group">
                                             <b>Book Code</b>
                                             <div class="form-line">
-                                                <input type="text" name="_id_buku" class="form-control" placeholder="Book Code" required />
+                                                <input type="text" name="_id_buku" class="form-control" placeholder="Book Code" maxlength="5" required />
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -31,19 +31,19 @@
                                         <div class="form-group">
                                             <b>Author</b>
                                             <div class="form-line">
-                                                <input type="text" name="_pengarang" class="form-control" placeholder="Author here.." required />
+                                                <input type="text" name="_pengarang" class="form-control" maxlength="45" placeholder="Author here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Publisher</b>
                                             <div class="form-line">
-                                                <input type="text" name="_penerbit" class="form-control" placeholder="Publisher here.." required />
+                                                <input type="text" name="_penerbit" class="form-control" maxlength="25" placeholder="Publisher here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>City</b>
                                             <div class="form-line">
-                                                <input type="text" name="_kota" class="form-control" placeholder="City here.." required />
+                                                <input type="text" name="_kota" class="form-control" maxlength="29" placeholder="City here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">

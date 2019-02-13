@@ -57,7 +57,7 @@
                                             <b>Title Information</b>
                                             <div class="form-line">
                                                 <input type="hidden" name="_id" class="form-control" value="{{ $info->id }}" required />
-                                                <input type="text" name="_judul" class="form-control" value="{{ $info->judul }}" required />
+                                                <input type="text" name="_judul" class="form-control" value="{{ $info->judul }}" maxlength="45" required />
                                             </div>
                                         </div>
                                         <div class="form-group">

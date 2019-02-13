@@ -32,19 +32,19 @@
                                         <div class="form-group">
                                             <b>Author</b>
                                             <div class="form-line">
-                                                <input type="text" name="_pengarang" class="form-control" value="{{ $book->pengarang }}" placeholder="Author here.." required />
+                                                <input type="text" name="_pengarang" class="form-control" maxlength="45" value="{{ $book->pengarang }}" placeholder="Author here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>Publisher</b>
                                             <div class="form-line">
-                                                <input type="text" name="_penerbit" value="{{ $book->penerbit }}" class="form-control" placeholder="Publisher here.." required />
+                                                <input type="text" name="_penerbit" value="{{ $book->penerbit }}" maxlength="25" class="form-control" placeholder="Publisher here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <b>City</b>
                                             <div class="form-line">
-                                                <input type="text" name="_kota" value="{{ $book->kota }}" class="form-control" placeholder="City here.." required />
+                                                <input type="text" name="_kota" value="{{ $book->kota }}" maxlength="28" class="form-control" placeholder="City here.." required />
                                             </div>
                                         </div>
                                         <div class="form-group">

@@ -58,7 +58,7 @@
                                                                 <tr>
                                                                     <td hidden>{{ $g['id'] }}</td>
                                                                     <td>{{ $g['pict'] }}</td>
-                                                                    <td>{{ $g['info'] }}</td>
+                                                                    <td id="trimdeskripsi">{{ $g['info'] }}</td>
                                                                     <td>{{ $g['tgl'] }}</td>
                                                                     <td>{{ $g['nama_jenis'] }}</td>
                                                                     <td><form method="POST" action="{{ route('delete.gallery') }}">
