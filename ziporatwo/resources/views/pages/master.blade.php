@@ -30,9 +30,11 @@
 
     <title></title>
   </head>
-  <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
-@yield('navigasi')
-@yield('content')
+  <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0" style="padding-top: 0px !important;">
+    @include('pages.partial.navbar')
+    @yield('navigasi')
+    @yield('content')
+
 
 <script href="{{asset('js/app.js')}}"></script>
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

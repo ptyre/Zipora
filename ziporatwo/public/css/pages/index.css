@@ -1,14 +1,11 @@
+#header1{
+  margin-top: 0;
+}
 
-
-
-
-
-
-
-
-
-#berita{
-  margin-top: 50%;
+#berita2{
+  margin-top: -100% !important;
+position: relative;
+z-index: 10;
 }
 
 .huruf-nama-1{
@@ -20,7 +17,9 @@
   font-size: 20px;
 }
 
-
+body {
+  background: orange;
+}
 
 #pemisahnews{
   weight:100%;

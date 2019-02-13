@@ -21,8 +21,8 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
-	color: #777;
-	background: #f6f6f6;
+	
+
 }
 
 a {
@@ -275,7 +275,7 @@ a img {
 		width: 100%;
 		min-width: auto;
 		min-height: auto;
-		padding: 1em; 
+		padding: 1em;
 	}
 
 	.column p {

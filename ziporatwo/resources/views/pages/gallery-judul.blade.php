@@ -11,11 +11,6 @@
 
 @section('navigasi')
 
-<div class="navigasi-atas">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-</div>
 
 @endsection
 
@@ -36,7 +31,7 @@
             {{ csrf_field() }}
             <input type="submit" value="" style="background:url({{$dta['pict']}}) no-repeat;" class="foto-1"></input>
             <span>{{ $dta['nama_jenis'] }}</span>
-            <span></span>
+            <span>menghitung</span>
           </form>
         </td>
         @endforeach

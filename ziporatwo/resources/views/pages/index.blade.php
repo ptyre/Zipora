@@ -10,133 +10,57 @@
 
 @endsection
 
-
-@section('navigasi')
-         <header>
-            <nav id="menubaruid" class="menubaru">
-               <div class="menu-icon">
-                 <div class="dropdown">
-                   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                     Dropdown button
-                   </button>
-                   <div class="dropdown-menu">
-                     <a class="dropdown-item" href="#">Link 1</a>
-                     <a class="dropdown-item" href="#">Link 2</a>
-                     <a class="dropdown-item" href="#">Link 3</a>
-                     <a class="dropdown-item" href="#">Link 3</a>
-                     <a class="dropdown-item" href="#">Link 3</a>
-                   </div>
-                 </div>
-               </div>
-
-
-               <div class="logo">
-                  <a href="#">
-
-
-                    <svg class="logosvg" width="50" height="50" viewBox="0 0 81 81" >
-                      <defs>
-                        <linearGradient id="linear-gradient" x1="0.5" y1="0.5" x2="0.204" y2="0.821" gradientUnits="objectBoundingBox">
-                          <stop offset="0" stop-color="#fa0"/>
-                          <stop offset="1" stop-color="#ff6f00"/>
-                        </linearGradient>
-                        <filter id="Path_1" x="0" y="0" width="81" height="81" filterUnits="userSpaceOnUse">
-                          <feOffset dx="3" dy="3" input="SourceAlpha"/>
-                          <feGaussianBlur stdDeviation="5" result="blur"/>
-                          <feFlood flood-color="#2d2929" flood-opacity="0.149"/>
-                          <feComposite operator="in" in2="blur"/>
-                          <feComposite in="SourceGraphic"/>
-                        </filter>
-                      </defs>
-                      <g id="Group_24" data-name="Group 24" transform="translate(-35 -19)">
-                        <g class="logoZipora-3" transform="matrix(1, 0, 0, 1, 35, 19)">
-                          <path id="Path_1-2" data-name="Path 1" class="logoZipora-1" d="M25.5,0A25.5,25.5,0,1,1,0,25.5,25.5,25.5,0,0,1,25.5,0Z" transform="translate(12 12)"/>
-                        </g>
-                        <path id="Path_8" data-name="Path 8" class="logoZipora-2" d="M77.424,19.331l38.279.138.594.75.844,1.125.688,1.078.641,1.094L119,24.578l.469.969.484,1.219L89.763,43.972l30.268.013-.219.578-.172.438-.312.75-.422.891-.375.7-.281.516-.391.641-.391.656-.453.641-.516.75-.531.672-.786.872-37.6-.231-.391-.469-.687-.844-.656-.937-.687-1.062L74.547,47.5l-.609-1.187-.625-1.406-.25-.641L103.079,27.4l-30.24-.009.318-.893.516-1.231.536-1.131.536-.992.6-.992.576-.893.754-1.032Z" transform="translate(-24 21)"/>
-                      </g>
-                    </svg>
-                  </a>
-               </div>
-               <div class="menu">
-                  <ul>
-                    <table class="table-menu">
-                      <td>
-                      <li><a href="#berita">News</a></li>
-                    </td>
-                    <td>
-                      <li><a href="#cerita">Article</a></li>
-                    </td>
-                    <td>
-                      <li><a href="{{route('book')}}">Buku</a></li>
-                    </td>
-                    <td>
-                      <li><a href="{{route('class')}}">Class</a></li>
-                    </td>
-                    <td>
-                      <li><a href="#kontak">Contact</a></li>
-                    </td>
-                    </table>
-
-                  </ul>
-
-
-               </div>
-
-
-
-
-            </nav>
-
-         </header>
-<div>
-
-         <table class="tablenamaZipora">
-           <tr>
-           <td class="huruf-nama-1">Z</td>
-           <td class="huruf-nama-2">I</td>
-           <td class="huruf-nama-1">P</td>
-           <td class="huruf-nama-2">O</td>
-           <td class="huruf-nama-1">R</td>
-           <td class="huruf-nama-2">A</td>
-           <td class="huruf-nama-1"> </td>
-           <td class="huruf-nama-2"> </td>
-           <td class="huruf-nama-1">T</td>
-           <td class="huruf-nama-2">R</td>
-           <td class="huruf-nama-1">I</td>
-           <td class="huruf-nama-2">E</td>
-           <td class="huruf-nama-1"> </td>
-           <td class="huruf-nama-2"> </td>
-           <td class="huruf-nama-1">W</td>
-           <td class="huruf-nama-2">A</td>
-           <td class="huruf-nama-1">R</td>
-           <td class="huruf-nama-2">D</td>
-           <td class="huruf-nama-1">H</td>
-           <td class="huruf-nama-2">A</td>
-           <td class="huruf-nama-1">N</td>
-           <td class="huruf-nama-2">I</td>
-         </tr>
-         <tr>
-           <td class="welcome-header" colspan="22"><h5>Welcome To Official Zipora Trie Wardhani Website</h5></td>
-         <tr>
-
-         </table>
-</div>
-
-
-
-
-
-@endsection
-
-
-
 @section('content')
 
+<section class="home-slider js-fullheight owl-carousel">
+<div class="slider-item js-fullheight" style="background-image:url(/images/foto-background/cropped-IMG_3768.jpg);">
+<div class="overlay"></div>
+<div class="container">
+<div class="row slider-text justify-content-center align-items-center">
 
+  <div class="col-md-7 col-sm-12 text-center ftco-animate">
+    <table class="tablenamaZipora">
+      <tr>
+      <td class="huruf-nama-1">Z</td>
+      <td class="huruf-nama-2">I</td>
+      <td class="huruf-nama-1">P</td>
+      <td class="huruf-nama-2">O</td>
+      <td class="huruf-nama-1">R</td>
+      <td class="huruf-nama-2">A</td>
+      <td class="huruf-nama-1"> </td>
+      <td class="huruf-nama-2"> </td>
+      <td class="huruf-nama-1">T</td>
+      <td class="huruf-nama-2">R</td>
+      <td class="huruf-nama-1">I</td>
+      <td class="huruf-nama-2">E</td>
+      <td class="huruf-nama-1"> </td>
+      <td class="huruf-nama-2"> </td>
+      <td class="huruf-nama-1">W</td>
+      <td class="huruf-nama-2">A</td>
+      <td class="huruf-nama-1">R</td>
+      <td class="huruf-nama-2">D</td>
+      <td class="huruf-nama-1">H</td>
+      <td class="huruf-nama-2">A</td>
+      <td class="huruf-nama-1">N</td>
+      <td class="huruf-nama-2">I</td>
+    </tr>
+    <tr>
+      <td class="welcome-header" colspan="22"><h5>Welcome To Official Zipora Trie Wardhani Website</h5></td>
+    <tr>
 
+    </table>
+  </div>
 
+</div>
+</div>
+</div>
+</section>
+<section class="ftco-services bg-light">
+			<div class="container">
+				
+			</div>
+		</section>
 <section id="berita">
-<div class="card">
   <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -173,8 +97,9 @@
 
             </div>
         </div>
-    </div>
+
   </div>
+
 
   <div id="buttonpemisah">
     <a href="#">

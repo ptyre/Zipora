@@ -20,7 +20,7 @@ class PagesController extends Controller
     }
 
     public function galleryJudul(){
-      $url = "http://localhost/api/getInfoGalery.php";
+      $url = "http://localhost/api/getImageJenis.php";
       $json = json_decode(file_get_contents($url),true);
       return view('pages.gallery-judul' , ['data' => $json]);
     }
