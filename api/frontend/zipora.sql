@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Feb 2019 pada 02.50
+-- Waktu pembuatan: 13 Feb 2019 pada 10.49
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -129,7 +129,8 @@ CREATE TABLE `tb_class` (
 
 INSERT INTO `tb_class` (`id_class`, `name_class`, `deskripsi`) VALUES
 (1, 'Calling At Work', 'Lorem ipsum dolor Lorem ipsum dolor ipsum'),
-(2, 'First Grad', 'untuk awal yang bagus');
+(2, 'First Grad', 'untuk awal yang bagus'),
+(4, 'Hardi naik kelas', 'loram ipsum dolor loram ipsum dolor loram ipsum dolor loram ipsum dolor loram ipsum dolor loram ipsum dolor loram ipsum dolor loram ipsum dolor loram ipsum dolor loram ipsum dolor loram ipsum dolor');
 
 -- --------------------------------------------------------
 
@@ -151,7 +152,8 @@ CREATE TABLE `tb_galery` (
 
 INSERT INTO `tb_galery` (`id`, `pict`, `info`, `tgl`, `jenis`) VALUES
 (7, '/images/gallery/IMG_1568.PNG', 'Temanku namanya rafli', '2019-02-08', 1),
-(8, '/images/gallery/WhatsApp Image 2019-02-07 at 07.22.18.jpeg', 'aku waktu kecil', '2004-03-09', 1);
+(8, '/images/gallery/WhatsApp Image 2019-02-07 at 07.22.18.jpeg', 'aku waktu kecil', '2004-03-09', 1),
+(9, '/images/gallery/kartuQR.jpg', 'Good photo', '2019-02-12', 2);
 
 -- --------------------------------------------------------
 
@@ -174,7 +176,9 @@ CREATE TABLE `tb_informasi` (
 
 INSERT INTO `tb_informasi` (`id`, `judul`, `pict`, `informasi`, `id_jenisinfo`, `tgl`) VALUES
 (3, '4 sekawan', 'asdqw.jpg', '12dsa', 3, '2019-12-20'),
-(17, 'Hardi naik kereta', 'logo_ILH_icon.ico', '<h2>WYSIWYG Editor</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non dui et tortor vulputate luctus. Praesent consequat rhoncus velit, ut molestie arcu venenatis sodales.</p>\r\n\r\n<h3>Lacinia</h3>\r\n\r\n<ul>\r\n	<li>Suspendisse tincidunt urna ut velit ullamcorper fermentum.</li>\r\n	<li>Nullam mattis sodales lacus, in gravida sem auctor at.</li>\r\n	<li>Praesent non lacinia mi.</li>\r\n	<li>Mauris a ante neque.</li>\r\n	<li>Aenean ut magna lobortis nunc feugiat sagittis.</li>\r\n</ul>\r\n\r\n<h3>Pellentesque adipiscing</h3>\r\n\r\n<p>Maecenas quis ante ante. Nunc adipiscing rhoncus rutrum. Pellentesque adipiscing urna mi, ut tempus lacus ultrices ac. Pellentesque sodales, libero et mollis interdum, dui odio vestibulum dolor, eu pellentesque nisl nibh quis nunc. Sed porttitor leo adipiscing venenatis vehicula. Aenean quis viverra enim. Praesent porttitor ut ipsum id ornare.</p>', 1, '2019-02-04');
+(17, 'Hardi naik kereta', 'logo_ILH_icon.ico', '<h2>WYSIWYG Editor</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non dui et tortor vulputate luctus. Praesent consequat rhoncus velit, ut molestie arcu venenatis sodales.</p>\r\n\r\n<h3>Lacinia</h3>\r\n\r\n<ul>\r\n	<li>Suspendisse tincidunt urna ut velit ullamcorper fermentum.</li>\r\n	<li>Nullam mattis sodales lacus, in gravida sem auctor at.</li>\r\n	<li>Praesent non lacinia mi.</li>\r\n	<li>Mauris a ante neque.</li>\r\n	<li>Aenean ut magna lobortis nunc feugiat sagittis.</li>\r\n</ul>\r\n\r\n<h3>Pellentesque adipiscing</h3>\r\n\r\n<p>Maecenas quis ante ante. Nunc adipiscing rhoncus rutrum. Pellentesque adipiscing urna mi, ut tempus lacus ultrices ac. Pellentesque sodales, libero et mollis interdum, dui odio vestibulum dolor, eu pellentesque nisl nibh quis nunc. Sed porttitor leo adipiscing venenatis vehicula. Aenean quis viverra enim. Praesent porttitor ut ipsum id ornare.</p>', 1, '2019-02-04'),
+(18, 'Menanam padi disawah', 'IMG_1568.PNG', '<h2>WYSIWYG Editor</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non dui et tortor vulputate luctus. Praesent consequat rhoncus velit, ut molestie arcu venenatis sodales.</p>\r\n\r\n<h3>Lacinia</h3>\r\n\r\n<ul>\r\n	<li>Suspendisse tincidunt urna ut velit ullamcorper fermentum.</li>\r\n	<li>Nullam mattis sodales lacus, in gravida sem auctor at.</li>\r\n	<li>Praesent non lacinia mi.</li>\r\n	<li>Mauris a ante neque.</li>\r\n	<li>Aenean ut magna lobortis nunc feugiat sagittis.</li>\r\n</ul>\r\n\r\n<h3>Pellentesque adipiscing</h3>\r\n\r\n<p>Maecenas quis ante ante. Nunc adipiscing rhoncus rutrum. Pellentesque adipiscing urna mi, ut tempus lacus ultrices ac. Pellentesque sodales, libero et mollis interdum, dui odio vestibulum dolor, eu pellentesque nisl nibh quis nunc. Sed porttitor leo adipiscing venenatis vehicula. Aenean quis viverra enim. Praesent porttitor ut ipsum id ornare.</p>', 2, '2019-02-11'),
+(19, 'Hardi naik Delman', '/images/info/cbpraktisi.jpg', '<h2>WYSIWYG Editor</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non dui et tortor vulputate luctus. Praesent consequat rhoncus velit, ut molestie arcu venenatis sodales.</p>\r\n\r\n<h3>Lacinia</h3>\r\n\r\n<ul>\r\n	<li>Suspendisse tincidunt urna ut velit ullamcorper fermentum.</li>\r\n	<li>Nullam mattis sodales lacus, in gravida sem auctor at.</li>\r\n	<li>Praesent non lacinia mi.</li>\r\n	<li>Mauris a ante neque.</li>\r\n	<li>Aenean ut magna lobortis nunc feugiat sagittis.</li>\r\n</ul>\r\n\r\n<h3>Pellentesque adipiscing</h3>\r\n\r\n<p>Maecenas quis ante ante. Nunc adipiscing rhoncus rutrum. Pellentesque adipiscing urna mi, ut tempus lacus ultrices ac. Pellentesque sodales, libero et mollis interdum, dui odio vestibulum dolor, eu pellentesque nisl nibh quis nunc. Sed porttitor leo adipiscing venenatis vehicula. Aenean quis viverra enim. Praesent porttitor ut ipsum id ornare.</p>', 2, '2018-01-10');
 
 -- --------------------------------------------------------
 
@@ -192,7 +196,8 @@ CREATE TABLE `tb_jenisgallery` (
 --
 
 INSERT INTO `tb_jenisgallery` (`id_jenisgalery`, `nama_jenis`) VALUES
-(1, 'Seminar');
+(1, 'Seminar'),
+(2, 'Workshop');
 
 -- --------------------------------------------------------
 
@@ -284,7 +289,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'hardi', 'hardi@ghar.com', '$2y$10$Mi.Z50C6GTOBa6jloLKKBeuo3oy2khtVPa2ss01bkaBFhb1iz/.4S', '3vnnYDdRT2jPhe9WmGUZRwbrTqQrE7FGMPPPTzGhZyAV44VbPwXLUnlXbuql', '2019-01-28 00:37:13', '2019-01-28 00:37:13'),
-(2, 'blabla', 'blabla@gmail.com', '$2y$10$ZvJSEMhC/HMHilPV97hGle5KRRZYEAUfEtRRmubNnUoJvlyIaZyK6', 'GrwKzZgITrRgpNPRFhiwsd2BYrrlgHemtDeycRYimorICN4VLm215BWvsQSN', '2019-02-06 20:50:25', '2019-02-06 20:50:25');
+(2, 'blabla', 'blabla@gmail.com', '$2y$10$ZvJSEMhC/HMHilPV97hGle5KRRZYEAUfEtRRmubNnUoJvlyIaZyK6', 'jWrEQeazXUx5RwiotkrKEjbu7VzZm3vcftNlYirGT7AHapSdzHVlMBcRpNeM', '2019-02-06 20:50:25', '2019-02-06 20:50:25');
 
 --
 -- Indexes for dumped tables
@@ -386,25 +391,25 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT untuk tabel `tb_class`
 --
 ALTER TABLE `tb_class`
-  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_class` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_galery`
 --
 ALTER TABLE `tb_galery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_informasi`
 --
 ALTER TABLE `tb_informasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_jenisgallery`
 --
 ALTER TABLE `tb_jenisgallery`
-  MODIFY `id_jenisgalery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_jenisgalery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_jenisinfo`

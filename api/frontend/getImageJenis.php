@@ -18,7 +18,7 @@
 	}
 
 	$hasil = json_encode(count($result));
-	
+
 	$result1 = array();
 	for ($i=1; $i <= $hasil; $i++) {
 		$query = mysqli_query($con, "SELECT COUNT(tb_galery.id) AS jumlah,tb_galery.pict , tb_jenisgallery.id_jenisgalery, tb_jenisgallery.nama_jenis FROM tb_galery INNER JOIN tb_jenisgallery ON tb_jenisgallery.id_jenisgalery = tb_galery.jenis WHERE tb_jenisgallery.id_jenisgalery = ".$i."");
@@ -32,6 +32,7 @@
 		}
 	}
 	echo json_encode(array(
-		'tes' => $hasil
+
+		'tes' => $result1
 	));
 
