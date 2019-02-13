@@ -7,8 +7,7 @@
 <link href="{{asset('css/pages/index.css')}}" rel="stylesheet">
 <link href="{{asset('css/pages/article.css')}}" rel="stylesheet">
 <link href="{{asset('css/pages/footer.css')}}" rel="stylesheet">
-<link href="{{asset('css/nav.css')}}" rel="stylesheet">
-<link href="{{asset('vendor/css/owl.carousel.min.css')}}" rel="stylesheet">
+
 @endsection
 
 
@@ -144,7 +143,6 @@
             <div id="news-slider" class="owl-carousel">
 
             <?php foreach ($data['newsEvent'] as $nw): ?>
-
 
               <div class="post-slide">
                   <div class="post-header">
@@ -339,6 +337,7 @@
 
 @section('script')
   @parent
+
   <script src="{{asset('js/pages2/nav.js')}}"></script>
   <script src="{{asset('vendor/javascript/jquery.mousewheel.min.js')}}"></script>
   <script src="{{asset('vendor/javascript/owl.carousel.min.js')}}"></script>

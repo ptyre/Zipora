@@ -24,37 +24,19 @@
     <div class="kolum" style="background-color:orange;">
       <div class="gambar">
         <div class="card2">
+
           <div class="products">
-            <div class="product active" product-id="1" product-color="black">
-              <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Stag.svg"/></div>
-              <h1 class="title">The Magnificent Stag</h1>
-              <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+            <?php foreach ($data as $cl): ?>
+            <div class="product active" product-id="{{ $cl['id_class'] }}" product-color="orange">
+              <h1 class="title">{{ $cl['name_class'] }}</h1>
+              <p class="description">{{ $cl['deskripsi'] }}</p>
             </div>
-            <div class="product" product-id="2" product-color="orange">
-              <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Bear.svg"/></div>
-              <h1 class="title">The Courageous Bear</h1>
-              <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            </div>
-            <div class="product" product-id="3" product-color="black">
-              <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Mouse.svg"/></div>
-              <h1 class="title">The Sneaky Mouse</h1>
-              <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            </div>
-            <div class="product" product-id="4" product-color="orange">
-              <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Fox.svg"/></div>
-              <h1 class="title">The Cunning Fox</h1>
-              <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            </div>
-            <div class="product" product-id="5" product-color="#orange">
-              <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Rabbit.svg"/></div>
-              <h1 class="title">The Jumpy Rabbit</h1>
-              <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            </div>
+            <?php endforeach; ?>
+
           </div>
           <div class="footer"><a class="btn" id="prev" href="#" ripple="" ripple-color="#666666">Prev</a><a class="btn" id="next" href="#" ripple="" ripple-color="#666666">Next</a></div>
         </div>
-
-
 
       </div>
     </div>
@@ -78,7 +60,10 @@
       <div class="form-group">
         <select id="idclass" class="form-control" placeholder= "Class">
           <option selected>Class</option>
-          <option>...</option>
+          <?php foreach ($data as $op): ?>
+            <option value="{{ $op['id_class'] }}">{{ $op['name_class'] }}</option>
+          <?php endforeach; ?>
+
         </select>
 		  </div>
 

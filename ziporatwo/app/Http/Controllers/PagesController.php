@@ -11,20 +11,24 @@ class PagesController extends Controller
       $json = json_decode(file_get_contents($url),true);
 
         return view('pages.index', ['data' => $json]);
-
-
     }
 
     public function gallery(){
-      return view('pages.gallery');
+      $url = "http://localhost/api/getInfoGalery.php";
+      $json = json_decode(file_get_contents($url),true);
+      return view('pages.gallery' , ['data' => $json]);
     }
 
     public function galleryJudul(){
-      return view('pages.gallery-judul');
+      $url = "http://localhost/api/getInfoGalery.php";
+      $json = json_decode(file_get_contents($url),true);
+      return view('pages.gallery-judul' , ['data' => $json]);
     }
 
     public function class(){
-      return view('pages.class');
+      $url = "http://localhost/api/getInfoClass.php";
+      $json = json_decode(file_get_contents($url),true);
+      return view('pages.class' , ['data' => $json]);
     }
 
     public function book(){
