@@ -29,12 +29,12 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="project.html" class="nav-link">Project</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        	<li class="nav-item"><a href="/#berita" class="nav-link">News</a></li>
+	        	<li class="nav-item"><a href="{{route('book')}}" class="nav-link">Book</a></li>
+	        	<li class="nav-item"><a href="{{route('class')}}" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a href="/#cerita" class="nav-link">Article</a></li>
+	        	<li class="nav-item"><a href="{{route('galerry.judul')}}" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>

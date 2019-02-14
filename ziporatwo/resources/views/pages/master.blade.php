@@ -34,6 +34,7 @@
     @include('pages.partial.navbar')
     @yield('navigasi')
     @yield('content')
+    @include('pages.partial.footer')
 
 
 <script href="{{asset('js/app.js')}}"></script>
@@ -51,7 +52,6 @@
     <script src="{{ asset('vendor/javascript/aos.js') }}"></script>
     <script src="{{ asset('vendor/javascript/jquery.animateNumber.min.js') }}"></script>
     <script src="{{ asset('vendor/javascript/bootstrap-datepicker.js') }}"></script>
-    <script src="{{ asset('vendor/javascript/jquery.timepicker.min.js') }}"></script>
     <script src="{{ asset('vendor/javascript/scrollax.min.js') }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="{{ asset('vendor/javascript/google-map.js') }}"></script>

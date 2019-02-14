@@ -57,7 +57,7 @@
 </section>
 <section class="ftco-services bg-light">
 			<div class="container">
-				
+
 			</div>
 		</section>
 <section id="berita">
@@ -214,37 +214,6 @@
 </div>
 
 </section>
-
-
-
-<!-- <section id="buku">
-    <div class="mybros">
-    <div class="kolum" style="background-color:orange;">
-      <h2>Column 1</h2>
-      <p>Some text..</p>
-    </div>
-    <div class="kolum" style="background-color:black;">
-      <h2>Column 2</h2>
-      <p>Some text..</p>
-    </div>
-  </div>
-</section>
-
-<section id="kelas">
-
-    <div class="mybros">
-    <div class="kolum" style="background-color:#aaa;">
-      <h2>Column 1</h2>
-      <p>Some text..</p>
-    </div>
-    <div class="kolum" style="background-color:#bbb;">
-      <h2>Column 2</h2>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
-
-</section> -->
 
 
 
