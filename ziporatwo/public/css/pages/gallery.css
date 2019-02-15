@@ -83,7 +83,9 @@ body, html {
   -webkit-filter: blur(2px);
 }
 
-
+.menu-pinggir{
+  z-index: 999;
+}
 
 .menu-pinggir a {
   padding: 6px 8px 6px 16px;
@@ -91,6 +93,7 @@ body, html {
   font-size: 25px;
   color: #818181;
   display: block;
+
 }
 
 .menu-pinggir a:hover {

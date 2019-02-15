@@ -8,6 +8,39 @@ position: relative;
 z-index: 10;
 }
 
+.batasnews{
+  overflow: hidden;
+ display: -webkit-box;
+ -webkit-line-clamp: 8;
+ -webkit-box-orient: vertical;
+}
+
+.button-article{
+  height: 30px;
+  width: 80px;
+  background: orange;
+  color: white;
+  border-color: black;
+}
+
+.button-article:hover{
+  color: red;
+  background: blue;
+  border-color: red;
+}
+
+.judul-gambar{
+  width: 150px;
+  height: 50px;
+
+}
+
+.tanggal-gambar{
+  width: 100px;
+  height: 50px;
+  font-size: 10px;
+}
+
 .huruf-nama-1{
   color:orange;
   font-size: 20px;

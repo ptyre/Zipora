@@ -4,18 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link href="{{asset('css/pages/gallery.css')}}" rel="stylesheet">
-<link href="{{asset('css/pages/navigasi-atas.css')}}" rel="stylesheet">
 <link href="{{asset('vendor/css/jquery.fancybox.min.css')}}" rel="stylesheet">
 
 @endsection
 
 @section('navigasi')
 
-<div class="navigasi-atas">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-</div>
 
 
 <div class="side-menu-gallery">

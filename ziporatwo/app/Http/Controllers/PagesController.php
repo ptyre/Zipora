@@ -37,4 +37,22 @@ class PagesController extends Controller
 
       return view('pages.buku', ['data' => $json]);
     }
+
+    public function news(){
+
+      return view('pages.news-detail');
+    }
+
+    public function article(){
+      return view('pages.article-detail');
+    }
+
+    public function seemorenws(){
+
+      return view('pages.news-seemore');
+    }
+
+    public function seemoreatc(){
+      return view('pages.article-seemore');
+    }
 }

@@ -75,12 +75,12 @@
                       <h3 class="post-title"><a href="#">{{ $nw['judul'] }}</a></h3>
                   </div>
                   <div class="pic">
-                      <img src="{{ $nw['pict'] }}" alt="">
+                      <img src="{{ $nw['pict'] }}" alt="images not found">
                   </div>
                   <ul class="post-bar">
                       <li><i class="fa fa-clock-o"></i> {{ $nw['tgl'] }}</li>
                   </ul>
-                  <p class="post-description">
+                  <p  class="batasnews post-description">
                       {{ $nw['informasi'] }}
                   </p>
 
@@ -142,40 +142,32 @@
 <div class="carousel-wrap">
   <div class="owl-carousel">
 
-    <?php foreach ($data['article'] as $atr) : ?>
+    <?php foreach (array_slice($data['article'], 0, 2) as $atr) : ?>
       <div class="item">
 
         <div class="col-sm-3">
                           <div class="col-item">
                               <div class="photo">
-                                  <img src="{{$atr['pict']}}" class="img-responsive" alt="a" />
-                              </div>
-                              <div class="info">
-                                  <div class="row">
-                                      <div class="price col-md-6">
-                                          <h5>
-                                              {{$atr['judul']}}</h5>
-                                          <h5 class="price-text-color">
-                                              {{$atr['tgl']}}</h5>
-                                              <h1>
-                                                  {{ $nw['informasi'] }}
-                                              </h1>
-                                      </div>
-                                      <div class="rating hidden-sm col-md-6">
-                                      </div>
-                                  </div>
-                                  <div class="separator clear-left">
-                                      <p class="btn-details">
-                                          <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
-                                  </div>
-                                  <div class="clearfix">
+                                <p class="judul-gambar">
+                                    {{$atr['judul']}}</p>
+                                  <img src="{{$atr['pict']}}"style="height:150px; width:150px;" class="img-responsive rounded" alt="images not found" />
+
+                                  <div class="tanggal-gambar" class="price-text-color">
+                                      {{$atr['tgl']}}
+
+                                      <div>
+                                        <form method="POST" class="read-more" action="#">
+                                          {{ csrf_field() }}
+                                          <input type="hidden" class="read-more" name="_id" value="{{ $nw['id'] }}"><button class="button-article rounded">Read more</button></input>
+                                        </form>
+                                    </div>
                                   </div>
                               </div>
                           </div>
                       </div>
       </div>
     <?php endforeach; ?>
-    <div class="item"><img src="http://placehold.it/150x150"></div>
+
   </div>
 </div>
 
@@ -232,8 +224,5 @@
 @section('script')
   @parent
 
-  <script src="{{asset('js/pages2/nav.js')}}"></script>
-  <script src="{{asset('vendor/javascript/jquery.mousewheel.min.js')}}"></script>
-  <script src="{{asset('vendor/javascript/owl.carousel.min.js')}}"></script>
   <script src="{{asset('js/pages2/page1.js')}}"></script>
 @endsection

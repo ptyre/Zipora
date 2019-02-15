@@ -27,6 +27,10 @@ Route::get('/gallery/detail', 'PagesController@gallery')->name('gallery');
 Route::get('/gallery', 'PagesController@galleryJudul')->name('galerry.judul');
 Route::get('/class', 'PagesController@class')->name('class');
 Route::get('/book', 'PagesController@book')->name('book');
+Route::get('/article', 'PagesController@article')->name('article');
+Route::get('/news', 'PagesController@news')->name('news');
+Route::get('/seemore/article', 'PagesController@seemoreatc')->name('article.seemore');
+Route::get('/seemore/news', 'PagesController@seemorenws')->name('news.seemore');
 // awal
 Route::get('/AHome',[
 	'uses' => 'AdminController@halamanAdmin',

@@ -7,7 +7,7 @@
 		die(mysqli_connect_error($con));
 	}
 
-	$query = mysqli_query($con, "SELECT * FROM tb_buku");
+	$query = mysqli_query($con, "SELECT * FROM tb_buku")or die( mysqli_error($con));
 
 	$result = array();
 	while ($row = mysqli_fetch_array($query)) {
@@ -24,7 +24,7 @@
 		));
 	}
 
-	$query = mysqli_query($con, "SELECT * FROM tb_testimoni GROUP BY id DESC");
+	$query = mysqli_query($con, "SELECT * FROM 'tb_testimoni' GROUP BY 'id' DESC")or die( mysqli_error($con));
 	$result1 = array();
 	while ($row = mysqli_fetch_array($query)) {
 		array_push($result1, array(
