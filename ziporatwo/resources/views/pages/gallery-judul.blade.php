@@ -22,22 +22,26 @@
 
 <section class="headerMG">
   <table class="tableMG">
-    @foreach(array_chunk($data, 3) as $dt)
+    @foreach(array_chunk($data['tes'], 3) as $dt)
     <tr>
       @foreach($dt as $dta)
         <td class="contGambar">
 
-          <form action="">
+          <form method="POST" enctype="multipart/form-data" action="{{ route('gallery') }}">
             {{ csrf_field() }}
+            <input type="hidden" name="_jenis" id="_jenis" value="{{$dta['id_jenisgalery']}}" ></input>
             <input type="submit" value="" style="background:url({{$dta['pict']}}) no-repeat;" class="foto-1"></input>
-            <span>{{ $dta['nama_jenis'] }}</span>
-            <span>menghitung</span>
+
           </form>
+          <span>{{ $dta['nama_jenis'] }}</span>
+          <span><p>Jumlah Photo: {{$dta['jumlah']}}</span>
         </td>
         @endforeach
       </tr>
       @endforeach
+    </table>
       </section>
+
 </div>
 <div class="footerGallery">
 
