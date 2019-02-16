@@ -84,9 +84,10 @@
                       {{ $nw['informasi'] }}
                   </p>
 
-                  <form method="POST" class="read-more" action="#">
+                  <form method="POST" class="read-more" action="{{route('news')}}">
                   {{ csrf_field() }}
-                      <input type="hidden" class="read-more" name="_id" value="{{ $nw['id'] }}"><button class="btn btn-primary">Read more</button></input>
+                      <input type="hidden" class="read-more" name="_id" value="{{ $nw['id'] }}"></input>
+                      <button type="submit" class="btn btn-primary">Read more</button>
                   </form>
               </div>
 
@@ -156,9 +157,10 @@
                                       {{$atr['tgl']}}
 
                                       <div>
-                                        <form method="POST" class="read-more" action="#">
+                                        <form method="POST" class="read-more" action="{{route('article')}}">
                                           {{ csrf_field() }}
-                                          <input type="hidden" class="read-more" name="_id" value="{{ $nw['id'] }}"><button class="button-article rounded">Read more</button></input>
+                                          <input type="hidden" class="read-more" name="_id" value="{{ $atr['id'] }}"></input>
+                                          <button type="submit" class="button-article rounded">Read more</button>
                                         </form>
                                     </div>
                                   </div>
@@ -172,7 +174,7 @@
 </div>
 
 <div id="buttonpemisah">
-<a href="article.seemore" >
+<a href="{{route('article.seemore')}}" >
 
 
 
@@ -208,14 +210,6 @@
 </section>
 
 
-
-<section id="kontak">
-
-  <div class="footer-kontak">
-    <p>Footer man is here</p>
-  </div>
-
-</section>
 
 
 

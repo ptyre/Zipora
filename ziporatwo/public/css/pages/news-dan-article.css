@@ -44,7 +44,7 @@ p {
   background-position: center;
   transition: -webkit-transform .2s;
   transition: transform .2s;
-  
+  height: 300px;
 }
 .firmalar{
   background: #f1f4f5c7;

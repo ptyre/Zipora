@@ -7,7 +7,7 @@
 
 @section('content')
 <section class="home-slider js-fullheight owl-carousel">
-      <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.jpg);">
+      <div class="slider-item js-fullheight" style="background-image:url();">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
@@ -24,12 +24,13 @@
   <section>
 <div class="firmalar">
     <div class="container">
+      <?php foreach ($data['article'] as $news): ?>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-12">
                 <div class="firma-card row">
                     <div class="col-md-5 img-padding-no">
-                        <div class="firma-resim">
+                        <div class="firma-resim" style="background:url({{$news['pict']}}) no-repeat;">
                             <a href="#">
 
                             </a>
@@ -38,12 +39,17 @@
                     <div class="col-md-7">
 
                         <div class="card-body">
-                            <h4>Ali Bulut</h4>
+                            <h4>{{ $news['judul'] }}</h4>
                             <ul class="yacht-info__list space-2">
-                              <div class="pengaturan">  dsdanjkeankwdwaknlkawnfejbhwakjvdawkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjcjvjjaucgbe
+                              <div class="pengaturan">  {{ $news['informasi'] }}
                               </div>
                             </ul>
-                                <a><button class="btn btn-success"> read more</button></a>
+                                <form method="post">
+                                  <input type="hidden" name="id" value="{{$news['id']}}">
+                                  <button type="submit" class="btn btn-success"> read more</button></a>
+                                </form>
+
+
 
 
                         </div>
@@ -54,6 +60,8 @@
             </div>
             <div class="col-md-2"></div>
         </div>
+      <?php endforeach; ?>
+
     </div>
     </div>
 

@@ -2448,6 +2448,15 @@ fieldset:disabled a.btn {
   line-height: 1.5;
   border-radius: 0.2rem; }
 
+  .huruf-nama-1{
+    color:orange;
+    font-size: 20px;
+  }
+  .huruf-nama-2{
+    color:white;
+    font-size: 20px;
+  }
+
 .btn-block {
   display: block;
   width: 100%; }

@@ -5,6 +5,8 @@ body, html {
 
 }
 
+
+
 .tableBacground{
   background-color: none;
 }
@@ -65,6 +67,11 @@ body, html {
   width:300px;
   height: 200px;
   background-size: cover;
+}
+
+.foto-1:hover{
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 

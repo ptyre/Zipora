@@ -33,8 +33,8 @@
 	        	<li class="nav-item"><a href="{{route('book')}}" class="nav-link">Book</a></li>
 	        	<li class="nav-item"><a href="{{route('class')}}" class="nav-link">Class</a></li>
 	        	<li class="nav-item"><a href="/#cerita" class="nav-link">Article</a></li>
-	        	<li class="nav-item"><a href="{{route('galerry.judul')}}" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+	        	<li class="nav-item"><a href="{{route('galerry.judul')}}" class="nav-link">Gallery</a></li>
+	          <li class="nav-item"><a href="#kontak" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>

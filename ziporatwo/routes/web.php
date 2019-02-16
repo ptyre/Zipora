@@ -22,13 +22,14 @@ Route::post('/loginAdmin',[
 	'as' => 'login.admin']);
 
 Route::get('/', 'PagesController@index')->name('index');
-Route::post('/book','PagesController@kirim')->name('kirim')
+Route::post('/book','PagesController@kirim')->name('kirim');
 Route::post('/gallery/detail', 'PagesController@gallery')->name('gallery');
 Route::get('/gallery', 'PagesController@galleryJudul')->name('galerry.judul');
 Route::get('/class', 'PagesController@class')->name('class');
+Route::post('/class', 'PagesController@storeclass')->name('class.store');
 Route::get('/book', 'PagesController@book')->name('book');
-Route::get('/article', 'PagesController@article')->name('article');
-Route::get('/news', 'PagesController@news')->name('news');
+Route::post('/article', 'PagesController@article')->name('article');
+Route::post('/news', 'PagesController@news')->name('news');
 Route::get('/seemore/article', 'PagesController@seemoreatc')->name('article.seemore');
 Route::get('/seemore/news', 'PagesController@seemorenws')->name('news.seemore');
 // awal
