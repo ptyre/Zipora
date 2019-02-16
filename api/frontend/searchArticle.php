@@ -9,7 +9,7 @@
 
 	$id = $_POST['id'];
 
-	$query = "SELECT tb_informasi.id, tb_informasi.judul, tb_informasi.pict, tb_informasi.informasi, tb_informasi.tgl, tb_jenisinfo.jenisinformasi FROM tb_informasi INNER JOIN tb_jenisinfo ON tb_jenisinfo.id = tb_informasi.id_jenisinfo WHERE jenisinformasi = 'article' AND tb_informasi.id = '$id'";
+	$query = "SELECT tb_informasi.id, tb_informasi.judul, tb_informasi.pict, tb_informasi.informasi, tb_informasi.tgl, tb_jenisinfo.jenisinformasi FROM tb_informasi INNER JOIN tb_jenisinfo ON tb_jenisinfo.id = tb_informasi.id_jenisinfo WHERE tb_jenisinfo.jenisinformasi = 'article' AND tb_informasi.id = '$id'";
 	$result = mysqli_query($con, $query);
 
 	if (mysqli_num_rows($result) > 0) {
