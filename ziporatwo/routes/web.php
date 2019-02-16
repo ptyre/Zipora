@@ -23,7 +23,7 @@ Route::post('/loginAdmin',[
 
 Route::get('/', 'PagesController@index')->name('index');
 
-Route::get('/gallery/detail', 'PagesController@gallery')->name('gallery');
+Route::post('/gallery/detail', 'PagesController@gallery')->name('gallery');
 Route::get('/gallery', 'PagesController@galleryJudul')->name('galerry.judul');
 Route::get('/class', 'PagesController@class')->name('class');
 Route::get('/book', 'PagesController@book')->name('book');

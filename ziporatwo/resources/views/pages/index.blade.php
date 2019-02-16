@@ -102,7 +102,7 @@
 
 
   <div id="buttonpemisah">
-    <a href="#">
+    <a href="{{route('news.seemore')}}">
       <svg class="button-pemisah-svg" width="150" height="50" viewBox="0 0 267 75.839">
         <defs>
       <linearGradient id="linear-gradient" x1="0.578" y1="0.5" x2="-0.03" y2="1.405" gradientUnits="objectBoundingBox">
@@ -172,7 +172,7 @@
 </div>
 
 <div id="buttonpemisah">
-<a href="#" >
+<a href="article.seemore" >
 
 
 

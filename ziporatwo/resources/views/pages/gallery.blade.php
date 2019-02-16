@@ -15,8 +15,7 @@
 <div class="side-menu-gallery">
   <div class="menu-pinggir">
     <a href="#about">Logo</a>
-    <a href="#services">Section name</a>
-    <a href="#back">Back</a>
+    <a href="{{route('galerry.judul')}}">Back</a>
 
   </div>
 </div>
@@ -26,27 +25,23 @@
 <div class="kumpulan-gambar">
 
 
-<table>
-<tr>
-  <td>
-    <a href="https://source.unsplash.com/IvfoDk30JnI/1500x1000" data-fancybox data-caption="&lt;b&gt;Single photo&lt;/b&gt;&lt;br /&gt;Caption can contain &lt;em&gt;any&lt;/em&gt; HTML elements">
-      <img class="rounded-circle" src="https://source.unsplash.com/IvfoDk30JnI/240x160" />
+<table class="tableBacground">
 
-    </a>
-  </td>
-  <td>
-    <a href="https://source.unsplash.com/0JYgd2QuMfw/1500x1000" data-fancybox data-caption="This image has a simple caption">
-      <img class="rounded-circle" src="https://source.unsplash.com/0JYgd2QuMfw/240x160" />
-    </a>
-  </td>
-  <td>
-    <a href="https://source.unsplash.com/xAgvgQpYsf4/1500x1000" data-fancybox>
-      <img class="rounded-circle" src="https://source.unsplash.com/xAgvgQpYsf4/240x160" />
-    </a>
-  </td>
-  <td>
-  </td>
+  <?php foreach (array_chunk($json , 5)as $dat): ?>
+<tr>
+    <?php foreach ($dat as $gbr): ?>
+      <td >
+
+        <a href="{{$gbr->pict}}"&lt;b&gt;{{$gbr->tgl}}&lt;/b&gt;&lt;br /&gt;{{$gbr->info}}">
+          <img class="rounded-circle" src="{{$gbr->pict}}" style="height:200px; width:200px;"/>
+        </a>
+      </td>
+    <?php endforeach; ?>
+
 </tr>
+  <?php endforeach; ?>
+
+
 </table>
 
 

@@ -18,15 +18,10 @@ p {
 }
 
 .pengaturan{
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  height: 100px;
-  padding: 20px;
-  font-size: 1.3rem;
-  margin: 0;
-  background: white;
-  resize: horizontal;
+ display: -webkit-box;
+ -webkit-line-clamp: 4;
+ -webkit-box-orient: vertical;
 }
 
 .firma-card{
@@ -49,7 +44,7 @@ p {
   background-position: center;
   transition: -webkit-transform .2s;
   transition: transform .2s;
-  background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg);
+  
 }
 .firmalar{
   background: #f1f4f5c7;
