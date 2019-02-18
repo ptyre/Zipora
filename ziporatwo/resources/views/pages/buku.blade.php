@@ -66,6 +66,51 @@
         </div>
       </div>
     </section>
+
+    <form method="POST" action="#" role="form" class="col-md-9 go-right">
+
+			<div class="form-group">
+			     <input id="name" name="_name" type="text" class="form-control" placeholder="Name"  required>
+			<label for="name">Nama</label>
+		  </div>
+
+      <div class="form-group">
+			     <input id="instutisi" name="_instutisi" type="text" class="form-control" placeholder="Instutisi" required>
+			<label for="instutisi">Instutisi</label>
+		  </div>
+
+      <div class="form-group">
+        <select id="_id_class" name="_id_class" class="form-control" placeholder= "Class">
+          <option selected>Class</option>
+          <?php foreach ($data as $op): ?>
+            <option value="{{ $op['id_class'] }}">{{ $op['name_class'] }}</option>
+          <?php endforeach; ?>
+
+        </select>
+		  </div>
+
+      <div class="form-group">
+			     <input id="email" name="_email" type="email" class="form-control" placeholder="E-mail" required>
+			<label for="email">E-mail</label>
+		  </div>
+
+      <div class="form-group">
+			     <input id="telepon" name="_telp" type="tel" class="form-control" placeholder="Phone Number" required>
+			<label for="phone">Phone Number</label>
+		  </div>
+
+      <div class="form-group">
+			<textarea id="alamat" name="_alamat" type="textarea" class="form-control" placeholder="Adress" required></textarea>
+			<label for="alamat">Alamat</label>
+		  </div>
+      {{ csrf_field() }}
+      <input type="hidden" name="_tgl_masuk" value="{{date("Y-m-d")}}"></input>
+
+      <a><button type="submit" class="btn btn-success">Send</button></a>
+		</form>
+    <section>
+
+    </section>
 @endsection
 
 @section('script')

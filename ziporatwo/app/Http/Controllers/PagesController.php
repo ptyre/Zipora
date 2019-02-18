@@ -151,4 +151,8 @@ class PagesController extends Controller
       $json = json_decode(file_get_contents($url),true);
       return view('pages.article-seemore', ['data' => $json]);
     }
+
+    public function about(){
+      return view('pages.about');
+    }
 }
