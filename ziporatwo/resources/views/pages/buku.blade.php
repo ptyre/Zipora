@@ -79,15 +79,6 @@
 			<label for="instutisi">Instutisi</label>
 		  </div>
 
-      <div class="form-group">
-        <select id="_id_class" name="_id_class" class="form-control" placeholder= "Class">
-          <option selected>Class</option>
-          <?php foreach ($data as $op): ?>
-            <option value="{{ $op['id_class'] }}">{{ $op['name_class'] }}</option>
-          <?php endforeach; ?>
-
-        </select>
-		  </div>
 
       <div class="form-group">
 			     <input id="email" name="_email" type="email" class="form-control" placeholder="E-mail" required>

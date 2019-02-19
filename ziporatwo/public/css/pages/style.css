@@ -164,6 +164,24 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
+.lingkaran{
+  width:50px;height: 50px;background:white; border-radius: 50%; text-align: center;line-height: 1.5; vertical-align: middle;
+}
+
+.lingkaran svg path{
+  fill:orange;
+}
+
+.lingkaran:hover{
+  background: orange;
+  cursor: pointer;
+}
+
+.lingkaran:hover svg path{
+  fill: white;
+
+}
+
 pre {
   margin-top: 0;
   margin-bottom: 1rem;

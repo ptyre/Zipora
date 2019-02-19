@@ -28,13 +28,10 @@
 <table class="tableBacground">
 
   <?php foreach (array_chunk($json , 5)as $dat): ?>
-<tr>
+<tr class="list-inline gallery">
     <?php foreach ($dat as $gbr): ?>
-      <td >
-
-        <a href="{{$gbr->pict}}"&lt;b&gt;{{$gbr->tgl}}&lt;/b&gt;&lt;br /&gt;{{$gbr->info}}">
-          <img class="rounded-circle" src="{{$gbr->pict}}" style="height:200px; width:200px;"/>
-        </a>
+      <td class="img-circle zoom">
+            <img class="rounded-circle zoom thumbnail " src="{{$gbr->pict}}" style="height:200px; width:200px;"/>
       </td>
     <?php endforeach; ?>
 

@@ -104,28 +104,7 @@
 
   <div id="buttonpemisah">
     <a href="{{route('news.seemore')}}">
-      <svg class="button-pemisah-svg" width="150" height="50" viewBox="0 0 267 75.839">
-        <defs>
-      <linearGradient id="linear-gradient" x1="0.578" y1="0.5" x2="-0.03" y2="1.405" gradientUnits="objectBoundingBox">
-        <stop offset="0" stop-color="#fa0"/>
-        <stop offset="1" stop-color="#ff6f00"/>
-      </linearGradient>
-      <filter id="Rectangle_6" x="0" y="0" width="267" height="75.839" filterUnits="userSpaceOnUse">
-        <feOffset dy="3" input="SourceAlpha"/>
-        <feGaussianBlur stdDeviation="0.5" result="blur"/>
-        <feFlood flood-opacity="0.149"/>
-        <feComposite operator="in" in2="blur"/>
-        <feComposite in="SourceGraphic"/>
-      </filter>
-    </defs>
-    <g id="Group_38" data-name="Group 38" transform="translate(-826.5 -2063.831)">
-      <g class="readmorebutton-3" transform="matrix(1, 0, 0, 1, 826.5, 2063.83)">
-        <rect id="Rectangle_6-2" data-name="Rectangle 6" class="readmorebutton-1" width="264" height="71.339" rx="35.669" transform="translate(1.5)"/>
-      </g>
-      <text id="see_more" data-name="see more" class="readmorebutton-2" transform="translate(897 2111)"><tspan x="0" y="0">see more</tspan></text>
-    </g>
-  </svg>
-
+      <button class="btn-pemisah-mk2">see more</button>
   </a>
   </div>
 
@@ -145,29 +124,33 @@
 
     <?php foreach (array_slice($data['article'], 0, 2) as $atr) : ?>
       <div class="item">
-
-        <div class="col-sm-3">
+        <div class="col-sm-12">
                           <div class="col-item">
-                              <div class="photo">
-                                <p class="judul-gambar">
-                                    {{$atr['judul']}}</p>
-                                  <img src="{{$atr['pict']}}"style="height:150px; width:150px;" class="img-responsive rounded" alt="images not found" />
+                            <div class="card ukuranCard">
+                        <img class="card-img-top" src="{{$atr['pict']}}" alt="Image not found">
+                        <div class="card-body warnacard">
+                          <h5 class="card-title">  {{$atr['judul']}}</h5>
+                          <p class="card-text batasarticle">{{ $atr['informasi'] }}</p>
+                          <div class="tanggal-gambar" class="price-text-color">
+                              {{$atr['tgl']}}
+                          </div>
+                          <div class="ukuranbuttonread">
+                            <form method="POST" class="read-more" action="{{route('article')}}">
+                              {{ csrf_field() }}
+                              <input type="hidden" class="read-more" name="_id" value="{{ $atr['id'] }}"></input>
+                              <button type="submit" class="button-article">Read more</button>
+                            </form>
+                        </div>
+                        </div>
 
-                                  <div class="tanggal-gambar" class="price-text-color">
-                                      {{$atr['tgl']}}
+                      </div>
 
-                                      <div>
-                                        <form method="POST" class="read-more" action="{{route('article')}}">
-                                          {{ csrf_field() }}
-                                          <input type="hidden" class="read-more" name="_id" value="{{ $atr['id'] }}"></input>
-                                          <button type="submit" class="button-article rounded">Read more</button>
-                                        </form>
-                                    </div>
-                                  </div>
-                              </div>
                           </div>
                       </div>
       </div>
+
+
+
     <?php endforeach; ?>
 
   </div>
@@ -175,32 +158,7 @@
 
 <div id="buttonpemisah">
 <a href="{{route('article.seemore')}}" >
-
-
-
-  <svg class="button-pemisah-svg" width="150" height="50" viewBox="0 0 267 75.839">
-    <defs>
-  <linearGradient id="linear-gradient" x1="0.578" y1="0.5" x2="-0.03" y2="1.405" gradientUnits="objectBoundingBox">
-    <stop offset="0" stop-color="#fa0"/>
-    <stop offset="1" stop-color="#ff6f00"/>
-  </linearGradient>
-  <filter id="Rectangle_6" x="0" y="0" width="267" height="75.839" filterUnits="userSpaceOnUse">
-    <feOffset dy="3" input="SourceAlpha"/>
-    <feGaussianBlur stdDeviation="0.5" result="blur"/>
-    <feFlood flood-opacity="0.149"/>
-    <feComposite operator="in" in2="blur"/>
-    <feComposite in="SourceGraphic"/>
-  </filter>
-</defs>
-<g id="Group_38" data-name="Group 38" transform="translate(-826.5 -2063.831)">
-  <g class="readmorebutton-3" transform="matrix(1, 0, 0, 1, 826.5, 2063.83)">
-    <rect id="Rectangle_6-2" data-name="Rectangle 6" class="readmorebutton-1" width="264" height="71.339" rx="35.669" transform="translate(1.5)"/>
-  </g>
-  <text id="see_more" data-name="see more" class="readmorebutton-2" transform="translate(897 2111)"><tspan x="0" y="0">see more</tspan></text>
-</g>
-</svg>
-
-
+  <button class="btn-pemisah-mk2">see more</button>
 </a>
 </div>
 </div>

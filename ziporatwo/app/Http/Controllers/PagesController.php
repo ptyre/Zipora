@@ -88,7 +88,7 @@ class PagesController extends Controller
     public function book(){
       $url = "http://localhost/Zipora/api/frontend/getTesBook.php";
       $json = json_decode(file_get_contents($url),true);
-
+      //return  dd($json);
       return view('pages.buku', ['data' => $json]);
     }
 
