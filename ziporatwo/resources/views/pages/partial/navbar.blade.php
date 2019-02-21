@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">
-					<svg class="logosvg" width="50" height="50" viewBox="0 0 81 81" >
+	      <a class="navbar-brand" href="{{route('index')}}">
+
+					<svg class="logosvg" width="45" height="45" viewBox="0 0 81 81" >
 						<defs>
 							<linearGradient id="linear-gradient" x1="0.5" y1="0.5" x2="0.204" y2="0.821" gradientUnits="objectBoundingBox">
 								<stop offset="0" stop-color="#fa0"/>
@@ -27,14 +28,15 @@
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
+	      <div class="collapse navbar-collapse hoverMenuMan" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item"><a href="/#berita" class="nav-link">News</a></li>
-	        	<li class="nav-item"><a href="{{route('book')}}" class="nav-link">Book</a></li>
-	        	<li class="nav-item"><a href="{{route('class')}}" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a href="/#cerita" class="nav-link">Article</a></li>
-	        	<li class="nav-item"><a href="{{route('galerry.judul')}}" class="nav-link">Gallery</a></li>
-	          <li class="nav-item"><a href="#kontak" class="nav-link">Contact</a></li>
+
+	        	<li class="nav-item"><a class="borderLink2" href="/#berita" class="nav-link">News</a></li>
+	        	<li class="nav-item"><a class="borderLink" href="{{route('book')}}" class="nav-link">Book</a></li>
+	        	<li class="nav-item"><a class="borderLink" href="{{route('class')}}" class="nav-link">Class</a></li>
+	        	<li class="nav-item"><a class="borderLink" href="/#c erita" class="nav-link">Article</a></li>
+	        	<li class="nav-item"><a class="borderLink" href="{{route('galerry.judul')}}" class="nav-link">Gallery</a></li>
+	          <li class="nav-item"><a class="borderLink" href="#kontak" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>

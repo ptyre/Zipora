@@ -27,10 +27,12 @@
     </section>
 
   <section>
+
     <div class="container">
       <div class="card">
 
-        {{$ar->informasi}}
+        {!!html_entity_decode($ar->informasi)!!}
+
       </div>
     </div>
   </section>

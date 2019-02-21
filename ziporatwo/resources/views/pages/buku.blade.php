@@ -1,7 +1,5 @@
 @extends('pages.master', ['title' => 'Home'])
 
-
-
 @section('css')
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -38,7 +36,7 @@
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate">
             <h2 class="mb-4">Testimoni</h2>
-            <p>testimoni orang orang</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus et molestie ac feugiat sed. Lectus urna duis convallis convallis tellus. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Adipiscing elit ut aliquam purus. Id neque aliquam vestibulum morbi. Feugiat in ante metus dictum at tempor commodo.</p>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -67,41 +65,7 @@
       </div>
     </section>
 
-    <form method="POST" action="#" role="form" class="col-md-9 go-right">
 
-			<div class="form-group">
-			     <input id="name" name="_name" type="text" class="form-control" placeholder="Name"  required>
-			<label for="name">Nama</label>
-		  </div>
-
-      <div class="form-group">
-			     <input id="instutisi" name="_instutisi" type="text" class="form-control" placeholder="Instutisi" required>
-			<label for="instutisi">Instutisi</label>
-		  </div>
-
-
-      <div class="form-group">
-			     <input id="email" name="_email" type="email" class="form-control" placeholder="E-mail" required>
-			<label for="email">E-mail</label>
-		  </div>
-
-      <div class="form-group">
-			     <input id="telepon" name="_telp" type="tel" class="form-control" placeholder="Phone Number" required>
-			<label for="phone">Phone Number</label>
-		  </div>
-
-      <div class="form-group">
-			<textarea id="alamat" name="_alamat" type="textarea" class="form-control" placeholder="Adress" required></textarea>
-			<label for="alamat">Alamat</label>
-		  </div>
-      {{ csrf_field() }}
-      <input type="hidden" name="_tgl_masuk" value="{{date("Y-m-d")}}"></input>
-
-      <a><button type="submit" class="btn btn-success">Send</button></a>
-		</form>
-    <section>
-
-    </section>
 @endsection
 
 @section('script')

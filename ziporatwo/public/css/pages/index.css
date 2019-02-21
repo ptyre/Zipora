@@ -27,15 +27,29 @@ z-index: 10;
   width: 100px;
   background: orange;
   color: white;
-  border-color: black;
+  border: none;
   border-radius: 34px;
   font-size: 12px;
+
+}
+
+.salah{
+  border: none !important;
+  border-color: white;
+  background:none;
+  color: blue;
+}
+
+.salah:hover{
+  color: orange;
+  cursor: pointer;
 }
 
 .button-article:hover{
-  color: red;
-  background: blue;
-  border-color: red;
+
+  background: yellow;
+  font-weight: 800;
+  cursor: pointer;
 }
 
 .judul-gambar{
@@ -66,6 +80,7 @@ body {
   height: 50px;
   width: 100%;
   top: 10%;
+  margin-bottom: 5%;
   padding-left: 45%;
 
 }

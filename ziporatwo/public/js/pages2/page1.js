@@ -1,4 +1,12 @@
 $(document).ready(function() {
+
+  $('.claimedRight').each(function (f) {
+
+      var newstr = $(this).text().substring(0,20);
+      $(this).text(newstr);
+
+    });
+
     $("#news-slider").owlCarousel({
         items : 3,
         itemsDesktop:[1199,3],

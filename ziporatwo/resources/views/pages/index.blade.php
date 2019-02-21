@@ -6,14 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link href="{{asset('css/pages/index.css')}}" rel="stylesheet">
 <link href="{{asset('css/pages/article.css')}}" rel="stylesheet">
-<link href="{{asset('css/pages/footer.css')}}" rel="stylesheet">
+
 
 @endsection
 
 @section('content')
 
 <section class="home-slider js-fullheight owl-carousel">
-<div class="slider-item js-fullheight" style="background-image:url(/images/foto-background/cropped-IMG_3768.jpg);">
+<div class="slider-item js-fullheight" style=" background-image:url(/images/foto-background/cropped-IMG_3768.jpg);">
 <div class="overlay"></div>
 <div class="container">
 <div class="row slider-text justify-content-center align-items-center">
@@ -27,14 +27,14 @@
       <td class="huruf-nama-2">O</td>
       <td class="huruf-nama-1">R</td>
       <td class="huruf-nama-2">A</td>
-      <td class="huruf-nama-1"> </td>
-      <td class="huruf-nama-2"> </td>
+      <td class="huruf-nama-1">&nbsp;</td>
+      <td class="huruf-nama-2">&nbsp;</td>
       <td class="huruf-nama-1">T</td>
       <td class="huruf-nama-2">R</td>
       <td class="huruf-nama-1">I</td>
       <td class="huruf-nama-2">E</td>
-      <td class="huruf-nama-1"> </td>
-      <td class="huruf-nama-2"> </td>
+      <td class="huruf-nama-1">&nbsp;</td>
+      <td class="huruf-nama-2">&nbsp;</td>
       <td class="huruf-nama-1">W</td>
       <td class="huruf-nama-2">A</td>
       <td class="huruf-nama-1">R</td>
@@ -46,22 +46,30 @@
     </tr>
     <tr>
       <td class="welcome-header" colspan="22"><h5>Welcome To Official Zipora Trie Wardhani Website</h5></td>
-    <tr>
+    </tr>
 
     </table>
+      <a href="{{route('about')}}" >
+      <button class="btn-pemisah-mk2 judukRead">see more</button>
+      </a>
   </div>
 
 </div>
 </div>
 </div>
 </section>
-<section class="ftco-services bg-light">
-			<div class="container">
 
-			</div>
-		</section>
 <section id="berita">
   <div class="container">
+    <div class="row ukuranNews2">
+      <div class="col borderNews">
+      </div>
+      <div class="col">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <h3>NEWS</h3>
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div id="news-slider" class="owl-carousel">
@@ -80,14 +88,14 @@
                   <ul class="post-bar">
                       <li><i class="fa fa-clock-o"></i> {{ $nw['tgl'] }}</li>
                   </ul>
-                  <p  class="batasnews post-description">
-                      {{ $nw['informasi'] }}
-                  </p>
+                  <div  class="batasnews post-description">
+                    {!!strip_tags($nw['informasi'])!!}
+                  </div>
 
                   <form method="POST" class="read-more" action="{{route('news')}}">
                   {{ csrf_field() }}
                       <input type="hidden" class="read-more" name="_id" value="{{ $nw['id'] }}"></input>
-                      <button type="submit" class="btn btn-primary">Read more</button>
+                      <button type="submit" class="salah">Read more</button>
                   </form>
               </div>
 
@@ -111,13 +119,16 @@
 </div>
 </section>
 
-<section>
-
-</section>
 
 <section id="cerita">
 <div class="card" id="warna-border" >
    <div class="card-body">
+     <div class="row ukuranArticle2">
+       <div class="col borderArticle">
+       </div>
+       <div class="col">
+       </div>
+     </div>
      <h3 class="card-title row h-100 justify-content-center align-items-center">Article</h3>
 <div class="carousel-wrap">
   <div class="owl-carousel">
@@ -130,7 +141,7 @@
                         <img class="card-img-top" src="{{$atr['pict']}}" alt="Image not found">
                         <div class="card-body warnacard">
                           <h5 class="card-title">  {{$atr['judul']}}</h5>
-                          <p class="card-text batasarticle">{{ $atr['informasi'] }}</p>
+                          <p class="card-text batasarticle">{!!strip_tags($atr['informasi'])!!}</p>
                           <div class="tanggal-gambar" class="price-text-color">
                               {{$atr['tgl']}}
                           </div>

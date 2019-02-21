@@ -4,21 +4,22 @@
 @section('css')
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="{{asset('css/pages/about.css')}}" rel="stylesheet">
 
 @endsection
 
 @section('content')
 
 
-<section style="width:100%;background-repeat: no-repeat;background-position: center;background-size:cover;background-image:url('/images/foto-background/IMG_6367.jpg')">
+<section class="naon">
 
-<div class="about" style="width:100%;">
-  <div style="height:100px;">
+<div class="about">
+  <div class="apa">
   </div>
-  <div class="row justify-content-center" style="margin-left:54px;width:90%;">
+  <div class="row justify-content-center gimana">
     <h1>Who i am</h1>
   </div>
-  <div style="width:90%;"  class="container">
+  <div class="container isi">
   <div style="margin-left:25px;" class="row">
   <div  class="col-sm-5 align-items-center">
     <div class="card align-items-center" style="margin-top:70px;">

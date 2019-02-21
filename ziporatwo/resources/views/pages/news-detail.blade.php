@@ -27,8 +27,8 @@
   <section>
     <div class="container">
       <div class="card">
+{!!html_entity_decode($j->informasi)!!}
 
-        {{$j->informasi}}
       </div>
     </div>
 

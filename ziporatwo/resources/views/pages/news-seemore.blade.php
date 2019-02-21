@@ -41,12 +41,13 @@
                         <div class="card-body">
                             <h4>{{ $news['judul'] }}</h4>
                             <ul class="yacht-info__list space-2">
-                              <div class="pengaturan">  {{ $news['informasi'] }}
+                              <div class="pengaturan">  {!!strip_tags($news['informasi'])!!}
                               </div>
                             </ul>
-                                <form method="post">
-                                  <input type="hidden" name="id" value="{{$news['id']}}">
-                                  <button type="submit" class="btn btn-success"> read more</button></a>
+                                <form method="POST" class="read-more" action="{{route('news')}}">
+                                {{ csrf_field() }}
+                                    <input type="hidden" class="read-more" name="_id" value="{{ $news['id'] }}"></input>
+                                    <button type="submit" class="btn btn-success">Read more</button>
                                 </form>
 
 
