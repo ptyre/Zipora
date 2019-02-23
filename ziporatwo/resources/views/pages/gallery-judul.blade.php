@@ -16,7 +16,7 @@
 @section('content')
 <div class="menuGallery">
 <section class="headerMGJ">
-  <h1>judul</h1>
+  <h1 class="judulgambar">Judul</h1>
 </section>
 
 <section class="headerMG">
@@ -32,8 +32,8 @@
             <input type="submit" value="" style="background:url({{$dta['pict']}}) no-repeat;" class="foto-1"></input>
 
           </form>
-          <span>{{ $dta['nama_jenis'] }}</span>
-          <span><p>Jumlah Photo: {{$dta['jumlah']}}</span>
+          <h3>{{ $dta['nama_jenis'] }}</h3>
+          <h3><p>Jumlah Photo: {{$dta['jumlah']}}</h3>
         </div>
         @endforeach
       </div>

@@ -7,7 +7,7 @@
 
 @section('content')
 <section class="home-slider js-fullheight owl-carousel">
-      <div class="slider-item js-fullheight" style="background-image:url();">
+      <div class="slider-item js-fullheight" style="background-image:url('/images/foto-background/Gambar-Article.jpg');">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
@@ -47,7 +47,7 @@
                                 <form method="POST" class="read-more" action="{{route('article')}}">
                                   {{ csrf_field() }}
                                   <input type="hidden" class="read-more" name="_id" value="{{$news['id']}}"></input>
-                                  <button type="submit" class="btn btn-successe">Read more</button>
+                                  <button type="submit" class="btn btn-success">Read more</button>
                                 </form>
 
 

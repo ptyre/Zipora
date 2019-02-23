@@ -223,6 +223,11 @@ body {
     color:#333;
     text-decoration:none;
 }
+.responsive-2{
+  color: white;
+  font-weight: 450;
+  font-size: 16px;
+}
 @media only screen and (max-width: 600px) {
 
     .textmargin-responsive-1{

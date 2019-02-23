@@ -19,7 +19,7 @@
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
             	<h1 class="mb-3 mt-5 bread">Class</h1>
-	            <p class="breadcrumbs"><span></span>  <span><h4>Ayo Belajar Bersama!!!</h4></span></p>
+	            <p class="breadcrumbs"><span></span>  <span><h4 class="warnaHeaderClass">Ayo Belajar Bersama!!!</h4></span></p>
             </div>
 
           </div>
