@@ -221,7 +221,12 @@ margin-top: 15%;
 }
 
 
-
+.huruftgl{
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Arial;
+}
 
 .jarak{
   padding-top: 25px;
@@ -3414,6 +3419,18 @@ input[type="button"].btn-block {
     -ms-flex-pack: justify;
     justify-content: space-between; }
 
+.warnaHeaderClass{
+  color: White;
+
+}
+
+
+.judulgambar{
+  color: white;
+  font-size: 23px;
+  font-family: Arial;
+  font-weight: 800;
+}
 .navbar-brand {
   display: inline-block;
   padding-top: 0.1rem;

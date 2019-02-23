@@ -18,7 +18,7 @@
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
             	<h1 class="mb-3 mt-5 bread">{{$ar->judul}}</h1>
-	            <p class="breadcrumbs"><span></span>  <span><h4>{{$ar->tgl}}</h4></span></p>
+	            <p class="breadcrumbs"><span></span>  <span><h4 class="huruftgl">{{$ar->tgl}}</h4></span></p>
             </div>
 
           </div>
