@@ -225,8 +225,32 @@ body {
 }
 @media only screen and (max-width: 600px) {
 
+    .textmargin-responsive-1{
+      weight:100%;
+      margin-left:-25%;
+      margin-top: 25%;
+
+
+    }
+
+    .judukRead{
+      margin-top: -70% !important;
+      margin-left: -175% !important;
+    }
+
+    .tablenamaZipora{
+      background: none !important;
+    }
+
+    .responsive-2{
+      color: white !important;
+
+    }
+
     .post-slide{
-        padding: 15px;
+      margin: auto;
+      padding:27px 30px;
+      weight:200% !important;
     }
     .post-slide .post-bar li{
         margin-bottom: 5px;
@@ -234,4 +258,5 @@ body {
     .post-slide .post-bar li:last-child{
         margin-bottom: 0;
     }
+
 }

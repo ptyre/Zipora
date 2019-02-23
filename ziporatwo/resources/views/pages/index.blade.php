@@ -18,7 +18,7 @@
 <div class="container">
 <div class="row slider-text justify-content-center align-items-center">
 
-  <div class="col-md-7 col-sm-12 text-center ftco-animate">
+  <div class="col-md-7 col-sm-12 text-center ftco-animate textmargin-responsive-1">
     <table class="tablenamaZipora">
       <tr>
       <td class="huruf-nama-1">Z</td>
@@ -45,7 +45,7 @@
       <td class="huruf-nama-2">I</td>
     </tr>
     <tr>
-      <td class="welcome-header" colspan="22"><h5>Welcome To Official Zipora Trie Wardhani Website</h5></td>
+      <td class="welcome-header" colspan="22"><h5 class="responsive-2">Welcome To Official Zipora Trie Wardhani Website</h5></td>
     </tr>
 
     </table>
@@ -134,10 +134,11 @@
   <div class="owl-carousel">
 
     <?php foreach (array_slice($data['article'], 0, 2) as $atr) : ?>
-      <div class="item">
+      <div class="item responsive8">
         <div class="col-sm-12">
                           <div class="col-item">
                             <div class="card ukuranCard">
+                              
                         <img class="card-img-top" src="{{$atr['pict']}}" alt="Image not found">
                         <div class="card-body warnacard">
                           <h5 class="card-title">  {{$atr['judul']}}</h5>

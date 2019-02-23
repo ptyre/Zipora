@@ -24,19 +24,19 @@
 						</g>
 					</svg>
 				</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	      <button class="navbar-toggler color123" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu color123"></span> <span class="color123">Menu</span>
 	      </button>
 
 	      <div class="collapse navbar-collapse hoverMenuMan" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 
-	        	<li class="nav-item"><a class="borderLink2" href="/#berita" class="nav-link">News</a></li>
-	        	<li class="nav-item"><a class="borderLink" href="{{route('book')}}" class="nav-link">Book</a></li>
-	        	<li class="nav-item"><a class="borderLink" href="{{route('class')}}" class="nav-link">Class</a></li>
-	        	<li class="nav-item"><a class="borderLink" href="/#c erita" class="nav-link">Article</a></li>
-	        	<li class="nav-item"><a class="borderLink" href="{{route('galerry.judul')}}" class="nav-link">Gallery</a></li>
-	          <li class="nav-item"><a class="borderLink" href="#kontak" class="nav-link">Contact</a></li>
+	        	<li class="nav-item tra"><a class="borderLink2" href="/#berita" class="nav-link">News</a></li>
+	        	<li class="nav-item tra"><a class="borderLink" href="{{route('book')}}" class="nav-link">Book</a></li>
+	        	<li class="nav-item tra"><a class="borderLink" href="{{route('class')}}" class="nav-link">Class</a></li>
+	        	<li class="nav-item tra"><a class="borderLink" href="/#c erita" class="nav-link">Article</a></li>
+	        	<li class="nav-item tra"><a class="borderLink" href="{{route('galerry.judul')}}" class="nav-link">Gallery</a></li>
+	          <li class="nav-item tra"><a class="borderLink" href="#kontak" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>

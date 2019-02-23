@@ -20,11 +20,11 @@
 </section>
 
 <section class="headerMG">
-  <table class="tableMG">
+  <div class="container">
     @foreach(array_chunk($data['tes'], 3) as $dt)
-    <tr>
+    <div class="row">
       @foreach($dt as $dta)
-        <td class="contGambar">
+        <div class="contGambar col-md-auto">
 
           <form method="POST" enctype="multipart/form-data" action="{{ route('gallery') }}">
             {{ csrf_field() }}
@@ -34,17 +34,15 @@
           </form>
           <span>{{ $dta['nama_jenis'] }}</span>
           <span><p>Jumlah Photo: {{$dta['jumlah']}}</span>
-        </td>
+        </div>
         @endforeach
-      </tr>
+      </div>
       @endforeach
-    </table>
-      </section>
+    </div>
+</section>
 
-</div>
-<div class="footerGallery">
 
-</div>
+
 
 
 @endsection

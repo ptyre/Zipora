@@ -1,4 +1,15 @@
 $(document).ready(function() {
+  var sz = window.matchMedia("(max-width: 700px)")
+
+
+
+
+
+  $('img').on("error", function() {
+    $(this).attr('src', '/images/foto-background/NoImageFound.jpg.png');
+  });
+
+
 
   $('.claimedRight').each(function (f) {
 
@@ -10,11 +21,13 @@ $(document).ready(function() {
     $("#news-slider").owlCarousel({
         items : 3,
         itemsDesktop:[1199,3],
-        itemsDesktopSmall:[1000,2],
-        itemsMobile : [650,1],
+        itemsDesktopSmall:[900,2],
+        itemsMobile : [600,1],
         navigationText:false,
         autoPlay:true
     });
+
+
 
     $('.owl-carousel').owlCarousel({
       loop: true,
@@ -31,10 +44,10 @@ $(document).ready(function() {
           items: 1
         },
         600: {
-          items: 3
+          items: 1
         },
         1000: {
-          items: 4
+          items: 3
         }
       }
     });

@@ -52,6 +52,7 @@ transform: translateY(2px);
   position: relative;
   z-index: 100;
   -webkit-backface-visibility: hidden;
+
 }
 
 /* end fix */
@@ -72,4 +73,16 @@ transform: translateY(2px);
 
 .owl-nav .owl-next {
   right: -30px;
+}
+
+@media only screen and (max-width: 600px) {
+.btn-pemisah{
+  weight:100%;
+  text-align: center;
+}
+
+.btn-pemisah-mk2{
+  transform: translateX(-50px);
+}
+
 }
