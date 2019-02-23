@@ -53,7 +53,7 @@
                                                     <i class="material-icons">date_range</i>
                                                 </span>
                                                 <div class="form-line">
-                                                    <input type="date" name="_tahun" id="tahun" data-date-format="YYYY/MM/DD" class="form-control">
+                                                    <input type="date" name="_tahun" id="tahun" data-date-format="YYYY/MM/DD" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="imageInput">Choose Photo</label>
-                                            <input data-preview="#preview" name="_picture" type="file" accept="image/*" id="imageInput">
+                                            <input data-preview="#preview" name="_picture" type="file" accept="image/*" id="imageInput" required>
                                             <img class="col-sm-6" id="preview"  src="">
                                         </div>
                                         <div class="form-group">

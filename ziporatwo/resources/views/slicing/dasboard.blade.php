@@ -108,23 +108,6 @@
         </div>
         <!-- #END# Visitors -->
         <!-- Latest Social Trends -->
-        
-        <!-- #END# Latest Social Trends -->
-        <!-- Answered Tickets -->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="body bg-teal">
-                    <div class="font-bold m-b--35">LOREM IPSUM</div>
-                    <ul class="dashboard-stat-list">
-                        <li>
-                            {{ count($dasboard['informasi']) }}
-                            <span class="pull-right"><b>8 752</b> <small>TICKETS</small></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- #END# Answered Tickets -->
     </div>
   </div>
 </section>

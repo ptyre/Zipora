@@ -30,7 +30,7 @@
                                         <div class="form-group">
                                             <label for="imageInput">Choose Photo</label>
                                             <div class="form-line">
-                                                <input data-preview="#preview" name="_picture" type="file" accept="image/*" id="imageInput">
+                                                <input data-preview="#preview" name="_picture" type="file" accept="image/*" id="imageInput" required>
                                                 <img class="col-sm-6" id="preview"  src="">
                                             </div>
                                         </div>

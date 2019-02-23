@@ -15,7 +15,8 @@
 		                    <div class="body">
 		                        <div class="row clearfix">
 		                            <div class="col-sm-12">
-		                                <div class="form-group">
+                                        @if(!empty($jenis))
+                                        <div class="form-group">
                                             <div class="form-line">
                                                 <input type="text" name="_info" class="form-control" placeholder="Information" required />
                                             </div>
@@ -35,21 +36,25 @@
                                                     <i class="material-icons">date_range</i>
                                                 </span>
                                                 <div class="form-line">
-                                                    <input type="date" name="_tgl" id="tahun" data-date-format="YYYY/MM/DD" class="form-control">
+                                                    <input type="date" name="_tgl" id="tahun" data-date-format="YYYY/MM/DD" class="form-control" required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-	                                            <label for="imageInput">Choose Photo</label>
-	                                            <input data-preview="#preview" name="_picture" type="file" accept="image/*" id="imageInput">
-	                                            <img class="col-sm-6" id="preview"  src="">
-	                                        </div>
+                                                <label for="imageInput">Choose Photo</label>
+                                                <input data-preview="#preview" name="_picture" type="file" accept="image/*" id="imageInput" required>
+                                                <img class="col-sm-6" id="preview"  src="">
+                                            </div>
                                             <div class="form-group">
                                                 <button type="submit" class="btn bg-green waves-effect col-sm-12">
                                                     <i class="material-icons">insert_photo</i>
                                                     <span>INSERT PHOTO</span>
                                                 </button>
                                             </div>
-                                        </div>
+                                        @else
+                                        <div class="form-group">
+                                            <label>Isi Jenis/Type Gallery terlebih dulu</label>
+                                            </div>
+                                        @endif
 		                            </div>
 		                        </div>
 		                    </div>

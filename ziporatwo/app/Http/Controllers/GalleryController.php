@@ -75,7 +75,7 @@ class GalleryController extends Controller
         $result = file_get_contents($url, false, $context);
 
         Session::flash('message', 'Success');
-        return redirect()->route('admin.book');
+        return redirect()->route('admin.gallery');
 
         //return dd($request->all());
     }

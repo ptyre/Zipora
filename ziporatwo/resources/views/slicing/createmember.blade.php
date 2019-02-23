@@ -16,6 +16,7 @@
                             <div class="body">
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
+                                        @if(!empty($class))
                                         <div class="form-group">
                                             <b>Name</b>
                                             <div class="form-line">
@@ -72,6 +73,11 @@
                                                 <span>INSERT NEW MEMBER</span>
                                             </button>
                                         </div>
+                                        @else
+                                        <div class="form-group">
+                                            <b>Tidak ada class silahkan isi class terlebih dahulu</b>
+                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

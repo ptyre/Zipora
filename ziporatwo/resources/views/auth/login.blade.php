@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>LOGIN | Zipora</title>
+    <title>LOGIN | Admin</title>
     <!-- Favicon-->
     <link href="{{asset('images/zipora.ico')}}" rel="shortcut icon" type="image/x-icon">
 
