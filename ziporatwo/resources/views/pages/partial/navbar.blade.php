@@ -34,7 +34,7 @@
 	        	<li class="nav-item tra"><a class="borderLink2" href="/#berita" class="nav-link">News</a></li>
 	        	<li class="nav-item tra"><a class="borderLink" href="{{route('book')}}" class="nav-link">Book</a></li>
 	        	<li class="nav-item tra"><a class="borderLink" href="{{route('class')}}" class="nav-link">Class</a></li>
-	        	<li class="nav-item tra"><a class="borderLink" href="/#c erita" class="nav-link">Article</a></li>
+	        	<li class="nav-item tra"><a class="borderLink" href="/#cerita" class="nav-link">Article</a></li>
 	        	<li class="nav-item tra"><a class="borderLink" href="{{route('galerry.judul')}}" class="nav-link">Gallery</a></li>
 	          <li class="nav-item tra"><a class="borderLink" href="#kontak" class="nav-link">Contact</a></li>
 	        </ul>

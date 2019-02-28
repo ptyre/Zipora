@@ -49,7 +49,7 @@
 
 
 <table class="tableBacground">
-
+  @if(!empty($json))
   <?php foreach (array_chunk($json , 5)as $dat): ?>
 <tr class="list-inline gallery">
     <?php foreach ($dat as $gbr): ?>
@@ -60,6 +60,9 @@
 
 </tr>
   <?php endforeach; ?>
+  @else
+  <td>TIDAK ADA FOTO</td>
+  @endif
 
 
 </table>

@@ -21,7 +21,7 @@
 
 <section class="headerMG">
   <div class="container">
-    @foreach(array_chunk($data['tes'], 3) as $dt)
+    @foreach(array_chunk($data['image'], 3) as $dt)
     <div class="row">
       @foreach($dt as $dta)
         <div class="contGambar col-md-auto">
