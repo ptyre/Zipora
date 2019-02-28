@@ -32,6 +32,6 @@
 		}
 	}
 	echo json_encode(array(
-		'tes' => $result1
+		'image' => $result1
 	));
 
