@@ -21,7 +21,8 @@ class GalleryController extends Controller
     
     public function index()
     {
-        $url = "http://localhost/zipora/api/getInfoGalery.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoGalery.php";
         $json = json_decode(file_get_contents($url),true);
 
         if (empty($json)) {
@@ -43,7 +44,8 @@ class GalleryController extends Controller
 
     public function show()
     {
-        $url = "http://localhost/zipora/api/getInfoJenisGallery.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoJenisGallery.php";
         $json = json_decode(file_get_contents($url),true);
         return view('slicing.creategallery', ['jenis' => $json]);
     }
@@ -56,7 +58,8 @@ class GalleryController extends Controller
      */
     public function storeType(Request $request)
     {
-        $url = "http://localhost/zipora/api/createJenisGallery.php";
+        $a = env('URL_API');
+        $url = $a . "/createJenisGallery.php";
 
         $nama_jenis = $request->_nama_jenis;
 
@@ -93,7 +96,8 @@ class GalleryController extends Controller
         $path = $request->_picture->getClientOriginalName();
         $new_name = $image->getClientOriginalName();
         
-        $url = "http://localhost/zipora/api/createGallery.php";
+        $a = env('URL_API');
+        $url = $a . "/createGallery.php";
 
         $info = $request->_info;
         $tgl = $request->_tgl;
@@ -161,7 +165,8 @@ class GalleryController extends Controller
      */
     public function destroy(Request $request)
     {
-        $url = "http://localhost/zipora/api/deleteGallery.php";
+        $a = env('URL_API');
+        $url = $a . "/deleteGallery.php";
         $id = $request->_id;
         $data = array('_id' => $id);
 

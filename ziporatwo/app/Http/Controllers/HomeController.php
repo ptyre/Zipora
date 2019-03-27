@@ -23,7 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $url = "http://localhost/zipora/api/getDasboard.php";
+        $a = env('URL_API');
+        $url = $a . "/getDasboard.php";
         $json = json_decode(file_get_contents($url),true);
 
         if (empty($json)) {

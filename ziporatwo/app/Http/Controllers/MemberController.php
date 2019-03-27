@@ -20,7 +20,8 @@ class MemberController extends Controller
     
     public function index()
     {
-        $url = "http://localhost/zipora/api/getInfoMember.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoMember.php";
         $json = json_decode(file_get_contents($url),true);
 
         if (empty($json)) {
@@ -37,7 +38,8 @@ class MemberController extends Controller
      */
     public function create()
     {
-        $url = "http://localhost/zipora/api/getInfoClass.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoClass.php";
         $json = json_decode(file_get_contents($url),true);
         return view('slicing.createmember', ['class' => $json]);
     }
@@ -50,7 +52,8 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        $url = "http://localhost/zipora/api/createMember.php";
+        $a = env('URL_API');
+        $url = $a . "/createMember.php";
 
         $name = $request->_name;
         $email = $request->_email;
@@ -104,7 +107,8 @@ class MemberController extends Controller
      */
     public function edit($id_member)
     {
-        $url = "http://localhost/zipora/api/searchMember.php";
+        $a = env('URL_API');
+        $url = $a . "/searchMember.php";
 
         $data = array('_id_member' => $id_member);
 
@@ -133,7 +137,8 @@ class MemberController extends Controller
      */
     public function update(Request $request)
     {
-        $url = "http://localhost/zipora/api/updateMember.php";
+        $a = env('URL_API');
+        $url = $a . "/updateMember.php";
 
         $id_member = $request->_id_member;
         $name = $request->_name;
@@ -173,7 +178,8 @@ class MemberController extends Controller
      */
     public function destroy(Request $request)
     {
-        $url = "http://localhost/zipora/api/deleteMember.php";
+        $a = env('URL_API');
+        $url = $a . "/deleteMember.php";
         $id_member = $request->_id_member;
         $data = array('_id_member' => $id_member);
 

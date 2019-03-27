@@ -20,7 +20,8 @@ class TestimonyController extends Controller
 
     public function index()
     {
-        $url = "http://localhost/zipora/api/getInfoTestimony.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoTestimony.php";
         $json = json_decode(file_get_contents($url),true);
 
         if (empty($json)) {
@@ -28,7 +29,8 @@ class TestimonyController extends Controller
         } else {
             return view('slicing.testimony', ['testimony' => $json]);
         }
-        // $url = "http://localhost/zipora/api/getInfoTestimony.php";
+        // $a = env('URL_API');
+        //$url = $a . "/getInfoTestimony.php";
         // $json = json_decode(file_get_contents($url),true);
 
         // return $json;
@@ -61,7 +63,8 @@ class TestimonyController extends Controller
         $path = $request->_picture->getClientOriginalName();
         $new_name = $image->getClientOriginalName();
         
-        $url = "http://localhost/zipora/api/createTestimony.php";
+        $a = env('URL_API');
+        $url = $a . "/createTestimony.php";
 
         $nama = $request->_nama;
         $text = $request->_text;
@@ -138,7 +141,8 @@ class TestimonyController extends Controller
      */
     public function destroy(Request $request)
     {
-        $url = "http://localhost/zipora/api/deleteTestimony.php";
+        $a = env('URL_API');
+        $url = $a . "/deleteTestimony.php";
         $id = $request->_id;
         $data = array('_id' => $id);
 

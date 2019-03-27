@@ -16,7 +16,8 @@ class LoginController extends Controller
     }
 
     public function store(Request $request){
-    	$url = "http://localhost/zipora/api/login.php";
+        $a = env('URL_API');
+        $url = $a . "/login.php";
         $username = $request->input('_username');
         $password = $request->input('_password');
 

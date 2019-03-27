@@ -21,7 +21,8 @@ class BookController extends Controller
     
     public function index()
     {
-        $url = "http://localhost/zipora/api/getInfoBook.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoBook.php";
         $json = json_decode(file_get_contents($url),true);
 
         if (empty($json)) {
@@ -54,7 +55,8 @@ class BookController extends Controller
         $new_name = $image->getClientOriginalName();
         
 
-        $url = "http://localhost/zipora/api/createBook.php";
+        $a = env('URL_API');
+        $url = $a . "/createBook.php";
 
         $id_buku = $request->_id_buku;
         $judul_buku = $request->_judul_buku;
@@ -120,7 +122,8 @@ class BookController extends Controller
      */
     public function edit($id_buku)
     {
-        $url = "http://localhost/zipora/api/searchBook.php";
+        $a = env('URL_API');
+        $url = $a . "/searchBook.php";
 
         $data = array('_id_buku' => $id_buku);
 
@@ -149,7 +152,8 @@ class BookController extends Controller
      */
     public function update(Request $request)
     {
-        $url = "http://localhost/zipora/api/updateBook.php";
+        $a = env('URL_API');
+        $url = $a . "/updateBook.php";
         $id_buku = $request->_id_buku;
         $judul_buku = $request->_judul_buku;
         $pengarang = $request->_pengarang;
@@ -192,7 +196,8 @@ class BookController extends Controller
      */
     public function destroy(Request $request)
     {
-        $url = "http://localhost/zipora/api/deleteBook.php";
+        $a = env('URL_API');
+        $url = $a . "/deleteBook.php";
         $id_buku = $request->_id_buku;
         $data = array('_id_buku' => $id_buku);
 

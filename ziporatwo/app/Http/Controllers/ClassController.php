@@ -20,7 +20,8 @@ class ClassController extends Controller
     
     public function index()
     {
-        $url = "http://localhost/zipora/api/getInfoClass.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoClass.php";
         $json = json_decode(file_get_contents($url),true);
 
         if (empty($json)) {
@@ -48,7 +49,8 @@ class ClassController extends Controller
      */
     public function store(Request $request)
     {
-        $url = "http://localhost/zipora/api/createClass.php";
+        $a = env('URL_API');
+        $url = $a . "/createClass.php";
         $name_class = $request->_name_class;
         $deskripsi = $request->_deskripsi;
 
@@ -98,7 +100,8 @@ class ClassController extends Controller
      */
     public function edit($id_class)
     {
-        $url = "http://localhost/zipora/api/searchClass.php";
+        $a = env('URL_API');
+        $url = $a . "/searchClass.php";
         // $json = json_decode(file_get_contents($url),true);
         // $class = $json->find($id);
         // return view('slicing.updateclass' , compact('class'));
@@ -132,7 +135,8 @@ class ClassController extends Controller
      */
     public function update(Request $request)
     {
-        $url = "http://localhost/zipora/api/updateClass.php";
+        $a = env('URL_API');
+        $url = $a . "/updateClass.php";
         $id_class = $request->_id_class;
         $name_class = $request->_name_class;
         $deskripsi = $request->_deskripsi;
@@ -164,7 +168,8 @@ class ClassController extends Controller
      */
     public function destroy(Request $request)
     {
-        $url = "http://localhost/zipora/api/deleteClass.php";
+        $a = env('URL_API');
+        $url = $a . "/deleteClass.php";
         $id_class = $request->_id_class;
         $data = array('_id_class' => $id_class);
 

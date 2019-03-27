@@ -8,14 +8,16 @@ use Illuminate\Support\Facades\Session;
 class PagesController extends Controller
 {
     public function index(){
-      $url = "http://localhost/Zipora/api/frontend/dashboard.php";
+      $a = env('URL_API');
+      $url = $a . "frontend/dashboard.php";
       $json = json_decode(file_get_contents($url),true);
 
         return view('pages.index', ['data' => $json]);
     }
 
     public function gallery(Request $request){
-      $url = "http://localhost/Zipora/api/frontend/searchPhoto.php";
+      $a = env('URL_API');
+      $url = $a . "/frontend/searchPhoto.php";
 
       $jenis = $request->_jenis;
       $data = array('jenis' => $jenis);
@@ -38,19 +40,22 @@ class PagesController extends Controller
     }
 
     public function galleryJudul(){
-      $url = "http://localhost/Zipora/api/frontend/getImageJenis.php";
+      $a = env('URL_API');
+      $url = $a . "frontend/getImageJenis.php";
       $json = json_decode(file_get_contents($url),true);
       return view('pages.gallery-judul' , ['data' => $json]);
     }
 
     public function class(){
-      $url = "http://localhost/Zipora/api/getInfoClass.php";
+      $a = env('URL_API');
+      $url = $a . "/getInfoClass.php";
       $json = json_decode(file_get_contents($url),true);
       return view('pages.class' , ['data' => $json]);
     }
 
     public function storeclass(Request $request){
-      $url = "http://localhost/zipora/api/createMember.php";
+      $a = env('URL_API');
+      $url = $a . "/createMember.php";
 
       $name = $request->_name;
       $email = $request->_email;
@@ -86,14 +91,16 @@ class PagesController extends Controller
     }
 
     public function book(){
-      $url = "http://localhost/Zipora/api/frontend/getTesBook.php";
+      $a = env('URL_API');
+      $url = $a . "/frontend/getTesBook.php";
       $json = json_decode(file_get_contents($url),true);
       //return  dd($json);
       return view('pages.buku', ['data' => $json]);
     }
 
     public function news(Request $request){
-      $url = "http://localhost/zipora/api/frontend/searchNews.php";
+      $a = env('URL_API');
+      $url = $a . "frontend/searchNews.php";
 
       $id = $request->_id;
       $data = array('id' => $id);
@@ -118,7 +125,8 @@ class PagesController extends Controller
 
     public function article(Request $request){
 
-      $url = "http://localhost/zipora/api/frontend/searchArticle.php";
+      $a = env('URL_API');
+      $url = $a . "frontend/searchArticle.php";
 
       $id = $request->_id;
       $data = array('id' => $id);
@@ -140,14 +148,16 @@ class PagesController extends Controller
     }
 
     public function seemorenws(){
-      $url = "http://localhost/Zipora/api/frontend/dashboard.php";
+      $a = env('URL_API');
+      $url = $a . "frontend/dashboard.php";
       $json = json_decode(file_get_contents($url),true);
 
       return view('pages.news-seemore', ['data' => $json]);
     }
 
     public function seemoreatc(){
-      $url = "http://localhost/Zipora/api/frontend/dashboard.php";
+      $a = env('URL_API');
+      $url = $a . "frontend/dashboard.php";
       $json = json_decode(file_get_contents($url),true);
       return view('pages.article-seemore', ['data' => $json]);
     }

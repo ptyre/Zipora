@@ -20,7 +20,8 @@ class AdminController extends Controller
 
     public function halamanAdmin()
     {
-        $url = "http://localhost/zipora/api/getDasboard.php";
+        $a = env('URL_API');
+        $url = $a . "/getDasboard.php";
         $json = json_decode(file_get_contents($url),true);
 
         if (empty($json)) {
@@ -53,8 +54,8 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-        $url = "http://localhost/zipora/api/createAdmin.php";
+        $a = env('URL_API');
+        $url = $a . "createAdmin.php";
 
         $username = $request->_username;
         $password = $request->_password;

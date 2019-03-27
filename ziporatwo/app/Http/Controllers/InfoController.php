@@ -21,7 +21,8 @@ class InfoController extends Controller
     
     public function index(Request $request)
     {
-        $url = "http://localhost/zipora/api/getInfoInformasi.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoInformasi.php";
         $json = json_decode(file_get_contents($url),true);
 
         if (empty($json)) {
@@ -40,7 +41,8 @@ class InfoController extends Controller
      */
     public function create()
     {
-        $url = "http://localhost/zipora/api/getInfoJenisInfo.php";
+        $a = env('URL_API');
+        $url = $a . "/getInfoJenisInfo.php";
         $json = json_decode(file_get_contents($url),true);
         return view('slicing.createinfo', ['jenis' => $json]);
 
@@ -60,7 +62,8 @@ class InfoController extends Controller
         $new_name = $image->getClientOriginalName();
         
 
-        $url = "http://localhost/zipora/api/createInformation.php";
+        $a = env('URL_API');
+        $url = $a . "/createInformation.php";
 
         $judul = $request->_judul;
         $pict = $path;
@@ -108,7 +111,8 @@ class InfoController extends Controller
      */
     public function showJenisInfo()
     {
-        // $url = "http://localhost/zipora/api/getInfoJenisInfo.php";
+        // $a = env('URL_API');
+        // $url = $a . "/getInfoJenisInfo.php";
         // $json = json_decode(file_get_contents($url),true);
         // return view('admin.createi', ['jenis' => $json]);
     }
@@ -121,7 +125,8 @@ class InfoController extends Controller
      */
     public function edit($id)
     {
-        $url = "http://localhost/zipora/api/searchInfo.php";
+        $a = env('URL_API');
+        $url = $a . "/searchInfo.php";
 
         $data = array('_id' => $id);
 
@@ -150,7 +155,8 @@ class InfoController extends Controller
      */
     public function update(Request $request)
     {
-        $url = "http://localhost/zipora/api/updateInformation.php";
+        $a = env('URL_API');
+        $url = $a . "/updateInformation.php";
         $id = $request->_id;
         $judul = $request->_judul;
         $informasi = $request->_informasi;
@@ -185,7 +191,8 @@ class InfoController extends Controller
      */
     public function destroy(Request $request)
     {
-        $url = "http://localhost/zipora/api/deleteInformation.php";
+        $a = env('URL_API');
+        $url = $a . "/deleteInformation.php";
         $id = $request->_id;
         $data = array('_id' => $id);
 
